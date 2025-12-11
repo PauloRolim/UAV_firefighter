@@ -1,0 +1,451 @@
+﻿IMPLEMENTATION
+    logic_i
+REFINES
+    logic
+SEES
+    g_types ,
+    g_operators ,
+    io_constants ,
+    lchip_interface ,
+    user_ctx ,
+    inputs
+
+    // pragma SAFETY_VARS
+CONCRETE_VARIABLES
+    board_0_O1 ,
+        board_0_O2 ,
+
+        first_time ,
+    SM_SimBCMonitor_state , // Current state of SimBCMonitor machine
+    cycle_timer , // Local cycle timer definition
+    cycle_state , // Store the current state of the simulation cycle 
+
+        var_read_1 ,
+        var_P_1 ,
+
+        var_patternBit_1 ,
+    var_patternBit_2 ,
+
+    valid_pred_5 ,
+    valid_pred_6 ,
+
+    // Model inputs
+    i_MissionStart ,
+    i_CommsLink ,
+    i_HighBattery ,
+
+    // Model outputs
+    o_Proceed
+INVARIANT
+    board_0_O1 : uint8_t &
+        board_0_O2 : uint8_t &
+
+        first_time : BOOL &
+    SM_SimBCMonitor_state : uint8_t &
+    SM_SimBCMonitor_state : { INIT , EXEC_1 , EXEC_2 , EXEC_3 } &
+    cycle_timer : uint32_t &
+    cycle_state : uint8_t &
+    cycle_state : { st_READ_INPUTS , st_STATE_MACHINE_CYCLE , st_WRITE_OUTPUTS , st_TIME } &
+
+        var_read_1 : uint32_t &
+        var_P_1 : uint32_t &
+
+        var_patternBit_1 : BOOL &
+    var_patternBit_2 : BOOL &
+
+    valid_pred_5 : BOOL &
+    valid_pred_6 : BOOL &
+
+    // Model inputs
+    i_MissionStart : uint8_t &
+    i_CommsLink : uint8_t &
+    i_HighBattery : uint8_t &
+
+    // Model outputs
+    o_Proceed : uint8_t
+INITIALISATION
+    board_0_O1 := IO_OFF ;
+        board_0_O2 := IO_OFF ;
+
+        first_time := TRUE ;
+    SM_SimBCMonitor_state := INIT ;
+    cycle_timer := 0 ;
+    cycle_state := 1 ;
+
+    var_read_1 := 0 ;
+    var_P_1 := 0 ;
+
+        var_patternBit_1 := TRUE ;
+    var_patternBit_2 := FALSE ;
+
+    valid_pred_5 := FALSE ;
+    valid_pred_6 := FALSE ;
+
+    // Model inputs
+    i_MissionStart := IO_OFF ;
+    i_CommsLink := IO_OFF ;
+    i_HighBattery := IO_OFF ;
+
+    // Model outputs
+    o_Proceed := IO_OFF
+
+LOCAL_OPERATIONS
+
+    execute_model_cycle =
+    BEGIN
+        // Translation variable
+        first_time :: BOOL ||
+        SM_SimBCMonitor_state :: uint8_t ||
+        cycle_timer :: uint32_t ||
+        var_patternBit_1 :: BOOL ||
+        var_patternBit_2 :: BOOL ||
+
+        // Cycle state
+        cycle_state :: uint8_t ||
+
+        // Model variables
+        var_P_1 :: uint32_t ||
+
+        // Model outputs
+        o_Proceed :: uint8_t
+
+    END ;
+
+    elapsed <-- since ( timer ) =
+    PRE timer : uint32_t & elapsed : uint32_t
+    THEN
+        elapsed :: uint32_t
+    END ;
+
+    // Logical and (&)
+    result <-- land ( pp , qq ) =
+    PRE pp : BOOL & qq : BOOL & result : BOOL
+    THEN
+        result :: BOOL
+    END ;
+
+    // Logical or (or)
+    result <-- lor ( pp , qq ) =
+    PRE pp : BOOL & qq : BOOL & result : BOOL
+    THEN
+        result :: BOOL
+    END ;
+
+    // Logical not (not)
+    result <-- lnot ( pp ) =
+    PRE pp : BOOL & result : BOOL
+    THEN
+        result :: BOOL
+    END ;
+
+    read_model_inputs =
+    PRE cycle_state = st_READ_INPUTS
+    THEN
+        cycle_state  :: uint8_t ||
+
+        i_MissionStart  :: uint8_t ||
+        i_CommsLink     :: uint8_t ||
+        i_HighBattery   :: uint8_t
+    END ;
+
+    write_model_outputs =
+    PRE cycle_state = st_WRITE_OUTPUTS
+    THEN
+        cycle_state  :: uint8_t ||
+
+        board_0_O1      :: uint8_t ||
+        board_0_O2      :: uint8_t
+    END ;
+
+    SM_SimBCMonitor =
+    PRE cycle_state = st_STATE_MACHINE_CYCLE
+    THEN
+        cycle_state  :: uint8_t ||
+        SM_SimBCMonitor_state :: uint32_t ||
+        var_patternBit_1 :: BOOL ||
+        var_patternBit_2 :: BOOL ||
+
+        // Model variables
+        var_P_1    :: uint32_t ||
+        var_read_1 :: uint32_t ||
+
+        // Model output
+        o_Proceed :: uint8_t
+    END ;
+
+    valid <-- validBitPattern ( pp , rr , cc ) =
+    PRE valid : BOOL & pp : BOOL & rr : uint32_t & cc : uint8_t
+    THEN
+         valid :: BOOL ||
+         var_patternBit_1 :: BOOL ||
+         var_patternBit_2 :: BOOL
+    END
+
+OPERATIONS
+    user_logic =
+    BEGIN
+        IF first_time = TRUE THEN
+           cycle_timer <-- get_ms_tick ; //update cycle timer 
+           execute_model_cycle ;
+           cycle_state := st_READ_INPUTS ;
+           first_time := FALSE
+
+        ELSE
+            VAR time_elapsed , cycle_duration IN
+
+                time_elapsed : ( time_elapsed : uint32_t ) ;
+                cycle_duration : ( cycle_duration : uint32_t ) ;
+
+                time_elapsed <-- since ( cycle_timer ) ;
+                cycle_duration := mul_uint32 ( SimBCMonitor_cycle_def , cycle_unit ) ;
+
+                IF ( cycle_duration <= time_elapsed ) THEN
+
+                    cycle_timer <-- get_ms_tick ; //update cycle timer
+                    execute_model_cycle ;
+                    cycle_state := st_READ_INPUTS
+
+                END
+            END
+        END
+    END ;
+
+    execute_model_cycle =
+    BEGIN
+        read_model_inputs ;
+        SM_SimBCMonitor ; //Main state machine    
+        write_model_outputs
+    END ;
+
+    elapsed <-- since ( timer ) = //Operation for counting elapsed time since the last reset of "timer" 
+    BEGIN
+        elapsed : ( elapsed : uint32_t ) ;
+        VAR local_time IN
+            local_time : ( local_time : uint32_t ) ;
+
+            local_time <-- get_ms_tick ;
+            elapsed := sub_uint32 ( local_time , timer )
+        END
+    END ;
+
+    // Logical and (&)
+    result <-- land ( pp , qq ) =
+    BEGIN
+        result := FALSE ;
+        IF ( pp = TRUE ) THEN
+            IF ( qq = TRUE ) THEN
+                result := TRUE
+            END
+        END
+    END ;
+
+    // Logical or (or)
+    result <-- lor ( pp , qq ) =
+    BEGIN
+        result := TRUE ;
+        IF ( pp = FALSE ) THEN
+            IF ( qq = FALSE ) THEN
+                result := FALSE
+            END
+        END
+    END ;
+
+    // Logical not (not)
+    result <-- lnot ( pp ) =
+    BEGIN
+        result := FALSE ;
+        IF ( pp = FALSE ) THEN
+            result := TRUE
+        END
+    END ;
+
+    ////////////////////////////////////////
+    // Translation model specific operations
+    ////////////////////////////////////////
+
+
+    read_model_inputs =
+    BEGIN
+        i_MissionStart <-- get_board_0_I1 ;
+        i_CommsLink <-- get_board_0_I2 ;
+        i_HighBattery <-- get_board_0_I3 ;
+
+        cycle_state := st_STATE_MACHINE_CYCLE
+    END ;
+
+    write_model_outputs =
+    BEGIN
+        board_0_O1 := o_Proceed ;
+        board_0_O2 := IO_OFF ;
+
+        cycle_state := st_TIME
+    END ;
+
+    SM_SimBCMonitor =
+    BEGIN
+        IF ( SM_SimBCMonitor_state = INIT ) THEN
+           //Initial
+            SM_SimBCMonitor_state := EXEC_1
+
+        ELSIF ( SM_SimBCMonitor_state = EXEC_1 ) THEN
+            //Idle
+            IF ( i_MissionStart = IO_OFF ) THEN
+                SM_SimBCMonitor_state := EXEC_1
+            END ;
+
+            IF ( i_MissionStart = IO_ON ) THEN
+                var_P_1 <-- get_ms_tick ;
+                SM_SimBCMonitor_state := EXEC_2
+            END
+
+        ELSIF ( SM_SimBCMonitor_state = EXEC_2 ) THEN
+                //MonitoringMission
+               var_read_1 := 0 ; //entry action
+
+               VAR guard_1 , guard_2 , guard_3 , guard_4 ,
+                   guard_5 , guard_6 , guard_7 , guard_8 ,
+                   guard_9 , guard_10 , guard_11 ,
+                   local_since ,
+                   predicate_1 , predicate_2 , predicate_3 ,
+                   predicate_4 , predicate_5 , predicate_6 ,
+                   predicate_7 , predicate_8 , predicate_9 ,
+                   predicate_10 , predicate_11 , predicate_12
+
+               IN guard_1 : ( guard_1 : BOOL ) ;
+                  guard_2 : ( guard_2 : BOOL ) ;
+                  guard_3 : ( guard_3 : BOOL ) ;
+                  guard_4 : ( guard_4 : BOOL ) ;
+                  guard_5 : ( guard_5 : BOOL ) ;
+                  guard_6 : ( guard_6 : BOOL ) ;
+                  guard_7 : ( guard_7 : BOOL ) ;
+                  guard_8 : ( guard_8 : BOOL ) ;
+                  guard_9 : ( guard_9 : BOOL ) ;
+                  guard_10 : ( guard_10 : BOOL ) ;
+                  guard_11 : ( guard_11 : BOOL ) ;
+
+                  local_since : ( local_since : uint32_t ) ;
+
+                  predicate_1 : ( predicate_1 : BOOL ) ;
+                  predicate_2 : ( predicate_2 : BOOL ) ;
+                  predicate_3 : ( predicate_3 : BOOL ) ;
+                  predicate_4 : ( predicate_4 : BOOL ) ;
+                  predicate_5 : ( predicate_5 : BOOL ) ;
+                  predicate_6 : ( predicate_6 : BOOL ) ;
+                  predicate_7 : ( predicate_7 : BOOL ) ;
+                  predicate_8 : ( predicate_8 : BOOL ) ;
+                  predicate_9 : ( predicate_9 : BOOL ) ;
+                  predicate_10 : ( predicate_10 : BOOL ) ;
+                  predicate_11 : ( predicate_11 : BOOL ) ;
+                  predicate_12 : ( predicate_12 : BOOL ) ;
+
+                  predicate_1 := bool ( i_CommsLink = IO_ON ) ;
+                  predicate_2 := bool ( i_HighBattery = IO_ON ) ;
+                  guard_1 <-- land ( predicate_1 , predicate_2 ) ; //[$CommsLink?currbit /\ $HighBattery?highBattery]
+
+                  predicate_3 := bool ( i_CommsLink = IO_OFF ) ;
+                  predicate_4 := bool ( i_HighBattery = IO_OFF ) ;
+                  guard_2 <-- land ( predicate_3 , predicate_4 ) ; //[not($CommsLink?currbit /\ $HighBattery?highBattery)] 
+
+                  local_since <-- since ( var_P_1 ) ;
+                  guard_3 := bool ( local_since <= TIMEOUT ) ; //[since(P) <= TIMEOUT]
+                  guard_4 := bool ( TIMEOUT < local_since ) ; // [since(P) > TIMEOUT]
+
+                  predicate_5 <-- validBitPattern ( PATTERN , var_read_1 , i_CommsLink ) ;
+                  predicate_6 <-- lnot ( predicate_5 ) ;
+                  guard_5 <-- land ( predicate_6 , predicate_2 ) ; //[not validBitPattern() /\ highBattery]
+                  guard_6 <-- land ( predicate_5 , predicate_2 ) ; //[validBitPattern() /\ highBattery]
+
+                  predicate_7 := bool ( i_CommsLink = IO_OFF ) ;
+                  predicate_8 := bool ( i_CommsLink = IO_OFF ) ;
+                  predicate_9 <-- land ( predicate_7 , predicate_8 ) ;
+                  predicate_10 := bool ( TIMEOUT < local_since ) ;
+                  predicate_11 := bool ( i_HighBattery = IO_OFF ) ;
+                  predicate_12 <-- land ( predicate_10 , predicate_11 ) ;
+                  guard_7 <-- land ( predicate_9 , predicate_12 ) ;
+
+                  guard_8 := predicate_4 ;
+
+                  guard_9 := guard_1 ;
+
+                  IF ( guard_2 = TRUE ) THEN //[not($CommsLink?currbit /\ $HighBattery?highBattery)]
+                        //Junction 1
+                        IF ( guard_3 = TRUE ) THEN //[since(P) <= TIMEOUT]
+                            o_Proceed := IO_ON ;
+                            SM_SimBCMonitor_state := EXEC_2
+
+                        ELSIF ( guard_4 = TRUE ) THEN //[TIMEOUT < since(P)]
+                               o_Proceed := IO_OFF ;
+                               SM_SimBCMonitor_state := EXEC_2
+                        END
+
+                  ELSIF ( guard_1 = TRUE ) THEN //[$CommsLink?currbit /\ $HighBattery?highBattery]
+                     // Junction 2
+                      IF ( guard_6 = TRUE ) THEN //[validBitPattern() /\ highBattery]
+                         //Junction 1
+                          IF ( guard_3 = TRUE ) THEN //[since(P) <= TIMEOUT]
+                              o_Proceed := IO_ON ;
+                              SM_SimBCMonitor_state := EXEC_2
+
+                          ELSIF ( guard_4 = TRUE ) THEN //[TIMEOUT < since(P)]
+                              o_Proceed := IO_OFF ;
+                              SM_SimBCMonitor_state := EXEC_2
+                          END
+                      END
+                        //Junction 2
+                  ELSIF ( guard_1 = TRUE ) THEN //[$CommsLink?currbit /\ $HighBattery?highBattery]
+                          //ProcessBitPattern
+                          IF ( guard_5 = TRUE ) THEN //[not validBitPattern() /\ highBattery]
+                             IF ( guard_7 = TRUE ) THEN //[not ($CommsLink?currbit/\$HighBattery?highBattery)
+                                                     // /\ since(P)>TIMEOUT/\highBattery]
+                                 o_Proceed := IO_OFF ;
+                                 SM_SimBCMonitor_state := EXEC_2
+                             END
+                          END ;
+
+                          IF ( guard_8 = TRUE ) THEN
+                              SM_SimBCMonitor_state := EXEC_3
+                          END
+
+
+                  ELSIF ( guard_1 = TRUE ) THEN //[$CommsLink?currbit /\ $HighBattery?highBattery]
+                        IF ( guard_8 = TRUE ) THEN
+                           SM_SimBCMonitor_state := EXEC_3
+                        END
+                  END
+               END
+
+
+        ELSIF ( SM_SimBCMonitor_state = EXEC_3 ) THEN
+            //AbortMission
+            o_Proceed := IO_OFF
+
+        ELSE
+           skip
+        END ;
+        cycle_state := st_WRITE_OUTPUTS
+    END ;
+
+    valid <-- validBitPattern ( pp , rr , cc ) = //Sequecen bit pattern is simplified to just contain two bits
+    BEGIN
+        valid : ( valid : BOOL ) ;
+        IF ( cc = IO_ON ) THEN
+           var_patternBit_1 := FALSE ;
+           var_patternBit_2 := pp ;
+           valid := TRUE
+        ELSE
+           var_patternBit_1 := TRUE ;
+           var_patternBit_2 := FALSE ;
+           valid := FALSE
+        END
+    END ;
+
+    po <-- get_board_0_O1 =
+        BEGIN
+                po := board_0_O1
+        END ;
+
+        po <-- get_board_0_O2 =
+        BEGIN
+                po := board_0_O2
+        END
+END

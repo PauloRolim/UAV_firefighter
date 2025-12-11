@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Machine xmlns='https://www.atelierb.eu/Formats/bxml' version='1.0' name='g_types_i' type='implementation' position='true' semantic='true' b0check='true'>
+<Abstraction>g_types</Abstraction>
+<Imports>
+<Attr>
+<Pos l='6' c='1' s='7'/>
+</Attr>
+<Referenced_Machine>
+<Attr>
+<Pos l='7' c='5' s='16'/>
+</Attr>
+<Name>g_standard_types</Name>
+</Referenced_Machine>
+</Imports>
+<Values>
+<Attr>
+<Pos l='8' c='1' s='6'/>
+</Attr>
+<Valuation ident='STRUE' typref='1'>
+<Attr>
+<Pos l='9' c='5' s='5'/>
+<B0Type>
+<Id value='INTEGER'/>
+</B0Type>
+</Attr>
+<Integer_Literal value='2' typref='1'>
+<Attr>
+<Pos l='9' c='13' s='1'/>
+</Attr>
+</Integer_Literal>
+</Valuation>
+<Valuation ident='SFALSE' typref='1'>
+<Attr>
+<Pos l='10' c='5' s='6'/>
+<B0Type>
+<Id value='INTEGER'/>
+</B0Type>
+</Attr>
+<Integer_Literal value='1' typref='1'>
+<Attr>
+<Pos l='10' c='14' s='1'/>
+</Attr>
+</Integer_Literal>
+</Valuation>
+<Valuation ident='MAX_UINT32' typref='1'>
+<Attr>
+<Pos l='12' c='5' s='10'/>
+<B0Type>
+<Id value='INTEGER'/>
+</B0Type>
+</Attr>
+<Integer_Literal value='4294967295' typref='1'>
+<Attr>
+<Pos l='12' c='18' s='10'/>
+</Attr>
+</Integer_Literal>
+</Valuation>
+<Valuation ident='MAX_UINT16' typref='1'>
+<Attr>
+<Pos l='13' c='5' s='10'/>
+<B0Type>
+<Id value='INTEGER'/>
+</B0Type>
+</Attr>
+<Integer_Literal value='65535' typref='1'>
+<Attr>
+<Pos l='13' c='18' s='5'/>
+</Attr>
+</Integer_Literal>
+</Valuation>
+<Valuation ident='MAX_UINT8' typref='1'>
+<Attr>
+<Pos l='14' c='5' s='9'/>
+<B0Type>
+<Id value='INTEGER'/>
+</B0Type>
+</Attr>
+<Integer_Literal value='255' typref='1'>
+<Attr>
+<Pos l='14' c='17' s='3'/>
+</Attr>
+</Integer_Literal>
+</Valuation>
+</Values>
+<Initialisation>
+<Skip/>
+</Initialisation>
+<TypeInfos>
+<Type id='0'>
+<Id value='BOOL'/>
+</Type>
+<Type id='1'>
+<Id value='INTEGER'/>
+</Type>
+<Type id='2'>
+<Unary_Exp op='POW'>
+<Id value='INTEGER'/>
+</Unary_Exp>
+</Type>
+<Type id='3'>
+<Unary_Exp op='POW'>
+<Unary_Exp op='POW'>
+<Id value='INTEGER'/>
+</Unary_Exp>
+</Unary_Exp>
+</Type>
+</TypeInfos>
+
+</Machine>

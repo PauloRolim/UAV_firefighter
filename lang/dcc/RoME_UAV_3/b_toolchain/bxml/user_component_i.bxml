@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Machine xmlns='https://www.atelierb.eu/Formats/bxml' version='1.0' name='user_component_i' type='implementation' position='true' semantic='true' b0check='true'>
+<Abstraction>user_component</Abstraction>
+<Imports>
+<Attr>
+<Pos l='9' c='1' s='7'/>
+</Attr>
+<Referenced_Machine>
+<Attr>
+<Pos l='10' c='5' s='8'/>
+</Attr>
+<Name>user_ctx</Name>
+</Referenced_Machine>
+<Referenced_Machine>
+<Attr>
+<Pos l='11' c='5' s='6'/>
+</Attr>
+<Name>inputs</Name>
+</Referenced_Machine>
+<Referenced_Machine>
+<Attr>
+<Pos l='12' c='5' s='5'/>
+</Attr>
+<Name>logic</Name>
+</Referenced_Machine>
+<Referenced_Machine>
+<Attr>
+<Pos l='13' c='5' s='7'/>
+</Attr>
+<Name>outputs</Name>
+</Referenced_Machine>
+</Imports>
+<Sees>
+<Attr>
+<Pos l='7' c='1' s='4'/>
+</Attr>
+<Referenced_Machine>
+<Attr>
+<Pos l='8' c='5' s='7'/>
+</Attr>
+<Name>g_types</Name>
+</Referenced_Machine>
+</Sees>
+<Concrete_Variables>
+<Attr>
+<Pos l='16' c='1' s='18'/>
+</Attr>
+<Id value='divergence_test_var' typref='1'>
+<Attr>
+<Pos l='17' c='5' s='19'/>
+<B0Type>
+<Id value='INTEGER'/>
+</B0Type>
+</Attr>
+</Id>
+</Concrete_Variables>
+<Invariant>
+<Attr>
+<Pos l='18' c='1' s='9'/>
+</Attr>
+<Exp_Comparison op=':'>
+<Attr>
+<Pos l='19' c='25' s='1'/>
+</Attr>
+<Id value='divergence_test_var' typref='1'>
+<Attr>
+<Pos l='19' c='5' s='19'/>
+<B0Type>
+<Id value='INTEGER'/>
+</B0Type>
+</Attr>
+</Id>
+<Id value='uint8_t' typref='2'>
+<Attr>
+<Pos l='19' c='27' s='7'/>
+<B0Type>
+<Binary_Exp op='..'>
+<Integer_Literal value='0'/>
+<Integer_Literal value='255'/>
+</Binary_Exp>
+</B0Type>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Invariant>
+<Initialisation>
+<Attr>
+<Pos l='20' c='1' s='14'/>
+</Attr>
+<Assignement_Sub>
+<Attr>
+<Pos l='21' c='25' s='2'/>
+</Attr>
+<Variables>
+<Id value='divergence_test_var' typref='1'>
+<Attr>
+<Pos l='21' c='5' s='19'/>
+<B0Type>
+<Id value='INTEGER'/>
+</B0Type>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Integer_Literal value='0' typref='1'>
+<Attr>
+<Pos l='21' c='28' s='1'/>
+</Attr>
+</Integer_Literal>
+</Values>
+</Assignement_Sub>
+</Initialisation>
+<Operations>
+<Operation name='user_app'>
+<Attr>
+<Pos l='23' c='5' s='8' endLine='29'/>
+</Attr>
+<Body>
+<Nary_Sub op=';'>
+<Assignement_Sub>
+<Attr>
+<Pos l='25' c='29' s='2'/>
+</Attr>
+<Variables>
+<Id value='divergence_test_var' typref='1'>
+<Attr>
+<Pos l='25' c='9' s='19'/>
+<B0Type>
+<Id value='INTEGER'/>
+</B0Type>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Integer_Literal value='0' typref='1'>
+<Attr>
+<Pos l='25' c='32' s='1'/>
+</Attr>
+</Integer_Literal>
+</Values>
+</Assignement_Sub>
+<Operation_Call>
+<Attr>
+<Pos l='26' c='9' s='11'/>
+</Attr>
+<Name>
+<Id value='read_inputs'>
+<Attr>
+<Pos l='26' c='9' s='11'/>
+</Attr>
+</Id>
+</Name>
+</Operation_Call>
+<Operation_Call>
+<Attr>
+<Pos l='27' c='9' s='10'/>
+</Attr>
+<Name>
+<Id value='user_logic'>
+<Attr>
+<Pos l='27' c='9' s='10'/>
+</Attr>
+</Id>
+</Name>
+</Operation_Call>
+<Operation_Call>
+<Attr>
+<Pos l='28' c='9' s='13'/>
+</Attr>
+<Name>
+<Id value='write_outputs'>
+<Attr>
+<Pos l='28' c='9' s='13'/>
+</Attr>
+</Id>
+</Name>
+</Operation_Call>
+</Nary_Sub>
+</Body>
+</Operation>
+<Operation name='user_consistency_error_detection_test'>
+<Attr>
+<Pos l='31' c='5' s='37' endLine='34'/>
+</Attr>
+<Input_Parameters>
+<Id value='divergence_value' typref='1'>
+<Attr>
+<Pos l='31' c='43' s='16'/>
+<B0Type>
+<Id value='INTEGER'/>
+</B0Type>
+</Attr>
+</Id>
+</Input_Parameters>
+<Body>
+<Assignement_Sub>
+<Attr>
+<Pos l='33' c='29' s='2'/>
+</Attr>
+<Variables>
+<Id value='divergence_test_var' typref='1'>
+<Attr>
+<Pos l='33' c='9' s='19'/>
+<B0Type>
+<Id value='INTEGER'/>
+</B0Type>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value='divergence_value' typref='1'>
+<Attr>
+<Pos l='33' c='32' s='16'/>
+<B0Type>
+<Id value='INTEGER'/>
+</B0Type>
+</Attr>
+</Id>
+</Values>
+</Assignement_Sub>
+</Body>
+</Operation>
+</Operations>
+<TypeInfos>
+<Type id='0'>
+<Id value='BOOL'/>
+</Type>
+<Type id='1'>
+<Id value='INTEGER'/>
+</Type>
+<Type id='2'>
+<Unary_Exp op='POW'>
+<Id value='INTEGER'/>
+</Unary_Exp>
+</Type>
+<Type id='3'>
+<Unary_Exp op='POW'>
+<Unary_Exp op='POW'>
+<Id value='INTEGER'/>
+</Unary_Exp>
+</Unary_Exp>
+</Type>
+</TypeInfos>
+
+</Machine>

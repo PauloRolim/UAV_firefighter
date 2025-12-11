@@ -1,0 +1,1280 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Proof_Obligations xmlns="https://www.atelierb.eu/Formats/pog" version="1.0">
+    <Define name="B definitions" hash="7128875304803749033">
+        <Exp_Comparison op="=">
+            <Id value="NAT" typref="0"/>
+            <Binary_Exp op=".." typref="0">
+                <Integer_Literal value="0" typref="1"/>
+                <Id value="MAXINT" typref="1"/>
+            </Binary_Exp>
+        </Exp_Comparison>
+        <Exp_Comparison op="=">
+            <Id value="INT" typref="0"/>
+            <Binary_Exp op=".." typref="0">
+                <Id value="MININT" typref="1"/>
+                <Id value="MAXINT" typref="1"/>
+            </Binary_Exp>
+        </Exp_Comparison>
+    </Define>
+    <Define name="ctx" hash="3142415190913999114">
+        <Exp_Comparison op="=">
+            <Id value="uint32_t" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_types.bxml:1:3:1:1:1"/>
+            <Binary_Exp op=".." typref="0">
+                <Integer_Literal value="0" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_types.bxml:1:3:1:1:2:1"/>
+                <Integer_Literal value="4294967295" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_types.bxml:1:3:1:1:2:2"/>
+            </Binary_Exp>
+        </Exp_Comparison>
+        <Exp_Comparison op="=">
+            <Id value="uint16_t" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_types.bxml:1:3:1:2:1"/>
+            <Binary_Exp op=".." typref="0">
+                <Integer_Literal value="0" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_types.bxml:1:3:1:2:2:1"/>
+                <Integer_Literal value="65535" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_types.bxml:1:3:1:2:2:2"/>
+            </Binary_Exp>
+        </Exp_Comparison>
+        <Exp_Comparison op="=">
+            <Id value="uint8_t" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_types.bxml:1:3:1:3:1"/>
+            <Binary_Exp op=".." typref="0">
+                <Integer_Literal value="0" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_types.bxml:1:3:1:3:2:1"/>
+                <Integer_Literal value="255" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_types.bxml:1:3:1:3:2:2"/>
+            </Binary_Exp>
+        </Exp_Comparison>
+        <Exp_Comparison op=":">
+            <Id value="STRUE" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_types.bxml:1:3:1:4:1"/>
+            <Id value="uint8_t" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_types.bxml:1:3:1:4:2"/>
+        </Exp_Comparison>
+        <Exp_Comparison op=":">
+            <Id value="SFALSE" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_types.bxml:1:3:1:5:1"/>
+            <Id value="uint8_t" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_types.bxml:1:3:1:5:2"/>
+        </Exp_Comparison>
+        <Exp_Comparison op=":">
+            <Id value="MAX_UINT32" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_types.bxml:1:3:1:6:1"/>
+            <Id value="uint32_t" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_types.bxml:1:3:1:6:2"/>
+        </Exp_Comparison>
+        <Exp_Comparison op=":">
+            <Id value="MAX_UINT16" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_types.bxml:1:3:1:7:1"/>
+            <Id value="uint16_t" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_types.bxml:1:3:1:7:2"/>
+        </Exp_Comparison>
+        <Exp_Comparison op=":">
+            <Id value="MAX_UINT8" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_types.bxml:1:3:1:8:1"/>
+            <Id value="uint8_t" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_types.bxml:1:3:1:8:2"/>
+        </Exp_Comparison>
+        <Exp_Comparison op=":">
+            <Id value="STRUE" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_types.bxml:1:3:1:9:1"/>
+            <Binary_Exp op=".." typref="0">
+                <Integer_Literal value="0" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_types.bxml:1:3:1:9:2:1"/>
+                <Id value="MAX_UINT8" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_types.bxml:1:3:1:9:2:2"/>
+            </Binary_Exp>
+        </Exp_Comparison>
+        <Exp_Comparison op=":">
+            <Id value="SFALSE" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_types.bxml:1:3:1:10:1"/>
+            <Binary_Exp op=".." typref="0">
+                <Integer_Literal value="0" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_types.bxml:1:3:1:10:2:1"/>
+                <Id value="MAX_UINT8" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_types.bxml:1:3:1:10:2:2"/>
+            </Binary_Exp>
+        </Exp_Comparison>
+        <Unary_Pred op="not">
+            <Exp_Comparison op="=">
+                <Id value="STRUE" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_types.bxml:1:3:1:11:1"/>
+                <Id value="SFALSE" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_types.bxml:1:3:1:11:2"/>
+            </Exp_Comparison>
+        </Unary_Pred>
+        <Exp_Comparison op="=">
+            <Id value="SBOOL" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_types.bxml:1:3:1:12:1"/>
+            <Nary_Exp op="{" typref="0">
+                <Id value="STRUE" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_types.bxml:1:3:1:12:2:1"/>
+                <Id value="SFALSE" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_types.bxml:1:3:1:12:2:2"/>
+            </Nary_Exp>
+        </Exp_Comparison>
+        <Exp_Comparison op="&lt;=i">
+            <Id value="STRUE" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_types.bxml:1:3:1:13:1"/>
+            <Integer_Literal value="2" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_types.bxml:1:3:1:13:2"/>
+        </Exp_Comparison>
+        <Exp_Comparison op="&lt;=i">
+            <Id value="SFALSE" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_types.bxml:1:3:1:14:1"/>
+            <Integer_Literal value="2" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_types.bxml:1:3:1:14:2"/>
+        </Exp_Comparison>
+        <Exp_Comparison op="=">
+            <Id value="MAX_UINT32" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_types.bxml:1:3:1:15:1"/>
+            <Integer_Literal value="4294967295" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_types.bxml:1:3:1:15:2"/>
+        </Exp_Comparison>
+        <Exp_Comparison op="=">
+            <Id value="MAX_UINT16" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_types.bxml:1:3:1:16:1"/>
+            <Integer_Literal value="65535" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_types.bxml:1:3:1:16:2"/>
+        </Exp_Comparison>
+        <Exp_Comparison op="=">
+            <Id value="MAX_UINT8" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_types.bxml:1:3:1:17:1"/>
+            <Integer_Literal value="255" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_types.bxml:1:3:1:17:2"/>
+        </Exp_Comparison>
+        <Exp_Comparison op="=">
+            <Id value="Convert_Bool" typref="2" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_types.bxml:1:3:1:18:1"/>
+            <Nary_Exp op="{" typref="2">
+                <Binary_Exp op="|-&gt;" typref="3">
+                    <Boolean_Literal value="TRUE" typref="4" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_types.bxml:1:3:1:18:2:1:1"/>
+                    <Id value="STRUE" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_types.bxml:1:3:1:18:2:1:2"/>
+                </Binary_Exp>
+                <Binary_Exp op="|-&gt;" typref="3">
+                    <Boolean_Literal value="FALSE" typref="4" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_types.bxml:1:3:1:18:2:2:1"/>
+                    <Id value="SFALSE" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_types.bxml:1:3:1:18:2:2:2"/>
+                </Binary_Exp>
+            </Nary_Exp>
+        </Exp_Comparison>
+        <Exp_Comparison op=":">
+            <Id value="MAX_NB_MODULES" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/lchip_configuration.bxml:1:3:1:1:1"/>
+            <Id value="uint8_t" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/lchip_configuration.bxml:1:3:1:1:2"/>
+        </Exp_Comparison>
+        <Exp_Comparison op=":">
+            <Id value="MAX_NB_INPUTS" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/lchip_configuration.bxml:1:3:1:2:1"/>
+            <Id value="uint8_t" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/lchip_configuration.bxml:1:3:1:2:2"/>
+        </Exp_Comparison>
+        <Exp_Comparison op=":">
+            <Id value="MAX_NB_OUTPUTS" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/lchip_configuration.bxml:1:3:1:3:1"/>
+            <Id value="uint8_t" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/lchip_configuration.bxml:1:3:1:3:2"/>
+        </Exp_Comparison>
+        <Exp_Comparison op="=">
+            <Id value="MAX_NB_MODULES" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/lchip_configuration.bxml:1:3:1:4:1"/>
+            <Integer_Literal value="1" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/lchip_configuration.bxml:1:3:1:4:2"/>
+        </Exp_Comparison>
+        <Exp_Comparison op="=">
+            <Id value="MAX_NB_INPUTS" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/lchip_configuration.bxml:1:3:1:5:1"/>
+            <Integer_Literal value="3" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/lchip_configuration.bxml:1:3:1:5:2"/>
+        </Exp_Comparison>
+        <Exp_Comparison op="=">
+            <Id value="MAX_NB_OUTPUTS" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/lchip_configuration.bxml:1:3:1:6:1"/>
+            <Integer_Literal value="2" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/lchip_configuration.bxml:1:3:1:6:2"/>
+        </Exp_Comparison>
+        <Exp_Comparison op=":">
+            <Id value="bitwise_sll_uint32" typref="5" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:1:1"/>
+            <Binary_Exp op="--&gt;" typref="6">
+                <Binary_Exp op="*s" typref="7">
+                    <Id value="uint32_t" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:1:2:1:1"/>
+                    <Id value="uint8_t" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:1:2:1:2"/>
+                </Binary_Exp>
+                <Id value="uint32_t" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:1:2:2"/>
+            </Binary_Exp>
+        </Exp_Comparison>
+        <Exp_Comparison op=":">
+            <Id value="bitwise_srl_uint32" typref="5" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:2:1"/>
+            <Binary_Exp op="--&gt;" typref="6">
+                <Binary_Exp op="*s" typref="7">
+                    <Id value="uint32_t" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:2:2:1:1"/>
+                    <Id value="uint8_t" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:2:2:1:2"/>
+                </Binary_Exp>
+                <Id value="uint32_t" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:2:2:2"/>
+            </Binary_Exp>
+        </Exp_Comparison>
+        <Exp_Comparison op=":">
+            <Id value="bitwise_not_uint32" typref="7" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:3:1"/>
+            <Binary_Exp op="--&gt;" typref="8">
+                <Id value="uint32_t" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:3:2:1"/>
+                <Id value="uint32_t" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:3:2:2"/>
+            </Binary_Exp>
+        </Exp_Comparison>
+        <Exp_Comparison op=":">
+            <Id value="bitwise_and_uint32" typref="5" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:4:1"/>
+            <Binary_Exp op="--&gt;" typref="6">
+                <Binary_Exp op="*s" typref="7">
+                    <Id value="uint32_t" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:4:2:1:1"/>
+                    <Id value="uint32_t" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:4:2:1:2"/>
+                </Binary_Exp>
+                <Id value="uint32_t" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:4:2:2"/>
+            </Binary_Exp>
+        </Exp_Comparison>
+        <Exp_Comparison op=":">
+            <Id value="bitwise_xor_uint32" typref="5" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:5:1"/>
+            <Binary_Exp op="--&gt;" typref="6">
+                <Binary_Exp op="*s" typref="7">
+                    <Id value="uint32_t" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:5:2:1:1"/>
+                    <Id value="uint32_t" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:5:2:1:2"/>
+                </Binary_Exp>
+                <Id value="uint32_t" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:5:2:2"/>
+            </Binary_Exp>
+        </Exp_Comparison>
+        <Exp_Comparison op=":">
+            <Id value="bitwise_or_uint32" typref="5" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:6:1"/>
+            <Binary_Exp op="--&gt;" typref="6">
+                <Binary_Exp op="*s" typref="7">
+                    <Id value="uint32_t" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:6:2:1:1"/>
+                    <Id value="uint32_t" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:6:2:1:2"/>
+                </Binary_Exp>
+                <Id value="uint32_t" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:6:2:2"/>
+            </Binary_Exp>
+        </Exp_Comparison>
+        <Exp_Comparison op=":">
+            <Id value="bitwise_sll_uint16" typref="5" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:7:1"/>
+            <Binary_Exp op="--&gt;" typref="6">
+                <Binary_Exp op="*s" typref="7">
+                    <Id value="uint16_t" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:7:2:1:1"/>
+                    <Id value="uint8_t" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:7:2:1:2"/>
+                </Binary_Exp>
+                <Id value="uint16_t" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:7:2:2"/>
+            </Binary_Exp>
+        </Exp_Comparison>
+        <Exp_Comparison op=":">
+            <Id value="bitwise_srl_uint16" typref="5" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:8:1"/>
+            <Binary_Exp op="--&gt;" typref="6">
+                <Binary_Exp op="*s" typref="7">
+                    <Id value="uint16_t" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:8:2:1:1"/>
+                    <Id value="uint8_t" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:8:2:1:2"/>
+                </Binary_Exp>
+                <Id value="uint16_t" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:8:2:2"/>
+            </Binary_Exp>
+        </Exp_Comparison>
+        <Exp_Comparison op=":">
+            <Id value="bitwise_not_uint16" typref="7" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:9:1"/>
+            <Binary_Exp op="--&gt;" typref="8">
+                <Id value="uint16_t" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:9:2:1"/>
+                <Id value="uint16_t" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:9:2:2"/>
+            </Binary_Exp>
+        </Exp_Comparison>
+        <Exp_Comparison op=":">
+            <Id value="bitwise_and_uint16" typref="5" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:10:1"/>
+            <Binary_Exp op="--&gt;" typref="6">
+                <Binary_Exp op="*s" typref="7">
+                    <Id value="uint16_t" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:10:2:1:1"/>
+                    <Id value="uint16_t" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:10:2:1:2"/>
+                </Binary_Exp>
+                <Id value="uint16_t" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:10:2:2"/>
+            </Binary_Exp>
+        </Exp_Comparison>
+        <Exp_Comparison op=":">
+            <Id value="bitwise_xor_uint16" typref="5" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:11:1"/>
+            <Binary_Exp op="--&gt;" typref="6">
+                <Binary_Exp op="*s" typref="7">
+                    <Id value="uint16_t" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:11:2:1:1"/>
+                    <Id value="uint16_t" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:11:2:1:2"/>
+                </Binary_Exp>
+                <Id value="uint16_t" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:11:2:2"/>
+            </Binary_Exp>
+        </Exp_Comparison>
+        <Exp_Comparison op=":">
+            <Id value="bitwise_or_uint16" typref="5" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:12:1"/>
+            <Binary_Exp op="--&gt;" typref="6">
+                <Binary_Exp op="*s" typref="7">
+                    <Id value="uint16_t" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:12:2:1:1"/>
+                    <Id value="uint16_t" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:12:2:1:2"/>
+                </Binary_Exp>
+                <Id value="uint16_t" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:12:2:2"/>
+            </Binary_Exp>
+        </Exp_Comparison>
+        <Exp_Comparison op=":">
+            <Id value="bitwise_sll_uint8" typref="5" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:13:1"/>
+            <Binary_Exp op="--&gt;" typref="6">
+                <Binary_Exp op="*s" typref="7">
+                    <Id value="uint8_t" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:13:2:1:1"/>
+                    <Id value="uint8_t" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:13:2:1:2"/>
+                </Binary_Exp>
+                <Id value="uint8_t" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:13:2:2"/>
+            </Binary_Exp>
+        </Exp_Comparison>
+        <Exp_Comparison op=":">
+            <Id value="bitwise_srl_uint8" typref="5" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:14:1"/>
+            <Binary_Exp op="--&gt;" typref="6">
+                <Binary_Exp op="*s" typref="7">
+                    <Id value="uint8_t" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:14:2:1:1"/>
+                    <Id value="uint8_t" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:14:2:1:2"/>
+                </Binary_Exp>
+                <Id value="uint8_t" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:14:2:2"/>
+            </Binary_Exp>
+        </Exp_Comparison>
+        <Exp_Comparison op=":">
+            <Id value="bitwise_not_uint8" typref="7" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:15:1"/>
+            <Binary_Exp op="--&gt;" typref="8">
+                <Id value="uint8_t" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:15:2:1"/>
+                <Id value="uint8_t" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:15:2:2"/>
+            </Binary_Exp>
+        </Exp_Comparison>
+        <Exp_Comparison op=":">
+            <Id value="bitwise_and_uint8" typref="5" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:16:1"/>
+            <Binary_Exp op="--&gt;" typref="6">
+                <Binary_Exp op="*s" typref="7">
+                    <Id value="uint8_t" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:16:2:1:1"/>
+                    <Id value="uint8_t" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:16:2:1:2"/>
+                </Binary_Exp>
+                <Id value="uint8_t" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:16:2:2"/>
+            </Binary_Exp>
+        </Exp_Comparison>
+        <Exp_Comparison op=":">
+            <Id value="bitwise_xor_uint8" typref="5" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:17:1"/>
+            <Binary_Exp op="--&gt;" typref="6">
+                <Binary_Exp op="*s" typref="7">
+                    <Id value="uint8_t" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:17:2:1:1"/>
+                    <Id value="uint8_t" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:17:2:1:2"/>
+                </Binary_Exp>
+                <Id value="uint8_t" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:17:2:2"/>
+            </Binary_Exp>
+        </Exp_Comparison>
+        <Exp_Comparison op=":">
+            <Id value="bitwise_or_uint8" typref="5" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:18:1"/>
+            <Binary_Exp op="--&gt;" typref="6">
+                <Binary_Exp op="*s" typref="7">
+                    <Id value="uint8_t" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:18:2:1:1"/>
+                    <Id value="uint8_t" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:18:2:1:2"/>
+                </Binary_Exp>
+                <Id value="uint8_t" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:18:2:2"/>
+            </Binary_Exp>
+        </Exp_Comparison>
+        <Exp_Comparison op=":">
+            <Id value="add_uint32" typref="5" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:19:1"/>
+            <Binary_Exp op="--&gt;" typref="6">
+                <Binary_Exp op="*s" typref="7">
+                    <Id value="uint32_t" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:19:2:1:1"/>
+                    <Id value="uint32_t" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:19:2:1:2"/>
+                </Binary_Exp>
+                <Id value="uint32_t" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:19:2:2"/>
+            </Binary_Exp>
+        </Exp_Comparison>
+        <Exp_Comparison op=":">
+            <Id value="sub_uint32" typref="5" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:20:1"/>
+            <Binary_Exp op="--&gt;" typref="6">
+                <Binary_Exp op="*s" typref="7">
+                    <Id value="uint32_t" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:20:2:1:1"/>
+                    <Id value="uint32_t" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:20:2:1:2"/>
+                </Binary_Exp>
+                <Id value="uint32_t" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:20:2:2"/>
+            </Binary_Exp>
+        </Exp_Comparison>
+        <Exp_Comparison op=":">
+            <Id value="mul_uint32" typref="5" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:21:1"/>
+            <Binary_Exp op="--&gt;" typref="6">
+                <Binary_Exp op="*s" typref="7">
+                    <Id value="uint32_t" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:21:2:1:1"/>
+                    <Id value="uint32_t" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:21:2:1:2"/>
+                </Binary_Exp>
+                <Id value="uint32_t" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:21:2:2"/>
+            </Binary_Exp>
+        </Exp_Comparison>
+        <Exp_Comparison op=":">
+            <Id value="add_uint16" typref="5" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:22:1"/>
+            <Binary_Exp op="--&gt;" typref="6">
+                <Binary_Exp op="*s" typref="7">
+                    <Id value="uint16_t" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:22:2:1:1"/>
+                    <Id value="uint16_t" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:22:2:1:2"/>
+                </Binary_Exp>
+                <Id value="uint16_t" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:22:2:2"/>
+            </Binary_Exp>
+        </Exp_Comparison>
+        <Exp_Comparison op=":">
+            <Id value="sub_uint16" typref="5" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:23:1"/>
+            <Binary_Exp op="--&gt;" typref="6">
+                <Binary_Exp op="*s" typref="7">
+                    <Id value="uint16_t" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:23:2:1:1"/>
+                    <Id value="uint16_t" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:23:2:1:2"/>
+                </Binary_Exp>
+                <Id value="uint16_t" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:23:2:2"/>
+            </Binary_Exp>
+        </Exp_Comparison>
+        <Exp_Comparison op=":">
+            <Id value="mul_uint16" typref="5" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:24:1"/>
+            <Binary_Exp op="--&gt;" typref="6">
+                <Binary_Exp op="*s" typref="7">
+                    <Id value="uint16_t" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:24:2:1:1"/>
+                    <Id value="uint16_t" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:24:2:1:2"/>
+                </Binary_Exp>
+                <Id value="uint16_t" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:24:2:2"/>
+            </Binary_Exp>
+        </Exp_Comparison>
+        <Exp_Comparison op=":">
+            <Id value="add_uint8" typref="5" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:25:1"/>
+            <Binary_Exp op="--&gt;" typref="6">
+                <Binary_Exp op="*s" typref="7">
+                    <Id value="uint8_t" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:25:2:1:1"/>
+                    <Id value="uint8_t" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:25:2:1:2"/>
+                </Binary_Exp>
+                <Id value="uint8_t" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:25:2:2"/>
+            </Binary_Exp>
+        </Exp_Comparison>
+        <Exp_Comparison op=":">
+            <Id value="sub_uint8" typref="5" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:26:1"/>
+            <Binary_Exp op="--&gt;" typref="6">
+                <Binary_Exp op="*s" typref="7">
+                    <Id value="uint8_t" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:26:2:1:1"/>
+                    <Id value="uint8_t" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:26:2:1:2"/>
+                </Binary_Exp>
+                <Id value="uint8_t" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:26:2:2"/>
+            </Binary_Exp>
+        </Exp_Comparison>
+        <Exp_Comparison op=":">
+            <Id value="mul_uint8" typref="5" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:27:1"/>
+            <Binary_Exp op="--&gt;" typref="6">
+                <Binary_Exp op="*s" typref="7">
+                    <Id value="uint8_t" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:27:2:1:1"/>
+                    <Id value="uint8_t" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:27:2:1:2"/>
+                </Binary_Exp>
+                <Id value="uint8_t" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:27:2:2"/>
+            </Binary_Exp>
+        </Exp_Comparison>
+        <Exp_Comparison op="=">
+            <Id value="bitwise_sll_uint32" typref="5" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:28:1"/>
+            <Quantified_Exp type="%" typref="5">
+                <Variables>
+                    <Id value="x1" typref="1"/>
+                    <Id value="x2" typref="1"/>
+                </Variables>
+                <Pred>
+                    <Nary_Pred op="&amp;">
+                        <Exp_Comparison op=":">
+                            <Id value="x1" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:28:2:2:1:1:1"/>
+                            <Id value="uint32_t" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:28:2:2:1:1:2"/>
+                        </Exp_Comparison>
+                        <Exp_Comparison op=":">
+                            <Id value="x2" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:28:2:2:1:2:1"/>
+                            <Id value="uint8_t" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:28:2:2:1:2:2"/>
+                        </Exp_Comparison>
+                    </Nary_Pred>
+                </Pred>
+                <Body>
+                    <Binary_Exp op="mod" typref="1">
+                        <Binary_Exp op="*i" typref="1">
+                            <Id value="x1" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:28:2:3:1:1:1"/>
+                            <Binary_Exp op="**i" typref="1">
+                                <Integer_Literal value="2" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:28:2:3:1:1:2:1"/>
+                                <Id value="x2" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:28:2:3:1:1:2:2"/>
+                            </Binary_Exp>
+                        </Binary_Exp>
+                        <Binary_Exp op="+i" typref="1">
+                            <Id value="MAX_UINT32" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:28:2:3:1:2:1"/>
+                            <Integer_Literal value="1" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:28:2:3:1:2:2"/>
+                        </Binary_Exp>
+                    </Binary_Exp>
+                </Body>
+            </Quantified_Exp>
+        </Exp_Comparison>
+        <Exp_Comparison op="=">
+            <Id value="bitwise_sll_uint16" typref="5" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:29:1"/>
+            <Quantified_Exp type="%" typref="5">
+                <Variables>
+                    <Id value="x1" typref="1"/>
+                    <Id value="x2" typref="1"/>
+                </Variables>
+                <Pred>
+                    <Nary_Pred op="&amp;">
+                        <Exp_Comparison op=":">
+                            <Id value="x1" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:29:2:2:1:1:1"/>
+                            <Id value="uint16_t" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:29:2:2:1:1:2"/>
+                        </Exp_Comparison>
+                        <Exp_Comparison op=":">
+                            <Id value="x2" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:29:2:2:1:2:1"/>
+                            <Id value="uint8_t" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:29:2:2:1:2:2"/>
+                        </Exp_Comparison>
+                    </Nary_Pred>
+                </Pred>
+                <Body>
+                    <Binary_Exp op="mod" typref="1">
+                        <Binary_Exp op="*i" typref="1">
+                            <Id value="x1" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:29:2:3:1:1:1"/>
+                            <Binary_Exp op="**i" typref="1">
+                                <Integer_Literal value="2" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:29:2:3:1:1:2:1"/>
+                                <Id value="x2" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:29:2:3:1:1:2:2"/>
+                            </Binary_Exp>
+                        </Binary_Exp>
+                        <Binary_Exp op="+i" typref="1">
+                            <Id value="MAX_UINT16" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:29:2:3:1:2:1"/>
+                            <Integer_Literal value="1" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:29:2:3:1:2:2"/>
+                        </Binary_Exp>
+                    </Binary_Exp>
+                </Body>
+            </Quantified_Exp>
+        </Exp_Comparison>
+        <Exp_Comparison op="=">
+            <Id value="bitwise_sll_uint8" typref="5" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:30:1"/>
+            <Quantified_Exp type="%" typref="5">
+                <Variables>
+                    <Id value="x1" typref="1"/>
+                    <Id value="x2" typref="1"/>
+                </Variables>
+                <Pred>
+                    <Nary_Pred op="&amp;">
+                        <Exp_Comparison op=":">
+                            <Id value="x1" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:30:2:2:1:1:1"/>
+                            <Id value="uint8_t" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:30:2:2:1:1:2"/>
+                        </Exp_Comparison>
+                        <Exp_Comparison op=":">
+                            <Id value="x2" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:30:2:2:1:2:1"/>
+                            <Id value="uint8_t" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:30:2:2:1:2:2"/>
+                        </Exp_Comparison>
+                    </Nary_Pred>
+                </Pred>
+                <Body>
+                    <Binary_Exp op="mod" typref="1">
+                        <Binary_Exp op="*i" typref="1">
+                            <Id value="x1" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:30:2:3:1:1:1"/>
+                            <Binary_Exp op="**i" typref="1">
+                                <Integer_Literal value="2" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:30:2:3:1:1:2:1"/>
+                                <Id value="x2" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:30:2:3:1:1:2:2"/>
+                            </Binary_Exp>
+                        </Binary_Exp>
+                        <Binary_Exp op="+i" typref="1">
+                            <Id value="MAX_UINT8" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:30:2:3:1:2:1"/>
+                            <Integer_Literal value="1" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:30:2:3:1:2:2"/>
+                        </Binary_Exp>
+                    </Binary_Exp>
+                </Body>
+            </Quantified_Exp>
+        </Exp_Comparison>
+        <Exp_Comparison op="=">
+            <Id value="bitwise_srl_uint32" typref="5" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:31:1"/>
+            <Quantified_Exp type="%" typref="5">
+                <Variables>
+                    <Id value="x1" typref="1"/>
+                    <Id value="x2" typref="1"/>
+                </Variables>
+                <Pred>
+                    <Nary_Pred op="&amp;">
+                        <Exp_Comparison op=":">
+                            <Id value="x1" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:31:2:2:1:1:1"/>
+                            <Id value="uint32_t" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:31:2:2:1:1:2"/>
+                        </Exp_Comparison>
+                        <Exp_Comparison op=":">
+                            <Id value="x2" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:31:2:2:1:2:1"/>
+                            <Id value="uint8_t" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:31:2:2:1:2:2"/>
+                        </Exp_Comparison>
+                    </Nary_Pred>
+                </Pred>
+                <Body>
+                    <Binary_Exp op="/i" typref="1">
+                        <Id value="x1" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:31:2:3:1:1"/>
+                        <Binary_Exp op="**i" typref="1">
+                            <Integer_Literal value="2" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:31:2:3:1:2:1"/>
+                            <Id value="x2" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:31:2:3:1:2:2"/>
+                        </Binary_Exp>
+                    </Binary_Exp>
+                </Body>
+            </Quantified_Exp>
+        </Exp_Comparison>
+        <Exp_Comparison op="=">
+            <Id value="bitwise_srl_uint16" typref="5" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:32:1"/>
+            <Quantified_Exp type="%" typref="5">
+                <Variables>
+                    <Id value="x1" typref="1"/>
+                    <Id value="x2" typref="1"/>
+                </Variables>
+                <Pred>
+                    <Nary_Pred op="&amp;">
+                        <Exp_Comparison op=":">
+                            <Id value="x1" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:32:2:2:1:1:1"/>
+                            <Id value="uint16_t" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:32:2:2:1:1:2"/>
+                        </Exp_Comparison>
+                        <Exp_Comparison op=":">
+                            <Id value="x2" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:32:2:2:1:2:1"/>
+                            <Id value="uint8_t" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:32:2:2:1:2:2"/>
+                        </Exp_Comparison>
+                    </Nary_Pred>
+                </Pred>
+                <Body>
+                    <Binary_Exp op="/i" typref="1">
+                        <Id value="x1" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:32:2:3:1:1"/>
+                        <Binary_Exp op="**i" typref="1">
+                            <Integer_Literal value="2" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:32:2:3:1:2:1"/>
+                            <Id value="x2" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:32:2:3:1:2:2"/>
+                        </Binary_Exp>
+                    </Binary_Exp>
+                </Body>
+            </Quantified_Exp>
+        </Exp_Comparison>
+        <Exp_Comparison op="=">
+            <Id value="bitwise_srl_uint8" typref="5" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:33:1"/>
+            <Quantified_Exp type="%" typref="5">
+                <Variables>
+                    <Id value="x1" typref="1"/>
+                    <Id value="x2" typref="1"/>
+                </Variables>
+                <Pred>
+                    <Nary_Pred op="&amp;">
+                        <Exp_Comparison op=":">
+                            <Id value="x1" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:33:2:2:1:1:1"/>
+                            <Id value="uint8_t" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:33:2:2:1:1:2"/>
+                        </Exp_Comparison>
+                        <Exp_Comparison op=":">
+                            <Id value="x2" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:33:2:2:1:2:1"/>
+                            <Id value="uint8_t" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:33:2:2:1:2:2"/>
+                        </Exp_Comparison>
+                    </Nary_Pred>
+                </Pred>
+                <Body>
+                    <Binary_Exp op="/i" typref="1">
+                        <Id value="x1" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:33:2:3:1:1"/>
+                        <Binary_Exp op="**i" typref="1">
+                            <Integer_Literal value="2" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:33:2:3:1:2:1"/>
+                            <Id value="x2" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:33:2:3:1:2:2"/>
+                        </Binary_Exp>
+                    </Binary_Exp>
+                </Body>
+            </Quantified_Exp>
+        </Exp_Comparison>
+        <Exp_Comparison op="=">
+            <Id value="add_uint32" typref="5" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:34:1"/>
+            <Quantified_Exp type="%" typref="5">
+                <Variables>
+                    <Id value="x1" typref="1"/>
+                    <Id value="x2" typref="1"/>
+                </Variables>
+                <Pred>
+                    <Nary_Pred op="&amp;">
+                        <Exp_Comparison op=":">
+                            <Id value="x1" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:34:2:2:1:1:1"/>
+                            <Id value="uint32_t" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:34:2:2:1:1:2"/>
+                        </Exp_Comparison>
+                        <Exp_Comparison op=":">
+                            <Id value="x2" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:34:2:2:1:2:1"/>
+                            <Id value="uint32_t" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:34:2:2:1:2:2"/>
+                        </Exp_Comparison>
+                    </Nary_Pred>
+                </Pred>
+                <Body>
+                    <Binary_Exp op="mod" typref="1">
+                        <Binary_Exp op="+i" typref="1">
+                            <Id value="x1" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:34:2:3:1:1:1"/>
+                            <Id value="x2" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:34:2:3:1:1:2"/>
+                        </Binary_Exp>
+                        <Binary_Exp op="+i" typref="1">
+                            <Id value="MAX_UINT32" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:34:2:3:1:2:1"/>
+                            <Integer_Literal value="1" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:34:2:3:1:2:2"/>
+                        </Binary_Exp>
+                    </Binary_Exp>
+                </Body>
+            </Quantified_Exp>
+        </Exp_Comparison>
+        <Exp_Comparison op="=">
+            <Id value="sub_uint32" typref="5" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:35:1"/>
+            <Quantified_Exp type="%" typref="5">
+                <Variables>
+                    <Id value="x1" typref="1"/>
+                    <Id value="x2" typref="1"/>
+                </Variables>
+                <Pred>
+                    <Nary_Pred op="&amp;">
+                        <Exp_Comparison op=":">
+                            <Id value="x1" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:35:2:2:1:1:1"/>
+                            <Id value="uint32_t" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:35:2:2:1:1:2"/>
+                        </Exp_Comparison>
+                        <Exp_Comparison op=":">
+                            <Id value="x2" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:35:2:2:1:2:1"/>
+                            <Id value="uint32_t" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:35:2:2:1:2:2"/>
+                        </Exp_Comparison>
+                    </Nary_Pred>
+                </Pred>
+                <Body>
+                    <Binary_Exp op="mod" typref="1">
+                        <Binary_Exp op="+i" typref="1">
+                            <Binary_Exp op="+i" typref="1">
+                                <Binary_Exp op="-i" typref="1">
+                                    <Id value="x1" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:35:2:3:1:1:1:1:1"/>
+                                    <Id value="x2" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:35:2:3:1:1:1:1:2"/>
+                                </Binary_Exp>
+                                <Id value="MAX_UINT32" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:35:2:3:1:1:1:2"/>
+                            </Binary_Exp>
+                            <Integer_Literal value="1" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:35:2:3:1:1:2"/>
+                        </Binary_Exp>
+                        <Binary_Exp op="+i" typref="1">
+                            <Id value="MAX_UINT32" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:35:2:3:1:2:1"/>
+                            <Integer_Literal value="1" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:35:2:3:1:2:2"/>
+                        </Binary_Exp>
+                    </Binary_Exp>
+                </Body>
+            </Quantified_Exp>
+        </Exp_Comparison>
+        <Exp_Comparison op="=">
+            <Id value="mul_uint32" typref="5" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:36:1"/>
+            <Quantified_Exp type="%" typref="5">
+                <Variables>
+                    <Id value="x1" typref="1"/>
+                    <Id value="x2" typref="1"/>
+                </Variables>
+                <Pred>
+                    <Nary_Pred op="&amp;">
+                        <Exp_Comparison op=":">
+                            <Id value="x1" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:36:2:2:1:1:1"/>
+                            <Id value="uint32_t" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:36:2:2:1:1:2"/>
+                        </Exp_Comparison>
+                        <Exp_Comparison op=":">
+                            <Id value="x2" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:36:2:2:1:2:1"/>
+                            <Id value="uint32_t" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:36:2:2:1:2:2"/>
+                        </Exp_Comparison>
+                    </Nary_Pred>
+                </Pred>
+                <Body>
+                    <Binary_Exp op="mod" typref="1">
+                        <Binary_Exp op="*i" typref="1">
+                            <Id value="x1" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:36:2:3:1:1:1"/>
+                            <Id value="x2" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:36:2:3:1:1:2"/>
+                        </Binary_Exp>
+                        <Binary_Exp op="+i" typref="1">
+                            <Id value="MAX_UINT32" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:36:2:3:1:2:1"/>
+                            <Integer_Literal value="1" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:36:2:3:1:2:2"/>
+                        </Binary_Exp>
+                    </Binary_Exp>
+                </Body>
+            </Quantified_Exp>
+        </Exp_Comparison>
+        <Exp_Comparison op="=">
+            <Id value="add_uint16" typref="5" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:37:1"/>
+            <Quantified_Exp type="%" typref="5">
+                <Variables>
+                    <Id value="y1" typref="1"/>
+                    <Id value="y2" typref="1"/>
+                </Variables>
+                <Pred>
+                    <Nary_Pred op="&amp;">
+                        <Exp_Comparison op=":">
+                            <Id value="y1" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:37:2:2:1:1:1"/>
+                            <Id value="uint16_t" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:37:2:2:1:1:2"/>
+                        </Exp_Comparison>
+                        <Exp_Comparison op=":">
+                            <Id value="y2" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:37:2:2:1:2:1"/>
+                            <Id value="uint16_t" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:37:2:2:1:2:2"/>
+                        </Exp_Comparison>
+                    </Nary_Pred>
+                </Pred>
+                <Body>
+                    <Binary_Exp op="mod" typref="1">
+                        <Binary_Exp op="+i" typref="1">
+                            <Id value="y1" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:37:2:3:1:1:1"/>
+                            <Id value="y2" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:37:2:3:1:1:2"/>
+                        </Binary_Exp>
+                        <Binary_Exp op="+i" typref="1">
+                            <Id value="MAX_UINT16" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:37:2:3:1:2:1"/>
+                            <Integer_Literal value="1" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:37:2:3:1:2:2"/>
+                        </Binary_Exp>
+                    </Binary_Exp>
+                </Body>
+            </Quantified_Exp>
+        </Exp_Comparison>
+        <Exp_Comparison op="=">
+            <Id value="sub_uint16" typref="5" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:38:1"/>
+            <Quantified_Exp type="%" typref="5">
+                <Variables>
+                    <Id value="y1" typref="1"/>
+                    <Id value="y2" typref="1"/>
+                </Variables>
+                <Pred>
+                    <Nary_Pred op="&amp;">
+                        <Exp_Comparison op=":">
+                            <Id value="y1" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:38:2:2:1:1:1"/>
+                            <Id value="uint16_t" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:38:2:2:1:1:2"/>
+                        </Exp_Comparison>
+                        <Exp_Comparison op=":">
+                            <Id value="y2" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:38:2:2:1:2:1"/>
+                            <Id value="uint16_t" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:38:2:2:1:2:2"/>
+                        </Exp_Comparison>
+                    </Nary_Pred>
+                </Pred>
+                <Body>
+                    <Binary_Exp op="mod" typref="1">
+                        <Binary_Exp op="+i" typref="1">
+                            <Binary_Exp op="+i" typref="1">
+                                <Binary_Exp op="-i" typref="1">
+                                    <Id value="y1" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:38:2:3:1:1:1:1:1"/>
+                                    <Id value="y2" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:38:2:3:1:1:1:1:2"/>
+                                </Binary_Exp>
+                                <Id value="MAX_UINT16" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:38:2:3:1:1:1:2"/>
+                            </Binary_Exp>
+                            <Integer_Literal value="1" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:38:2:3:1:1:2"/>
+                        </Binary_Exp>
+                        <Binary_Exp op="+i" typref="1">
+                            <Id value="MAX_UINT16" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:38:2:3:1:2:1"/>
+                            <Integer_Literal value="1" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:38:2:3:1:2:2"/>
+                        </Binary_Exp>
+                    </Binary_Exp>
+                </Body>
+            </Quantified_Exp>
+        </Exp_Comparison>
+        <Exp_Comparison op="=">
+            <Id value="mul_uint16" typref="5" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:39:1"/>
+            <Quantified_Exp type="%" typref="5">
+                <Variables>
+                    <Id value="y1" typref="1"/>
+                    <Id value="y2" typref="1"/>
+                </Variables>
+                <Pred>
+                    <Nary_Pred op="&amp;">
+                        <Exp_Comparison op=":">
+                            <Id value="y1" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:39:2:2:1:1:1"/>
+                            <Id value="uint16_t" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:39:2:2:1:1:2"/>
+                        </Exp_Comparison>
+                        <Exp_Comparison op=":">
+                            <Id value="y2" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:39:2:2:1:2:1"/>
+                            <Id value="uint16_t" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:39:2:2:1:2:2"/>
+                        </Exp_Comparison>
+                    </Nary_Pred>
+                </Pred>
+                <Body>
+                    <Binary_Exp op="mod" typref="1">
+                        <Binary_Exp op="*i" typref="1">
+                            <Id value="y1" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:39:2:3:1:1:1"/>
+                            <Id value="y2" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:39:2:3:1:1:2"/>
+                        </Binary_Exp>
+                        <Binary_Exp op="+i" typref="1">
+                            <Id value="MAX_UINT16" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:39:2:3:1:2:1"/>
+                            <Integer_Literal value="1" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:39:2:3:1:2:2"/>
+                        </Binary_Exp>
+                    </Binary_Exp>
+                </Body>
+            </Quantified_Exp>
+        </Exp_Comparison>
+        <Exp_Comparison op="=">
+            <Id value="add_uint8" typref="5" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:40:1"/>
+            <Quantified_Exp type="%" typref="5">
+                <Variables>
+                    <Id value="y1" typref="1"/>
+                    <Id value="y2" typref="1"/>
+                </Variables>
+                <Pred>
+                    <Nary_Pred op="&amp;">
+                        <Exp_Comparison op=":">
+                            <Id value="y1" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:40:2:2:1:1:1"/>
+                            <Id value="uint8_t" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:40:2:2:1:1:2"/>
+                        </Exp_Comparison>
+                        <Exp_Comparison op=":">
+                            <Id value="y2" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:40:2:2:1:2:1"/>
+                            <Id value="uint8_t" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:40:2:2:1:2:2"/>
+                        </Exp_Comparison>
+                    </Nary_Pred>
+                </Pred>
+                <Body>
+                    <Binary_Exp op="mod" typref="1">
+                        <Binary_Exp op="+i" typref="1">
+                            <Id value="y1" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:40:2:3:1:1:1"/>
+                            <Id value="y2" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:40:2:3:1:1:2"/>
+                        </Binary_Exp>
+                        <Binary_Exp op="+i" typref="1">
+                            <Id value="MAX_UINT8" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:40:2:3:1:2:1"/>
+                            <Integer_Literal value="1" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:40:2:3:1:2:2"/>
+                        </Binary_Exp>
+                    </Binary_Exp>
+                </Body>
+            </Quantified_Exp>
+        </Exp_Comparison>
+        <Exp_Comparison op="=">
+            <Id value="sub_uint8" typref="5" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:41:1"/>
+            <Quantified_Exp type="%" typref="5">
+                <Variables>
+                    <Id value="y1" typref="1"/>
+                    <Id value="y2" typref="1"/>
+                </Variables>
+                <Pred>
+                    <Nary_Pred op="&amp;">
+                        <Exp_Comparison op=":">
+                            <Id value="y1" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:41:2:2:1:1:1"/>
+                            <Id value="uint8_t" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:41:2:2:1:1:2"/>
+                        </Exp_Comparison>
+                        <Exp_Comparison op=":">
+                            <Id value="y2" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:41:2:2:1:2:1"/>
+                            <Id value="uint8_t" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:41:2:2:1:2:2"/>
+                        </Exp_Comparison>
+                    </Nary_Pred>
+                </Pred>
+                <Body>
+                    <Binary_Exp op="mod" typref="1">
+                        <Binary_Exp op="+i" typref="1">
+                            <Binary_Exp op="+i" typref="1">
+                                <Binary_Exp op="-i" typref="1">
+                                    <Id value="y1" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:41:2:3:1:1:1:1:1"/>
+                                    <Id value="y2" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:41:2:3:1:1:1:1:2"/>
+                                </Binary_Exp>
+                                <Id value="MAX_UINT8" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:41:2:3:1:1:1:2"/>
+                            </Binary_Exp>
+                            <Integer_Literal value="1" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:41:2:3:1:1:2"/>
+                        </Binary_Exp>
+                        <Binary_Exp op="+i" typref="1">
+                            <Id value="MAX_UINT8" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:41:2:3:1:2:1"/>
+                            <Integer_Literal value="1" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:41:2:3:1:2:2"/>
+                        </Binary_Exp>
+                    </Binary_Exp>
+                </Body>
+            </Quantified_Exp>
+        </Exp_Comparison>
+        <Exp_Comparison op="=">
+            <Id value="mul_uint8" typref="5" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:42:1"/>
+            <Quantified_Exp type="%" typref="5">
+                <Variables>
+                    <Id value="y1" typref="1"/>
+                    <Id value="y2" typref="1"/>
+                </Variables>
+                <Pred>
+                    <Nary_Pred op="&amp;">
+                        <Exp_Comparison op=":">
+                            <Id value="y1" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:42:2:2:1:1:1"/>
+                            <Id value="uint8_t" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:42:2:2:1:1:2"/>
+                        </Exp_Comparison>
+                        <Exp_Comparison op=":">
+                            <Id value="y2" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:42:2:2:1:2:1"/>
+                            <Id value="uint8_t" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:42:2:2:1:2:2"/>
+                        </Exp_Comparison>
+                    </Nary_Pred>
+                </Pred>
+                <Body>
+                    <Binary_Exp op="mod" typref="1">
+                        <Binary_Exp op="*i" typref="1">
+                            <Id value="y1" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:42:2:3:1:1:1"/>
+                            <Id value="y2" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:42:2:3:1:1:2"/>
+                        </Binary_Exp>
+                        <Binary_Exp op="+i" typref="1">
+                            <Id value="MAX_UINT8" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:42:2:3:1:2:1"/>
+                            <Integer_Literal value="1" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:42:2:3:1:2:2"/>
+                        </Binary_Exp>
+                    </Binary_Exp>
+                </Body>
+            </Quantified_Exp>
+        </Exp_Comparison>
+        <Quantified_Pred type="!">
+            <Variables>
+                <Id value="ui1" typref="1"/>
+                <Id value="ui2" typref="1"/>
+            </Variables>
+            <Body>
+                <Binary_Pred op="=&gt;">
+                    <Nary_Pred op="&amp;">
+                        <Exp_Comparison op=":">
+                            <Id value="ui1" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:43:2:1:1:1:1"/>
+                            <Id value="uint16_t" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:43:2:1:1:1:2"/>
+                        </Exp_Comparison>
+                        <Exp_Comparison op=":">
+                            <Id value="ui2" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:43:2:1:1:2:1"/>
+                            <Id value="uint16_t" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:43:2:1:1:2:2"/>
+                        </Exp_Comparison>
+                    </Nary_Pred>
+                    <Exp_Comparison op="&lt;=i">
+                        <Binary_Exp op="(" typref="1">
+                            <Id value="bitwise_and_uint16" typref="5" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:43:2:1:2:1:1"/>
+                            <Binary_Exp op="|-&gt;" typref="9">
+                                <Id value="ui1" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:43:2:1:2:1:2:1"/>
+                                <Id value="ui2" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:43:2:1:2:1:2:2"/>
+                            </Binary_Exp>
+                        </Binary_Exp>
+                        <Id value="ui2" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:43:2:1:2:2"/>
+                    </Exp_Comparison>
+                </Binary_Pred>
+            </Body>
+        </Quantified_Pred>
+        <Quantified_Pred type="!">
+            <Variables>
+                <Id value="ui1" typref="1"/>
+                <Id value="ui2" typref="1"/>
+            </Variables>
+            <Body>
+                <Binary_Pred op="=&gt;">
+                    <Nary_Pred op="&amp;">
+                        <Exp_Comparison op=":">
+                            <Id value="ui1" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:44:2:1:1:1:1"/>
+                            <Id value="uint32_t" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:44:2:1:1:1:2"/>
+                        </Exp_Comparison>
+                        <Exp_Comparison op=":">
+                            <Id value="ui2" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:44:2:1:1:2:1"/>
+                            <Id value="uint32_t" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:44:2:1:1:2:2"/>
+                        </Exp_Comparison>
+                    </Nary_Pred>
+                    <Exp_Comparison op="&lt;=i">
+                        <Binary_Exp op="(" typref="1">
+                            <Id value="bitwise_and_uint32" typref="5" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:44:2:1:2:1:1"/>
+                            <Binary_Exp op="|-&gt;" typref="9">
+                                <Id value="ui1" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:44:2:1:2:1:2:1"/>
+                                <Id value="ui2" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:44:2:1:2:1:2:2"/>
+                            </Binary_Exp>
+                        </Binary_Exp>
+                        <Id value="ui2" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_operators.bxml:1:3:1:44:2:1:2:2"/>
+                    </Exp_Comparison>
+                </Binary_Pred>
+            </Body>
+        </Quantified_Pred>
+        <Exp_Comparison op="=">
+            <Id value="TIME" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/io_constants.bxml:1:4:1:1:1"/>
+            <Id value="uint32_t" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/io_constants.bxml:1:4:1:1:2"/>
+        </Exp_Comparison>
+        <Exp_Comparison op="=">
+            <Id value="IO_STATE" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/io_constants.bxml:1:4:1:2:1"/>
+            <Id value="uint8_t" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/io_constants.bxml:1:4:1:2:2"/>
+        </Exp_Comparison>
+        <Exp_Comparison op=":">
+            <Id value="IO_ON" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/io_constants.bxml:1:4:1:3:1"/>
+            <Id value="uint8_t" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/io_constants.bxml:1:4:1:3:2"/>
+        </Exp_Comparison>
+        <Exp_Comparison op=":">
+            <Id value="IO_OFF" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/io_constants.bxml:1:4:1:4:1"/>
+            <Id value="uint8_t" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/io_constants.bxml:1:4:1:4:2"/>
+        </Exp_Comparison>
+        <Unary_Pred op="not">
+            <Exp_Comparison op="=">
+                <Id value="IO_ON" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/io_constants.bxml:1:4:1:5:1"/>
+                <Id value="IO_OFF" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/io_constants.bxml:1:4:1:5:2"/>
+            </Exp_Comparison>
+        </Unary_Pred>
+        <Exp_Comparison op=":">
+            <Id value="IO_ON" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/io_constants.bxml:1:4:1:6:1"/>
+            <Id value="IO_STATE" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/io_constants.bxml:1:4:1:6:2"/>
+        </Exp_Comparison>
+        <Exp_Comparison op=":">
+            <Id value="IO_OFF" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/io_constants.bxml:1:4:1:7:1"/>
+            <Id value="IO_STATE" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/io_constants.bxml:1:4:1:7:2"/>
+        </Exp_Comparison>
+        <Exp_Comparison op=":">
+            <Id value="SimBCMonitor_cycle_def" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/user_ctx.bxml:1:3:1:1:1"/>
+            <Id value="uint32_t" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/user_ctx.bxml:1:3:1:1:2"/>
+        </Exp_Comparison>
+        <Exp_Comparison op=":">
+            <Id value="cycle_unit" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/user_ctx.bxml:1:3:1:2:1"/>
+            <Id value="uint32_t" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/user_ctx.bxml:1:3:1:2:2"/>
+        </Exp_Comparison>
+        <Exp_Comparison op=":">
+            <Id value="st_READ_INPUTS" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/user_ctx.bxml:1:3:1:3:1"/>
+            <Id value="uint8_t" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/user_ctx.bxml:1:3:1:3:2"/>
+        </Exp_Comparison>
+        <Exp_Comparison op=":">
+            <Id value="st_STATE_MACHINE_CYCLE" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/user_ctx.bxml:1:3:1:4:1"/>
+            <Id value="uint8_t" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/user_ctx.bxml:1:3:1:4:2"/>
+        </Exp_Comparison>
+        <Exp_Comparison op=":">
+            <Id value="st_WRITE_OUTPUTS" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/user_ctx.bxml:1:3:1:5:1"/>
+            <Id value="uint8_t" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/user_ctx.bxml:1:3:1:5:2"/>
+        </Exp_Comparison>
+        <Exp_Comparison op=":">
+            <Id value="st_TIME" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/user_ctx.bxml:1:3:1:6:1"/>
+            <Id value="uint8_t" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/user_ctx.bxml:1:3:1:6:2"/>
+        </Exp_Comparison>
+        <Exp_Comparison op=":">
+            <Id value="INIT" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/user_ctx.bxml:1:3:1:7:1"/>
+            <Id value="uint8_t" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/user_ctx.bxml:1:3:1:7:2"/>
+        </Exp_Comparison>
+        <Exp_Comparison op=":">
+            <Id value="EXEC_1" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/user_ctx.bxml:1:3:1:8:1"/>
+            <Id value="uint8_t" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/user_ctx.bxml:1:3:1:8:2"/>
+        </Exp_Comparison>
+        <Exp_Comparison op=":">
+            <Id value="EXEC_2" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/user_ctx.bxml:1:3:1:9:1"/>
+            <Id value="uint8_t" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/user_ctx.bxml:1:3:1:9:2"/>
+        </Exp_Comparison>
+        <Exp_Comparison op=":">
+            <Id value="EXEC_3" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/user_ctx.bxml:1:3:1:10:1"/>
+            <Id value="uint8_t" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/user_ctx.bxml:1:3:1:10:2"/>
+        </Exp_Comparison>
+        <Exp_Comparison op=":">
+            <Id value="PATTERN" typref="4" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/user_ctx.bxml:1:3:1:11:1"/>
+            <Id value="BOOL" typref="10" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/user_ctx.bxml:1:3:1:11:2"/>
+        </Exp_Comparison>
+        <Exp_Comparison op=":">
+            <Id value="TIMEOUT" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/user_ctx.bxml:1:3:1:12:1"/>
+            <Id value="uint32_t" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/user_ctx.bxml:1:3:1:12:2"/>
+        </Exp_Comparison>
+    </Define>
+    <Define name="seext" hash="4207919545983056649">
+        <Exp_Comparison op=":">
+            <Id value="ms_tick" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/lchip_interface.bxml:1:3:1:1"/>
+            <Id value="uint32_t" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/lchip_interface.bxml:1:3:1:2"/>
+        </Exp_Comparison>
+        <Exp_Comparison op=":">
+            <Id value="board_0_I1" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/inputs.bxml:1:3:1:1:1"/>
+            <Id value="uint8_t" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/inputs.bxml:1:3:1:1:2"/>
+        </Exp_Comparison>
+        <Exp_Comparison op=":">
+            <Id value="board_0_I2" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/inputs.bxml:1:3:1:2:1"/>
+            <Id value="uint8_t" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/inputs.bxml:1:3:1:2:2"/>
+        </Exp_Comparison>
+        <Exp_Comparison op=":">
+            <Id value="board_0_I3" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/inputs.bxml:1:3:1:3:1"/>
+            <Id value="uint8_t" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/inputs.bxml:1:3:1:3:2"/>
+        </Exp_Comparison>
+        <Exp_Comparison op=":">
+            <Id value="board_0_O1" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/logic.bxml:1:3:1:1:1"/>
+            <Id value="uint8_t" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/logic.bxml:1:3:1:1:2"/>
+        </Exp_Comparison>
+        <Exp_Comparison op=":">
+            <Id value="board_0_O2" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/logic.bxml:1:3:1:2:1"/>
+            <Id value="uint8_t" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/logic.bxml:1:3:1:2:2"/>
+        </Exp_Comparison>
+        <Exp_Comparison op=":">
+            <Id value="Convert_Bool" typref="2" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_types.bxml:1:5:1:1:1"/>
+            <Binary_Exp op="+-&gt;" typref="11">
+                <Id value="BOOL" typref="10" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_types.bxml:1:5:1:1:2:1"/>
+                <Id value="uint8_t" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_types.bxml:1:5:1:1:2:2"/>
+            </Binary_Exp>
+        </Exp_Comparison>
+        <Exp_Comparison op=":">
+            <Id value="Convert_Bool" typref="2" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_types.bxml:1:5:1:2:1"/>
+            <Binary_Exp op="+-&gt;" typref="11">
+                <Id value="BOOL" typref="10" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_types.bxml:1:5:1:2:2:1"/>
+                <Id value="uint16_t" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_types.bxml:1:5:1:2:2:2"/>
+            </Binary_Exp>
+        </Exp_Comparison>
+        <Exp_Comparison op=":">
+            <Id value="Convert_Bool" typref="2" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_types.bxml:1:5:1:3:1"/>
+            <Binary_Exp op="+-&gt;" typref="11">
+                <Id value="BOOL" typref="10" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_types.bxml:1:5:1:3:2:1"/>
+                <Id value="uint32_t" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_types.bxml:1:5:1:3:2:2"/>
+            </Binary_Exp>
+        </Exp_Comparison>
+    </Define>
+    <Define name="mchcst" hash="0"/>
+    <Define name="aprp" hash="0"/>
+    <Define name="abs" hash="0"/>
+    <Define name="inv" hash="0"/>
+    <Define name="ass" hash="0"/>
+    <Define name="sets" hash="0"/>
+    <Define name="imlprp" hash="0"/>
+    <Define name="imprp" hash="0"/>
+    <Define name="imext" hash="0"/>
+    <Proof_Obligation goalHash="5390550274044502072">
+        <Tag>Operation_write_outputs</Tag>
+        <Definition name="B definitions"/>
+        <Definition name="ctx"/>
+        <Definition name="mchcst"/>
+        <Definition name="aprp"/>
+        <Definition name="imlprp"/>
+        <Definition name="imprp"/>
+        <Definition name="imext"/>
+        <Definition name="seext"/>
+        <Definition name="abs"/>
+        <Definition name="inv"/>
+        <Definition name="ass"/>
+        <Local_Hyp num="1">
+            <Exp_Comparison op=":">
+                <Id value="lsb" typref="1" tag="C:\CSSP\workspace\RoME_UAV_3\bdp\outputs_i.bxml:1:4:1:1:1:2:1:1:1:1,C:\CSSP\workspace\RoME_UAV_3\bdp\outputs_i.bxml:1:4:1:1:1:2:1:1:2:1:1,"/>
+                <Id value="uint8_t" typref="0" tag="C:\CSSP\workspace\RoME_UAV_3\bdp\outputs_i.bxml:1:4:1:1:1:2:1:1:2:1:2"/>
+            </Exp_Comparison>
+        </Local_Hyp>
+        <Local_Hyp num="2">
+            <Exp_Comparison op=":">
+                <Integer_Literal value="0" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/lchip_interface.bxml:1:5:3:2:1:1:1,C:\CSSP\workspace\RoME_UAV_3\bdp\outputs_i.bxml:1:4:1:1:1:2:1:3:1:1,C:\CSSP\workspace\RoME_UAV_3\bdp\outputs_i.bxml:1:4:1:1:1:2:1:3:2:1"/>
+                <Id value="uint8_t" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/lchip_interface.bxml:1:5:3:2:1:1:2,C:\CSSP\workspace\RoME_UAV_3\bdp\outputs_i.bxml:1:4:1:1:1:2:1:3:1:1"/>
+            </Exp_Comparison>
+        </Local_Hyp>
+        <Local_Hyp num="3">
+            <Exp_Comparison op="&lt;i">
+                <Integer_Literal value="0" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/lchip_interface.bxml:1:5:3:2:1:2:1,C:\CSSP\workspace\RoME_UAV_3\bdp\outputs_i.bxml:1:4:1:1:1:2:1:3:1:1,C:\CSSP\workspace\RoME_UAV_3\bdp\outputs_i.bxml:1:4:1:1:1:2:1:3:2:1"/>
+                <Id value="MAX_NB_OUTPUTS" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/lchip_interface.bxml:1:5:3:2:1:2:2,C:\CSSP\workspace\RoME_UAV_3\bdp\outputs_i.bxml:1:4:1:1:1:2:1:3:1:1"/>
+            </Exp_Comparison>
+        </Local_Hyp>
+        <Simple_Goal>
+            <Tag>Precondition predicate</Tag>
+            <Ref_Hyp num="1"/>
+            <Goal>
+                <Exp_Comparison op=":">
+                    <Integer_Literal value="0" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/lchip_interface.bxml:1:5:3:2:1:1:1,C:\CSSP\workspace\RoME_UAV_3\bdp\outputs_i.bxml:1:4:1:1:1:2:1:3:1:1,C:\CSSP\workspace\RoME_UAV_3\bdp\outputs_i.bxml:1:4:1:1:1:2:1:3:2:1"/>
+                    <Id value="uint8_t" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/lchip_interface.bxml:1:5:3:2:1:1:2,C:\CSSP\workspace\RoME_UAV_3\bdp\outputs_i.bxml:1:4:1:1:1:2:1:3:1:1"/>
+                </Exp_Comparison>
+            </Goal>
+        </Simple_Goal>
+        <Simple_Goal>
+            <Tag>Precondition predicate</Tag>
+            <Ref_Hyp num="1"/>
+            <Goal>
+                <Exp_Comparison op="&lt;i">
+                    <Integer_Literal value="0" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/lchip_interface.bxml:1:5:3:2:1:2:1,C:\CSSP\workspace\RoME_UAV_3\bdp\outputs_i.bxml:1:4:1:1:1:2:1:3:1:1,C:\CSSP\workspace\RoME_UAV_3\bdp\outputs_i.bxml:1:4:1:1:1:2:1:3:2:1"/>
+                    <Id value="MAX_NB_OUTPUTS" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/lchip_interface.bxml:1:5:3:2:1:2:2,C:\CSSP\workspace\RoME_UAV_3\bdp\outputs_i.bxml:1:4:1:1:1:2:1:3:1:1"/>
+                </Exp_Comparison>
+            </Goal>
+        </Simple_Goal>
+        <Simple_Goal>
+            <Tag>Precondition predicate</Tag>
+            <Ref_Hyp num="1"/>
+            <Ref_Hyp num="2"/>
+            <Ref_Hyp num="3"/>
+            <Goal>
+                <Exp_Comparison op=":">
+                    <Integer_Literal value="1" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/lchip_interface.bxml:1:5:3:2:1:1:1,C:\CSSP\workspace\RoME_UAV_3\bdp\outputs_i.bxml:1:4:1:1:1:2:1:5:1:1,C:\CSSP\workspace\RoME_UAV_3\bdp\outputs_i.bxml:1:4:1:1:1:2:1:5:2:1"/>
+                    <Id value="uint8_t" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/lchip_interface.bxml:1:5:3:2:1:1:2,C:\CSSP\workspace\RoME_UAV_3\bdp\outputs_i.bxml:1:4:1:1:1:2:1:5:1:1"/>
+                </Exp_Comparison>
+            </Goal>
+        </Simple_Goal>
+        <Simple_Goal>
+            <Tag>Precondition predicate</Tag>
+            <Ref_Hyp num="1"/>
+            <Ref_Hyp num="2"/>
+            <Ref_Hyp num="3"/>
+            <Goal>
+                <Exp_Comparison op="&lt;i">
+                    <Integer_Literal value="1" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/lchip_interface.bxml:1:5:3:2:1:2:1,C:\CSSP\workspace\RoME_UAV_3\bdp\outputs_i.bxml:1:4:1:1:1:2:1:5:1:1,C:\CSSP\workspace\RoME_UAV_3\bdp\outputs_i.bxml:1:4:1:1:1:2:1:5:2:1"/>
+                    <Id value="MAX_NB_OUTPUTS" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/lchip_interface.bxml:1:5:3:2:1:2:2,C:\CSSP\workspace\RoME_UAV_3\bdp\outputs_i.bxml:1:4:1:1:1:2:1:5:1:1"/>
+                </Exp_Comparison>
+            </Goal>
+        </Simple_Goal>
+    </Proof_Obligation>
+    <TypeInfos>
+        <Type id="0">
+            <Unary_Exp op="POW">
+                <Id value="INTEGER"/>
+            </Unary_Exp>
+        </Type>
+        <Type id="1">
+            <Id value="INTEGER"/>
+        </Type>
+        <Type id="2">
+            <Unary_Exp op="POW">
+                <Binary_Exp op="*">
+                    <Id value="BOOL"/>
+                    <Id value="INTEGER"/>
+                </Binary_Exp>
+            </Unary_Exp>
+        </Type>
+        <Type id="3">
+            <Binary_Exp op="*">
+                <Id value="BOOL"/>
+                <Id value="INTEGER"/>
+            </Binary_Exp>
+        </Type>
+        <Type id="4">
+            <Id value="BOOL"/>
+        </Type>
+        <Type id="5">
+            <Unary_Exp op="POW">
+                <Binary_Exp op="*">
+                    <Binary_Exp op="*">
+                        <Id value="INTEGER"/>
+                        <Id value="INTEGER"/>
+                    </Binary_Exp>
+                    <Id value="INTEGER"/>
+                </Binary_Exp>
+            </Unary_Exp>
+        </Type>
+        <Type id="6">
+            <Unary_Exp op="POW">
+                <Unary_Exp op="POW">
+                    <Binary_Exp op="*">
+                        <Binary_Exp op="*">
+                            <Id value="INTEGER"/>
+                            <Id value="INTEGER"/>
+                        </Binary_Exp>
+                        <Id value="INTEGER"/>
+                    </Binary_Exp>
+                </Unary_Exp>
+            </Unary_Exp>
+        </Type>
+        <Type id="7">
+            <Unary_Exp op="POW">
+                <Binary_Exp op="*">
+                    <Id value="INTEGER"/>
+                    <Id value="INTEGER"/>
+                </Binary_Exp>
+            </Unary_Exp>
+        </Type>
+        <Type id="8">
+            <Unary_Exp op="POW">
+                <Unary_Exp op="POW">
+                    <Binary_Exp op="*">
+                        <Id value="INTEGER"/>
+                        <Id value="INTEGER"/>
+                    </Binary_Exp>
+                </Unary_Exp>
+            </Unary_Exp>
+        </Type>
+        <Type id="9">
+            <Binary_Exp op="*">
+                <Id value="INTEGER"/>
+                <Id value="INTEGER"/>
+            </Binary_Exp>
+        </Type>
+        <Type id="10">
+            <Unary_Exp op="POW">
+                <Id value="BOOL"/>
+            </Unary_Exp>
+        </Type>
+        <Type id="11">
+            <Unary_Exp op="POW">
+                <Unary_Exp op="POW">
+                    <Binary_Exp op="*">
+                        <Id value="BOOL"/>
+                        <Id value="INTEGER"/>
+                    </Binary_Exp>
+                </Unary_Exp>
+            </Unary_Exp>
+        </Type>
+    </TypeInfos>
+</Proof_Obligations>

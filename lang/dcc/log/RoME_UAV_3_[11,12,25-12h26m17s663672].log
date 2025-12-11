@@ -1,0 +1,153 @@
+---------------------------------------
+ DCC v0.0, ClearSy 2017
+
+ Configuration from user arguments
+---------------------------------------
+step                   | c2hex
+release_mode           | ReleaseMode.SAFETY
+platform               | win32
+install_dir            | C:\atelierb-cssp 24.04\share\cssp_plugins1
+build_dir              | C:\CSSP\workspace\RoME_UAV_3\lang\dcc
+compile_mode           | CompilationMode.USER
+ending_mode            | EndingMode.LCHIP
+debug_mode             | False
+lite_mode              | False
+project_name           | RoME_UAV_3
+build_project_dir      | C:\CSSP\workspace\RoME_UAV_3\lang\dcc\RoME_UAV_3
+kernel_archive         | C:\atelierb-cssp 24.04\share\plugins\lchip_795L_multi_kernel_kernel_archive.zip
+tools_dir              | C:\atelierb-cssp 24.04\share\cssp_plugins1\bin\win_tools
+tools_cfg              | C:\atelierb-cssp 24.04\share\cssp_plugins1\tools.cfg
+config_dir             | C:\atelierb-cssp 24.04\share\plugins\lchip_user_src\cfg
+resources_dir          | C:\atelierb-cssp 24.04\share\plugins\lchip_user_src\ressources
+c_src_dir              | C:\atelierb-cssp 24.04\share\plugins\lchip_user_src\src
+b_bdp_dir              | C:\CSSP\workspace\RoME_UAV_3\bdp
+b_db                   | C:\CSSP\workspace\RoME_UAV_3\bdp\RoME_UAV_3.db
+parrallel_build_tasks  | 1
+compiler               | C:\atelierb-cssp 24.04\share\cssp_plugins1\bin\win_tools\c2hex\pic32-tools\bin\pic32-gcc.exe
+read_elf               | C:\atelierb-cssp 24.04\share\cssp_plugins1\bin\win_tools\c2hex\pic32-tools\bin\pic32-readelf.exe
+bin2hex                | C:\atelierb-cssp 24.04\share\cssp_plugins1\bin\win_tools\c2hex\pic32-tools\bin\pic32-bin2hex.exe
+c_compiler_options     | False
+use_bootloader         | False
+generate_mips_assembly | False
+Output hex file        | C:\CSSP\workspace\RoME_UAV_3\lang\dcc\RoME_UAV_3\RoME_UAV_3_final.hex
+
+ Configuration tools configuration file
+---------------------------------------
+empty
+
+ Configuration project configuration file
+---------------------------------------
+COMPILATION_MODE                | USER
+ENDING_MODE                     | LCHIP
+MCU                             | 32MX795F512L
+INCLUDE_CONSTANTS_PATH          | replica_2\include_constants.h
+C4B_OUTPUT_PATH                 | replica_2
+LINKER_SCRIPT                   | LinkerScript.ld
+PROGRAM_MEM                     | ORIGIN = 0x9D000000, LENGTH = 0x80000
+PROGRAM_DATA                    | ORIGIN = 0xA0000000, LENGTH = 0x20000
+BOOTLOADER_AREA                 | ORIGIN = 0x1FC00000, LENGTH = 0x3000
+[_SYSTEM_RESERVED_FLASH_LENGTH] | 0x15000
+[_SYSTEM_RESERVED_RAM_LENGTH]   | 0x8000
+[_PRECOMPUTED_CRC_SPACE]        | 0x1000
+[_PRECOMPUTED_CRC_LENGTH]       | 0x1000
+C_COMPILER                      | pic32
+C_COMPILER_OPT                  | -D _DISABLE_OPENADC10_CONFIGPORT_WARNING -D _SUPPRESS_PLIB_WARNING
+R1_CHK_VAR_SECTION              | .R1_CHK_VAR
+R1_NCHK_VAR_SECTION             | .R1_NCHK_VAR
+R1_FN_SECTION                   | .R1_FN
+SYMBOL_REGEX                    | ^safety_variables__initialisation$
+STRUCT_GLOBAL_CONSTANTS         | global_constants
+STRUCT_SAFETY_VARIABLES_SIZE    | struct_safety_variables_size_minus_1
+STRUCT_SAFETY_VARIABLES_ARRAY   | safety_variables_array
+LINK_TO_KERNEL_REGEX            | ^.*$
+LINK_TO_KERNEL_ADDR_PATH        | kernel_app\link_to_kernel_addr.h
+NON_APP_SECTION_REGEX           | ^\.(USER_INFO|TEST_FLASH|SAFETY_SPACE_CRC|CRC|NR_NS_FN_NO_CACHE|R[12]?_U_\w+)$
+FREE_FLASH_SECTION              | .FREE_FLASH_SPACE
+FREE_RAM_SECTION                | .FREE_RAM_SPACE
+
+
+
+ -------------------------------- 
+|     I - Second C toolchain     |
+ -------------------------------- 
+
+1.1) C toolchain initialization
+-----------------------------------
+src_dir : C:\CSSP\workspace\RoME_UAV_3\lang\dcc\RoME_UAV_3\c_toolchain_2\sources
+build_dir : C:\CSSP\workspace\RoME_UAV_3\lang\dcc\RoME_UAV_3\c_toolchain_2\build
+release_dir : C:\CSSP\workspace\RoME_UAV_3\lang\dcc\RoME_UAV_3\c_toolchain_2\release
+linker_script_origin_path : C:\atelierb-cssp 24.04\share\plugins\lchip_user_src\src\LinkerScript.ld
+linker_script_path : C:\CSSP\workspace\RoME_UAV_3\lang\dcc\RoME_UAV_3\c_toolchain_2\sources\LinkerScript.ld
+
+1.2) Generate map file
+--------------------------
+Launch [Info memory usage] : ['C:\\atelierb-cssp 24.04\\share\\cssp_plugins1\\bin\\win_tools\\info_memory_usage\\bin\\info_memory_usage.exe', 'C:\\CSSP\\workspace\\RoME_UAV_3\\lang\\dcc\\RoME_UAV_3\\cfg\\config.cfg', 'C:\\atelierb-cssp 24.04\\share\\cssp_plugins1\\bin\\win_tools\\c2hex\\pic32-tools\\bin\\pic32-readelf.exe', 'C:\\CSSP\\workspace\\RoME_UAV_3\\lang\\dcc\\RoME_UAV_3\\c_toolchain_1\\release\\c_toolchain_1.elf', 'C:\\CSSP\\workspace\\RoME_UAV_3\\lang\\dcc\\RoME_UAV_3\\b_toolchain\\b32_release\\b32_toolchain.output_mapping', '-map', 'C:\\CSSP\\workspace\\RoME_UAV_3\\lang\\dcc\\RoME_UAV_3\\c_toolchain_2\\sources\\prev_gen.map']
+Warning, ignored mapping line in C:\CSSP\workspace\RoME_UAV_3\lang\dcc\RoME_UAV_3\c_toolchain_2\sources\prev_gen.map : # Autogenerated file on Thu Dec 11 12:26:17 2025
+Mapping file C:\CSSP\workspace\RoME_UAV_3\lang\dcc\RoME_UAV_3\c_toolchain_2\sources\prev_gen.map successfully loaded
+Warning, ignored mapping line in C:\CSSP\workspace\RoME_UAV_3\lang\dcc\RoME_UAV_3\c_toolchain_2\sources\prev_gen.map : # Autogenerated file on Thu Dec 11 12:26:17 2025
+Mapping file C:\CSSP\workspace\RoME_UAV_3\lang\dcc\RoME_UAV_3\c_toolchain_2\sources\prev_gen.map successfully loaded
+C:\CSSP\workspace\RoME_UAV_3\lang\dcc\RoME_UAV_3\c_toolchain_2\sources\prev_gen.map successfully generated
+
+1.3) Re-update Linker_Script
+--------------------------------
+Linker edit map :
+[_SYSTEM_RESERVED_FLASH_LENGTH]                  | 0x15000
+[_SYSTEM_RESERVED_RAM_LENGTH]                    | 0x8000
+[_PRECOMPUTED_CRC_SPACE]                         | 0x1000
+[_PRECOMPUTED_CRC_LENGTH]                        | 0x1000
+[_APP_PROGRAM_MEM_ORIGIN]                        | 0x9d019338
+[_APP_PROGRAM_MEM_LENGTH]                        | 412872
+[_APP_DATA_MEM_ORIGIN]                           | 0xa000839c
+[_APP_DATA_MEM_LENGTH]                           | 97380
+[&g_operators__initialisation]                   | 0x9d01043c
+[&g_standard_types__initialisation]              | 0x9d01045c
+[&IO_ON]                                         | 0x9d011e93
+[&IO_OFF]                                        | 0x9d011e94
+[&user_struct_safety_variables_size_minus_1]     | 0x9d011ea8
+[&ru_c__module_secu_ids_ptr]                     | 0x9d011eac
+[&ru_c__module_nb_inputs_ptr]                    | 0x9d011eb0
+[&ru_c__module_nb_outputs_ptr]                   | 0x9d011eb4
+[&ru_c__input_module_ids_ptr]                    | 0x9d011eb8
+[&ru_c__input_local_ids_ptr]                     | 0x9d011ebc
+[&ru_c__output_module_ids_ptr]                   | 0x9d011ec0
+[&ru_c__output_local_ids_ptr]                    | 0x9d011ec4
+[&ru_c__NB_MODULES_ptr]                          | 0x9d011ec8
+[&ru_c__NB_INPUTS_ptr]                           | 0x9d011ecc
+[&ru_c__NB_OUTPUTS_ptr]                          | 0x9d011ed0
+[&r2__user_configuration__initialisation_ptr]    | 0x9d011eec
+[&r2__user_safety_variables__initialisation_ptr] | 0x9d011ef0
+[&r2__user_safety_variables_array_ptr]           | 0x9d011ef4
+[&r2__user_component__initialisation_ptr]        | 0x9d011ef8
+[&r2__user_app_ptr]                              | 0x9d011efc
+[&r2__user_consistency_error_detection_test_ptr] | 0x9d011f00
+[&io_constants__initialisation]                  | 0x9d0135c0
+[&print_global_inputs]                           | 0x9d01382c
+[&get_ms_tick]                                   | 0x9d0138b8
+[&get_processor_id]                              | 0x9d0138f0
+[&get_replica_id]                                | 0x9d013920
+[&read_global_input]                             | 0x9d013950
+[&write_global_output]                           | 0x9d013998
+[&print_uint8]                                   | 0x9d0139e8
+[_R1_FN_ADJUST]                                  | 0x608d8
+LinkerScript updated
+
+1.4) C compilation
+----------------------
+Rewriting built objects dependencies from first C compilation
+
+make            | mingw32-make.exe
+picFlag         | -mprocessor=32MX795F512L
+compiler_path   | C:\atelierb-cssp 24.04\share\cssp_plugins1\bin\win_tools\c2hex\pic32-tools\bin\pic32-gcc.exe
+bin2hex_path    | C:\atelierb-cssp 24.04\share\cssp_plugins1\bin\win_tools\c2hex\pic32-tools\bin\pic32-bin2hex.exe
+linkerScript    | C:\CSSP\workspace\RoME_UAV_3\lang\dcc\RoME_UAV_3\c_toolchain_2\sources\LinkerScript.ld
+project         | c_toolchain_2
+sources         | C:\CSSP\workspace\RoME_UAV_3\lang\dcc\RoME_UAV_3\c_toolchain_2\sources
+build           | C:\CSSP\workspace\RoME_UAV_3\lang\dcc\RoME_UAV_3\c_toolchain_2\build
+release         | C:\CSSP\workspace\RoME_UAV_3\lang\dcc\RoME_UAV_3\c_toolchain_2\release
+parallel_build  | 1
+compiler_opt    | -D _DISABLE_OPENADC10_CONFIGPORT_WARNING -D _SUPPRESS_PLIB_WARNING
+no_startup_code | True
+
+Launch [c2hex] : ['mingw32-make.exe', '-f', 'C:\\CSSP\\workspace\\RoME_UAV_3\\lang\\dcc\\RoME_UAV_3\\c_toolchain_2\\sources\\makefile', '-j1']
+"C:\atelierb-cssp 24.04\share\cssp_plugins1\bin\win_tools\c2hex\pic32-tools\bin\pic32-gcc.exe" -mprocessor=32MX795F512L -nostartfiles -o "C:\CSSP\workspace\RoME_UAV_3\lang\dcc\RoME_UAV_3\c_toolchain_2\release/c_toolchain_2.elf" "C:\CSSP\workspace\RoME_UAV_3\lang\dcc\RoME_UAV_3\c_toolchain_2\build\kernel_app\link_to_kernel.o" "C:\CSSP\workspace\RoME_UAV_3\lang\dcc\RoME_UAV_3\c_toolchain_2\build\non_replicated\safety_variables.o" "C:\CSSP\workspace\RoME_UAV_3\lang\dcc\RoME_UAV_3\c_toolchain_2\build\replica_2\c4b_constants.o" "C:\CSSP\workspace\RoME_UAV_3\lang\dcc\RoME_UAV_3\c_toolchain_2\build\replica_2\c4b_no_checked_variables.o" "C:\CSSP\workspace\RoME_UAV_3\lang\dcc\RoME_UAV_3\c_toolchain_2\build\replica_2\c4b_safety_variables.o" "C:\CSSP\workspace\RoME_UAV_3\lang\dcc\RoME_UAV_3\c_toolchain_2\build\replica_2\g_types_i.o" "C:\CSSP\workspace\RoME_UAV_3\lang\dcc\RoME_UAV_3\c_toolchain_2\build\replica_2\inputs_i.o" "C:\CSSP\workspace\RoME_UAV_3\lang\dcc\RoME_UAV_3\c_toolchain_2\build\replica_2\logic_i.o" "C:\CSSP\workspace\RoME_UAV_3\lang\dcc\RoME_UAV_3\c_toolchain_2\build\replica_2\outputs_i.o" "C:\CSSP\workspace\RoME_UAV_3\lang\dcc\RoME_UAV_3\c_toolchain_2\build\replica_2\user_component_i.o" "C:\CSSP\workspace\RoME_UAV_3\lang\dcc\RoME_UAV_3\c_toolchain_2\build\replica_2\user_configuration_i.o" "C:\CSSP\workspace\RoME_UAV_3\lang\dcc\RoME_UAV_3\c_toolchain_2\build\replica_2\user_ctx_i.o" "-Wl,--defsym=__MPLAB_BUILD=1,--defsym=_min_heap_size=0,--script=C:\CSSP\workspace\RoME_UAV_3\lang\dcc\RoME_UAV_3\c_toolchain_2\sources\LinkerScript.ld,-Map=C:\CSSP\workspace\RoME_UAV_3\lang\dcc\RoME_UAV_3\c_toolchain_2\release/c_toolchain_2.map"
+"C:\atelierb-cssp 24.04\share\cssp_plugins1\bin\win_tools\c2hex\pic32-tools\bin\pic32-bin2hex.exe" "C:\CSSP\workspace\RoME_UAV_3\lang\dcc\RoME_UAV_3\c_toolchain_2\release/c_toolchain_2.elf"

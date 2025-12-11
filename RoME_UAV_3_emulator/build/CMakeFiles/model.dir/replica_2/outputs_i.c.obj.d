@@ -1,0 +1,35 @@
+CMakeFiles/model.dir/replica_2/outputs_i.c.obj: \
+ C:\CSSP\workspace\RoME_UAV_3\RoME_UAV_3_emulator\src\replica_2\outputs_i.c \
+ C:\CSSP\workspace\RoME_UAV_3\RoME_UAV_3_emulator\src\replica_2\outputs.h \
+ C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/stdint.h \
+ C:/mingw64/x86_64-w64-mingw32/include/stdint.h \
+ C:/mingw64/x86_64-w64-mingw32/include/crtdefs.h \
+ C:/mingw64/x86_64-w64-mingw32/include/corecrt.h \
+ C:/mingw64/x86_64-w64-mingw32/include/_mingw.h \
+ C:/mingw64/x86_64-w64-mingw32/include/_mingw_mac.h \
+ C:/mingw64/x86_64-w64-mingw32/include/_mingw_secapi.h \
+ C:/mingw64/x86_64-w64-mingw32/include/vadefs.h \
+ C:/mingw64/x86_64-w64-mingw32/include/sdks/_mingw_ddk.h \
+ C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/stddef.h \
+ C:/mingw64/x86_64-w64-mingw32/include/stddef.h \
+ C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/stdbool.h \
+ C:\CSSP\workspace\RoME_UAV_3\RoME_UAV_3_emulator\src\replica_2\interface_c4b.h \
+ C:\CSSP\workspace\RoME_UAV_3\RoME_UAV_3_emulator\src\replica_2\type.h \
+ C:/CSSP/workspace/RoME_UAV_3/RoME_UAV_3_emulator/src/memory/sections.h \
+ C:\CSSP\workspace\RoME_UAV_3\RoME_UAV_3_emulator\src\replica_2\include_constants.h \
+ C:\CSSP\workspace\RoME_UAV_3\RoME_UAV_3_emulator\src\replica_2\g_types.h \
+ C:\CSSP\workspace\RoME_UAV_3\RoME_UAV_3_emulator\src\replica_2\g_standard_types.h \
+ C:/CSSP/workspace/RoME_UAV_3/RoME_UAV_3_emulator/src/kernel_app/link_to_kernel.h \
+ C:/CSSP/workspace/RoME_UAV_3/RoME_UAV_3_emulator/src/kernel_app/link_to_kernel_addr.h \
+ C:/CSSP/workspace/RoME_UAV_3/RoME_UAV_3_emulator/src/replica_2/c4b_safety_variables.h \
+ C:/CSSP/workspace/RoME_UAV_3/RoME_UAV_3_emulator/src/replica_2/interface_c4b.h \
+ C:\CSSP\workspace\RoME_UAV_3\RoME_UAV_3_emulator\src\replica_2\c4b_constants.h \
+ C:\CSSP\workspace\RoME_UAV_3\RoME_UAV_3_emulator\src\replica_2\user_configuration.h \
+ C:\CSSP\workspace\RoME_UAV_3\RoME_UAV_3_emulator\src\replica_2\lchip_configuration.h \
+ C:\CSSP\workspace\RoME_UAV_3\RoME_UAV_3_emulator\src\replica_2\user_ctx.h \
+ C:\CSSP\workspace\RoME_UAV_3\RoME_UAV_3_emulator\src\replica_2\lchip_interface.h \
+ C:\CSSP\workspace\RoME_UAV_3\RoME_UAV_3_emulator\src\replica_2\logic.h \
+ C:\CSSP\workspace\RoME_UAV_3\RoME_UAV_3_emulator\src\replica_2\g_operators.h \
+ C:\CSSP\workspace\RoME_UAV_3\RoME_UAV_3_emulator\src\replica_2\io_constants.h \
+ C:\CSSP\workspace\RoME_UAV_3\RoME_UAV_3_emulator\src\replica_2\inputs.h \
+ C:\CSSP\workspace\RoME_UAV_3\RoME_UAV_3_emulator\src\replica_2\c4b_safety_variables.h

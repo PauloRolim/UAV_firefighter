@@ -1,0 +1,45 @@
+# Auto-generated file
+
+= 0xa000839c ~ 97380 .FREE_RAM_SPACE
+
+= 0x9d01043c ~ 5284 .NR_S_FN
+= <.NR_S_FN> 0x9d01043c g_operators__initialisation
+= <.NR_S_FN> 0x9d01045c g_standard_types__initialisation
+
+= 0x9d011e84 ~ 36 .R_CST
+= <.R_CST> 0x9d011e93 ~ 1 IO_ON
+= <.R_CST> 0x9d011e94 ~ 1 IO_OFF
+
+= 0x9d011ea8 ~ 44 .R_U_S_CST
+= <.R_U_S_CST> 0x9d011ea8 user_struct_safety_variables_size_minus_1
+= <.R_U_S_CST> 0x9d011eac * module_secu_ids
+= <.R_U_S_CST> 0x9d011eb0 * module_nb_inputs
+= <.R_U_S_CST> 0x9d011eb4 * module_nb_outputs
+= <.R_U_S_CST> 0x9d011eb8 * input_module_ids
+= <.R_U_S_CST> 0x9d011ebc * input_local_ids
+= <.R_U_S_CST> 0x9d011ec0 * output_module_ids
+= <.R_U_S_CST> 0x9d011ec4 * output_local_ids
+= <.R_U_S_CST> 0x9d011ec8 * NB_MODULES
+= <.R_U_S_CST> 0x9d011ecc * NB_INPUTS
+= <.R_U_S_CST> 0x9d011ed0 * NB_OUTPUTS
+
+= 0x9d011ed4 ~ 24 .R1_U_PTR
+= <.R1_U_PTR> 0x9d011ed4 * user_configuration__initialisation
+= <.R1_U_PTR> 0x9d011ed8 * user_safety_variables__initialisation
+= <.R1_U_PTR> 0x9d011edc * user_safety_variables_array
+= <.R1_U_PTR> 0x9d011ee0 * user_component__initialisation
+= <.R1_U_PTR> 0x9d011ee4 * user_app
+= <.R1_U_PTR> 0x9d011ee8 * user_consistency_error_detection_test
+
+= 0x9d014e78 ~ 17600 .R1_FN
+= <.R1_FN> 0x9d016fcc ~ 40 io_constants__initialisation
+= <.R1_FN> 0x9d0172ec ~ 188 print_global_inputs
+= <.R1_FN> 0x9d0173a8 ~ 76 get_ms_tick
+= <.R1_FN> 0x9d0173f4 ~ 76 get_processor_id
+= <.R1_FN> 0x9d017440 ~ 76 get_replica_id
+= <.R1_FN> 0x9d01748c ~ 88 read_global_input
+= <.R1_FN> 0x9d0174e4 ~ 80 write_global_output
+= <.R1_FN> 0x9d017534 ~ 80 print_uint8
+
+= 0x9d019338 ~ 412872 .FREE_FLASH_SPACE
+

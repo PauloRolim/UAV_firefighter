@@ -1,0 +1,30 @@
+﻿IMPLEMENTATION
+    user_ctx_i
+REFINES
+    user_ctx
+
+    // pragma CONSTANTS
+SEES
+    g_types
+VALUES
+
+    // Model Constants
+    INIT = 0 ;
+    EXEC_1 = 1 ;
+    EXEC_2 = 2 ;
+    EXEC_3 = 3 ;
+
+    SimBCMonitor_cycle_def = 1 ;
+
+    cycle_unit = 1000 ;
+
+    //Translation constants for cycle status
+    st_READ_INPUTS = 1 ;
+    st_STATE_MACHINE_CYCLE = 2 ;
+    st_WRITE_OUTPUTS = 3 ;
+    st_TIME = 4 ;
+
+    PATTERN = TRUE ;
+    TIMEOUT = 40000
+
+END

@@ -1,0 +1,16 @@
+THEORY BalanceX IS
+g_standard_types,0,0,0,0,0,0,0
+END
+&
+THEORY ProofState
+END
+&
+THEORY MethodList
+END
+&
+THEORY PassList
+END
+&
+THEORY Status IS
+g_standard_types,0,0,0,0,0,0
+END

@@ -1,0 +1,23 @@
+THEORY ProofList IS
+_f(1) & _f(2) & _f(3) & _f(4) & _f(5) & _f(13) & Operation_user_app.1,(_f(6) & _f(7) & _f(8) & _f(11) => _f(12));
+_f(1) & _f(2) & _f(3) & _f(4) & _f(5) & Initialisation.1,(_f(6) & _f(7) & _f(8) & _f(9) & _f(10) & _f(11) => _f(12))
+END
+&
+THEORY Formulas IS
+((NAT) = (((0) .. (2147483647)))) & ((INT) = (((-2147483647) .. (2147483647))));
+((uint32_t) = (((0) .. (4294967295)))) & ((uint16_t) = (((0) .. (65535)))) & ((uint8_t) = (((0) .. (255)))) & ((STRUE) : (uint8_t)) & ((SFALSE) : (uint8_t)) & ((MAX_UINT32) : (uint32_t)) & ((MAX_UINT16) : (uint16_t)) & ((MAX_UINT8) : (uint8_t)) & ((STRUE) : (((0) .. (MAX_UINT8)))) & ((SFALSE) : (((0) .. (MAX_UINT8)))) & not(((STRUE) = (SFALSE))) & ((SBOOL) = (({STRUE}\/{SFALSE}))) & (STRUE <= 2) & (SFALSE <= 2) & ((MAX_UINT32) = (4294967295)) & ((MAX_UINT16) = (65535)) & ((MAX_UINT8) = (255)) & ((Convert_Bool) = (({((TRUE) |-> (STRUE))}\/{((FALSE) |-> (SFALSE))})));
+((SimBCMonitor_cycle_def) : (uint32_t)) & ((cycle_unit) : (uint32_t)) & ((st_READ_INPUTS) : (uint8_t)) & ((st_STATE_MACHINE_CYCLE) : (uint8_t)) & ((st_WRITE_OUTPUTS) : (uint8_t)) & ((st_TIME) : (uint8_t)) & ((INIT) : (uint8_t)) & ((EXEC_1) : (uint8_t)) & ((EXEC_2) : (uint8_t)) & ((EXEC_3) : (uint8_t)) & ((PATTERN) : (BOOL)) & ((TIMEOUT) : (uint32_t));
+((board_0_I1$1) : (uint8_t)) & ((board_0_I2$1) : (uint8_t)) & ((board_0_I3$1) : (uint8_t)) & ((board_0_O1$1) : (uint8_t)) & ((board_0_O2$1) : (uint8_t));
+((Convert_Bool) : (((BOOL) +-> (uint8_t)))) & ((Convert_Bool) : (((BOOL) +-> (uint16_t)))) & ((Convert_Bool) : (((BOOL) +-> (uint32_t))));
+((board_0_I1) : (uint8_t));
+((board_0_I2) : (uint8_t));
+((board_0_I3) : (uint8_t));
+((board_0_O1) : (uint8_t));
+((board_0_O2) : (uint8_t));
+"Refinement is correct";
+((0) : (uint8_t));
+((divergence_test_var$1) : (uint8_t))
+END
+&
+THEORY EnumerateX
+END

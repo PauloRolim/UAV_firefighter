@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<db_xml>
+    <atelierb version="3_7_ubuntu-cvs" />
+    <project decomp_dir="C:\CSSP\workspace\RoME_UAV_3\bdp\expand_src" old_decomp_dir="C:\CSSP\workspace\RoME_UAV_3\bdp\src">
+        <!-- Definition directory list -->
+        <!-- Proof mechanisms -->
+        <!-- Component file list -->
+        <component_file path="C:\CSSP\workspace\RoME_UAV_3" name="g_operators" suffix="mch" user="paulo">
+            <component name="g_operators" type="specification" />
+        </component_file>
+        <component_file path="C:\CSSP\workspace\RoME_UAV_3" name="g_standard_types" suffix="mch" user="paulo">
+            <component name="g_standard_types" type="specification" />
+        </component_file>
+        <component_file path="C:\CSSP\workspace\RoME_UAV_3" name="g_types" suffix="mch" user="paulo">
+            <component name="g_types" type="specification" />
+        </component_file>
+        <component_file path="C:\CSSP\workspace\RoME_UAV_3" name="g_types_i" suffix="imp" user="paulo">
+            <component name="g_types_i" type="implementation" />
+        </component_file>
+        <component_file path="C:\CSSP\workspace\RoME_UAV_3" name="inputs" suffix="mch" user="paulo">
+            <component name="inputs" type="specification" />
+        </component_file>
+        <component_file path="C:\CSSP\workspace\RoME_UAV_3" name="inputs_i" suffix="imp" user="paulo">
+            <component name="inputs_i" type="implementation" />
+        </component_file>
+        <component_file path="C:\CSSP\workspace\RoME_UAV_3" name="io_constants" suffix="mch" user="paulo">
+            <component name="io_constants" type="specification" />
+        </component_file>
+        <component_file path="C:\CSSP\workspace\RoME_UAV_3" name="lchip_configuration" suffix="mch" user="paulo">
+            <component name="lchip_configuration" type="specification" />
+        </component_file>
+        <component_file path="C:\CSSP\workspace\RoME_UAV_3" name="lchip_interface" suffix="mch" user="paulo">
+            <component name="lchip_interface" type="specification" />
+        </component_file>
+        <component_file path="C:\CSSP\workspace\RoME_UAV_3" name="logic" suffix="mch" user="paulo">
+            <component name="logic" type="specification" />
+        </component_file>
+        <component_file path="C:\CSSP\workspace\RoME_UAV_3" name="logic_i" suffix="imp" user="paulo">
+            <component name="logic_i" type="implementation" />
+        </component_file>
+        <component_file path="C:\CSSP\workspace\RoME_UAV_3" name="outputs" suffix="mch" user="paulo">
+            <component name="outputs" type="specification" />
+        </component_file>
+        <component_file path="C:\CSSP\workspace\RoME_UAV_3" name="outputs_i" suffix="imp" user="paulo">
+            <component name="outputs_i" type="implementation" />
+        </component_file>
+        <component_file path="C:\CSSP\workspace\RoME_UAV_3" name="safety_variables" suffix="mch" user="paulo">
+            <component name="safety_variables" type="specification" />
+        </component_file>
+        <component_file path="C:\CSSP\workspace\RoME_UAV_3" name="user_component" suffix="mch" user="paulo">
+            <component name="user_component" type="specification" />
+        </component_file>
+        <component_file path="C:\CSSP\workspace\RoME_UAV_3" name="user_component_i" suffix="imp" user="paulo">
+            <component name="user_component_i" type="implementation" />
+        </component_file>
+        <component_file path="C:\CSSP\workspace\RoME_UAV_3" name="user_configuration" suffix="mch" user="paulo">
+            <component name="user_configuration" type="specification" />
+        </component_file>
+        <component_file path="C:\CSSP\workspace\RoME_UAV_3" name="user_configuration_i" suffix="imp" user="paulo">
+            <component name="user_configuration_i" type="implementation" />
+        </component_file>
+        <component_file path="C:\CSSP\workspace\RoME_UAV_3" name="user_ctx" suffix="mch" user="paulo">
+            <component name="user_ctx" type="specification" />
+        </component_file>
+        <component_file path="C:\CSSP\workspace\RoME_UAV_3" name="user_ctx_i" suffix="imp" user="paulo">
+            <component name="user_ctx_i" type="implementation" />
+        </component_file>
+    </project>
+</db_xml>

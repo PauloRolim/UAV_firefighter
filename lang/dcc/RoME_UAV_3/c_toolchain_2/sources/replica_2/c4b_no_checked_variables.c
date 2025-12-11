@@ -1,0 +1,3 @@
+#include "c4b_no_checked_variables.h"
+
+struct_no_checked_variables SECTION_C4B_NO_CHECK_VARIABLES no_checked_variables;

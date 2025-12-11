@@ -1,0 +1,29 @@
+THEORY ProofList IS
+_f(1) & _f(2) & ValuesLemmas.9,(_f(3) => _f(12));
+_f(1) & _f(2) & ValuesLemmas.8,(_f(3) => _f(11));
+_f(1) & _f(2) & ValuesLemmas.7,(_f(3) => _f(10));
+_f(1) & _f(2) & ValuesLemmas.6,(_f(3) => _f(9));
+_f(1) & _f(2) & ValuesLemmas.5,(_f(3) => _f(8));
+_f(1) & _f(2) & ValuesLemmas.4,(_f(3) => _f(7));
+_f(1) & _f(2) & ValuesLemmas.3,(_f(3) => _f(6));
+_f(1) & _f(2) & ValuesLemmas.2,(_f(3) => _f(5));
+_f(1) & _f(2) & ValuesLemmas.1,(_f(3) => _f(4))
+END
+&
+THEORY Formulas IS
+((NAT) = (((0) .. (2147483647)))) & ((INT) = (((-2147483647) .. (2147483647))));
+((uint32_t) = (((0) .. (4294967295)))) & ((uint16_t) = (((0) .. (65535)))) & ((uint8_t) = (((0) .. (255))));
+"Valuation is correct";
+((2) : (uint8_t));
+((1) : (uint8_t));
+((4294967295) : (uint32_t));
+((65535) : (uint16_t));
+((255) : (uint8_t));
+((2) : (((0) .. (255))));
+((1) : (((0) .. (255))));
+(2 <= 2);
+(1 <= 2)
+END
+&
+THEORY EnumerateX
+END
