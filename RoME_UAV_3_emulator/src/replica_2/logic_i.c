@@ -176,7 +176,6 @@ void SECTION_C4B_FUNCTION SM_SimBCMonitor(void)
             uint8_t guard_9;
             uint8_t guard_10;
             uint32_t local_since;
-            uint32_t local_read;
             uint8_t predicate_1;
             uint8_t predicate_2;
             uint8_t predicate_3;
@@ -189,50 +188,55 @@ void SECTION_C4B_FUNCTION SM_SimBCMonitor(void)
             uint8_t predicate_10;
             uint8_t predicate_11;
             uint8_t predicate_12;
+            uint8_t predicate_13;
+            uint8_t predicate_14;
+            uint8_t predicate_15;
+            uint8_t predicate_16;
+            uint8_t predicate_17;
+            uint8_t predicate_18;
+            uint8_t predicate_19;
             
             predicate_1 = ((i_CommsLink == IO_ON) ? true : false);
+            var_currbit_2 = predicate_1;
             predicate_2 = ((i_HighBattery == IO_ON) ? true : false);
+            var_highBattery_3 = predicate_2;
             land(predicate_1, predicate_2, &guard_1);
             predicate_3 = ((i_CommsLink == IO_OFF) ? true : false);
+            var_currbit_2 = predicate_3;
             predicate_4 = ((i_HighBattery == IO_OFF) ? true : false);
+            var_highBattery_3 = predicate_4;
             lor(predicate_3, predicate_4, &guard_2);
             since(var_P_1, &local_since);
             guard_3 = (((local_since) <= (TIMEOUT)) ? true : false);
             guard_4 = (((TIMEOUT) < (local_since)) ? true : false);
-            local_read = ((uint32_t) 0UL);
-            var_currbit_2 = ((i_CommsLink == IO_ON) ? true : false);
-            validBitPattern(PATTERN, local_read, var_currbit_2, &predicate_5);
+            validBitPattern(PATTERN, var_read_1 + ((uint32_t) 1UL), var_currbit_2, &predicate_5);
             lnot(predicate_5, &predicate_6);
-            var_highBattery_3 = ((i_HighBattery == IO_ON) ? true : false);
             predicate_7 = var_highBattery_3;
             land(predicate_6, predicate_7, &guard_5);
-            var_currbit_2 = ((i_CommsLink == IO_ON) ? true : false);
-            validBitPattern(PATTERN, local_read, var_currbit_2, &predicate_8);
-            var_highBattery_3 = ((i_HighBattery == IO_ON) ? true : false);
+            validBitPattern(PATTERN, var_read_1 + ((uint32_t) 1UL), var_currbit_2, &predicate_8);
             predicate_9 = var_highBattery_3;
             land(predicate_8, predicate_9, &guard_6);
-            predicate_10 = (((TIMEOUT) < (local_since)) ? true : false);
+            predicate_10 = ((i_CommsLink == IO_OFF) ? true : false);
+            var_currbit_2 = predicate_10;
             predicate_11 = ((i_HighBattery == IO_OFF) ? true : false);
-            land(predicate_10, predicate_11, &predicate_12);
-            land(predicate_9, predicate_12, &guard_7);
-            guard_8 = predicate_4;
-            guard_9 = guard_1;
-            if((guard_2 == true))
+            var_highBattery_3 = predicate_11;
+            lor(predicate_10, predicate_11, &predicate_12);
+            predicate_13 = (((TIMEOUT) < (local_since)) ? true : false);
+            predicate_14 = var_highBattery_3;
+            land(predicate_13, predicate_14, &predicate_15);
+            land(predicate_12, predicate_15, &guard_7);
+            predicate_16 = var_highBattery_3;
+            lnot(predicate_13, &guard_8);
+            predicate_14 = ((i_CommsLink == IO_ON) ? true : false);
+            var_currbit_2 = predicate_14;
+            predicate_15 = ((i_HighBattery == IO_ON) ? true : false);
+            var_highBattery_3 = predicate_15;
+            land(predicate_14, predicate_15, &guard_9);
+            predicate_19 = var_highBattery_3;
+            lnot(predicate_19, &guard_10);
+            if((guard_1 == true))
             {
-                if((guard_3 == true))
-                {
-                    o_Proceed = IO_ON;
-                    SM_SimBCMonitor_state = EXEC_2;
-                }
-                else if((guard_4 == true))
-                {
-                    o_Proceed = IO_OFF;
-                    SM_SimBCMonitor_state = EXEC_2;
-                }
-            }
-            else if((guard_1 == true))
-            {
-                if((guard_6 == true))
+                if((guard_5 == true))
                 {
                     if((guard_3 == true))
                     {
@@ -245,27 +249,54 @@ void SECTION_C4B_FUNCTION SM_SimBCMonitor(void)
                         SM_SimBCMonitor_state = EXEC_2;
                     }
                 }
-            }
-            else if((guard_1 == true))
-            {
-                if((guard_5 == true))
+                else if((guard_6 == true))
                 {
                     if((guard_7 == true))
                     {
                         o_Proceed = IO_OFF;
                         SM_SimBCMonitor_state = EXEC_2;
                     }
+                    else if((guard_8 == true))
+                    {
+                        SM_SimBCMonitor_state = EXEC_3;
+                    }
+                    else if((guard_9 == true))
+                    {
+                        if((guard_5 == true))
+                        {
+                            if((guard_3 == true))
+                            {
+                                o_Proceed = IO_ON;
+                                SM_SimBCMonitor_state = EXEC_2;
+                            }
+                            else if((guard_4 == true))
+                            {
+                                o_Proceed = IO_OFF;
+                                SM_SimBCMonitor_state = EXEC_2;
+                            }
+                        }
+                        else if((guard_10 == true))
+                        {
+                            SM_SimBCMonitor_state = EXEC_3;
+                        }
+                    }
                 }
-                if((guard_8 == true))
+                else if((guard_10 == true))
                 {
                     SM_SimBCMonitor_state = EXEC_3;
                 }
             }
-            else if((guard_1 == true))
+            else if((guard_2 == true))
             {
-                if((guard_8 == true))
+                if((guard_3 == true))
                 {
-                    SM_SimBCMonitor_state = EXEC_3;
+                    o_Proceed = IO_ON;
+                    SM_SimBCMonitor_state = EXEC_2;
+                }
+                else if((guard_4 == true))
+                {
+                    o_Proceed = IO_OFF;
+                    SM_SimBCMonitor_state = EXEC_2;
                 }
             }
         }
@@ -273,10 +304,6 @@ void SECTION_C4B_FUNCTION SM_SimBCMonitor(void)
     else if((SM_SimBCMonitor_state == EXEC_3))
     {
         o_Proceed = IO_OFF;
-    }
-    else
-    {
-        ;
     }
     cycle_state = st_WRITE_OUTPUTS;
 }
@@ -288,7 +315,6 @@ void SECTION_C4B_FUNCTION validBitPattern(uint8_t pp, uint32_t rr, uint8_t cc, u
         var_patternBit_1 = false;
         var_patternBit_2 = pp;
         (*valid) = true;
-        var_read_1 = rr + ((uint32_t) 1UL);
     }
     else
     {
