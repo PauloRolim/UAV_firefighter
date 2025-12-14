@@ -38,11 +38,11 @@ void SECTION_C4B_FUNCTION logic__initialisation(void)
     cycle_timer = ((uint32_t) 0UL);
     cycle_state = ((uint32_t) 1UL);
     var_read_1 = ((uint32_t) 0UL);
+    var_currbit_2 = false;
+    var_highBattery_3 = false;
     var_P_1 = ((uint32_t) 0UL);
     var_patternBit_1 = true;
     var_patternBit_2 = false;
-    valid_pred_5 = false;
-    valid_pred_6 = false;
     i_MissionStart = IO_OFF;
     i_CommsLink = IO_OFF;
     i_HighBattery = IO_OFF;
@@ -175,8 +175,8 @@ void SECTION_C4B_FUNCTION SM_SimBCMonitor(void)
             uint8_t guard_8;
             uint8_t guard_9;
             uint8_t guard_10;
-            uint8_t guard_11;
             uint32_t local_since;
+            uint32_t local_read;
             uint8_t predicate_1;
             uint8_t predicate_2;
             uint8_t predicate_3;
@@ -195,17 +195,22 @@ void SECTION_C4B_FUNCTION SM_SimBCMonitor(void)
             land(predicate_1, predicate_2, &guard_1);
             predicate_3 = ((i_CommsLink == IO_OFF) ? true : false);
             predicate_4 = ((i_HighBattery == IO_OFF) ? true : false);
-            land(predicate_3, predicate_4, &guard_2);
+            lor(predicate_3, predicate_4, &guard_2);
             since(var_P_1, &local_since);
             guard_3 = (((local_since) <= (TIMEOUT)) ? true : false);
             guard_4 = (((TIMEOUT) < (local_since)) ? true : false);
-            validBitPattern(PATTERN, var_read_1, i_CommsLink, &predicate_5);
+            local_read = ((uint32_t) 0UL);
+            var_currbit_2 = ((i_CommsLink == IO_ON) ? true : false);
+            validBitPattern(PATTERN, local_read, var_currbit_2, &predicate_5);
             lnot(predicate_5, &predicate_6);
-            land(predicate_6, predicate_2, &guard_5);
-            land(predicate_5, predicate_2, &guard_6);
-            predicate_7 = ((i_CommsLink == IO_OFF) ? true : false);
-            predicate_8 = ((i_CommsLink == IO_OFF) ? true : false);
-            land(predicate_7, predicate_8, &predicate_9);
+            var_highBattery_3 = ((i_HighBattery == IO_ON) ? true : false);
+            predicate_7 = var_highBattery_3;
+            land(predicate_6, predicate_7, &guard_5);
+            var_currbit_2 = ((i_CommsLink == IO_ON) ? true : false);
+            validBitPattern(PATTERN, local_read, var_currbit_2, &predicate_8);
+            var_highBattery_3 = ((i_HighBattery == IO_ON) ? true : false);
+            predicate_9 = var_highBattery_3;
+            land(predicate_8, predicate_9, &guard_6);
             predicate_10 = (((TIMEOUT) < (local_since)) ? true : false);
             predicate_11 = ((i_HighBattery == IO_OFF) ? true : false);
             land(predicate_10, predicate_11, &predicate_12);
@@ -278,11 +283,12 @@ void SECTION_C4B_FUNCTION SM_SimBCMonitor(void)
 
 void SECTION_C4B_FUNCTION validBitPattern(uint8_t pp, uint32_t rr, uint8_t cc, uint8_t *valid)
 {
-    if((cc == IO_ON))
+    if((cc == true))
     {
         var_patternBit_1 = false;
         var_patternBit_2 = pp;
         (*valid) = true;
+        var_read_1 = rr + ((uint32_t) 1UL);
     }
     else
     {

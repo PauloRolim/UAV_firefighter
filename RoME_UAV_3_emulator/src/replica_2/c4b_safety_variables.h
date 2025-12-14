@@ -14,11 +14,11 @@ typedef struct _struct_safety_variables {
 	uint32_t v_cycle_timer;
 	uint8_t v_cycle_state;
 	uint32_t v_var_read_1;
+	uint8_t v_var_currbit_2;
+	uint8_t v_var_highBattery_3;
 	uint32_t v_var_P_1;
 	uint8_t v_var_patternBit_1;
 	uint8_t v_var_patternBit_2;
-	uint8_t v_valid_pred_5;
-	uint8_t v_valid_pred_6;
 	uint8_t v_i_MissionStart;
 	uint8_t v_i_CommsLink;
 	uint8_t v_i_HighBattery;

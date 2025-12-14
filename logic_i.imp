@@ -21,13 +21,12 @@ CONCRETE_VARIABLES
     cycle_state, // Store the current state of the simulation cycle 
 	
 	var_read_1,
-	var_P_1,	
+	var_currbit_2,
+	var_highBattery_3,
+	var_P_1,
 	
 	var_patternBit_1,
     var_patternBit_2,
-    
-    valid_pred_5,
-    valid_pred_6,
         
     // Model inputs
     i_MissionStart,
@@ -48,13 +47,12 @@ INVARIANT
     cycle_state: {st_READ_INPUTS, st_STATE_MACHINE_CYCLE, st_WRITE_OUTPUTS, st_TIME} &
 	
 	var_read_1: uint32_t &
+	var_currbit_2: BOOL &
+	var_highBattery_3: BOOL &
 	var_P_1: uint32_t &
 	
 	var_patternBit_1: BOOL &
     var_patternBit_2: BOOL &
-    
-    valid_pred_5:BOOL &
-    valid_pred_6:BOOL &
         
     // Model inputs
     i_MissionStart: uint8_t &
@@ -73,13 +71,12 @@ INITIALISATION
     cycle_state:= 1;
     
     var_read_1:= 0;
+    var_currbit_2:= FALSE;
+	var_highBattery_3:= FALSE;
     var_P_1:= 0;
     
 	var_patternBit_1:= TRUE;
     var_patternBit_2:= FALSE;
-    
-    valid_pred_5:= FALSE;
-    valid_pred_6:= FALSE;
     
     // Model inputs
     i_MissionStart:= IO_OFF;
@@ -105,6 +102,8 @@ LOCAL_OPERATIONS
     
         // Model variables
         var_P_1:: uint32_t ||
+        var_currbit_2:: BOOL ||
+	    var_highBattery_3:: BOOL ||
     
         // Model outputs
         o_Proceed:: uint8_t
@@ -141,6 +140,9 @@ LOCAL_OPERATIONS
     read_model_inputs = 
     PRE cycle_state = st_READ_INPUTS    
     THEN
+        
+        var_currbit_2:: BOOL ||
+	    var_highBattery_3:: BOOL ||
         cycle_state  :: uint8_t ||
         
         i_MissionStart  :: uint8_t ||
@@ -168,13 +170,15 @@ LOCAL_OPERATIONS
         // Model variables
         var_P_1    :: uint32_t ||
         var_read_1 :: uint32_t ||
+        var_currbit_2 :: BOOL ||
+        var_highBattery_3 :: BOOL ||
         
         // Model output
         o_Proceed:: uint8_t
     END;
     
     valid <-- validBitPattern(pp,rr,cc) =
-    PRE valid:BOOL & pp:BOOL & rr:uint32_t & cc: uint8_t
+    PRE valid:BOOL & pp:BOOL & rr:uint32_t & cc: BOOL
     THEN    
          valid:: BOOL||
          var_patternBit_1:: BOOL ||
@@ -268,9 +272,9 @@ OPERATIONS
     BEGIN
         i_MissionStart <-- get_board_0_I1;
         i_CommsLink <-- get_board_0_I2;
-        i_HighBattery <-- get_board_0_I3;
-        
+        i_HighBattery <-- get_board_0_I3;        
         cycle_state := st_STATE_MACHINE_CYCLE
+       
     END;
     
     write_model_outputs = 
@@ -304,12 +308,14 @@ OPERATIONS
                 
                VAR guard_1, guard_2, guard_3, guard_4,
                    guard_5, guard_6, guard_7, guard_8,
-                   guard_9, guard_10, guard_11,
-                   local_since,
+                   guard_9, guard_10,
+                   local_since, local_read,
                    predicate_1, predicate_2, predicate_3,
                    predicate_4, predicate_5, predicate_6,
                    predicate_7, predicate_8, predicate_9,
-                   predicate_10, predicate_11, predicate_12
+                   predicate_10, predicate_11, predicate_12,
+                   predicate_13, predicate_14, predicate_15,
+                   predicate_16
                    
                IN guard_1:(guard_1:BOOL);
                   guard_2:(guard_2:BOOL);
@@ -321,9 +327,9 @@ OPERATIONS
                   guard_8:(guard_8:BOOL);
                   guard_9:(guard_9:BOOL);
                   guard_10:(guard_10:BOOL);
-                  guard_11:(guard_11:BOOL);
-                  
+               
                   local_since:(local_since:uint32_t);
+                  local_read:(local_read:uint32_t);
                   
                   predicate_1:(predicate_1:BOOL);
                   predicate_2:(predicate_2:BOOL);
@@ -337,80 +343,106 @@ OPERATIONS
                   predicate_10:(predicate_10:BOOL);
                   predicate_11:(predicate_11:BOOL);
                   predicate_12:(predicate_12:BOOL);
+                  predicate_13:(predicate_13:BOOL);
+                  predicate_14:(predicate_14:BOOL);
+                  predicate_15:(predicate_15:BOOL);
+                  predicate_16:(predicate_16:BOOL);
                   
                   predicate_1:= bool(i_CommsLink = IO_ON);
                   predicate_2:= bool(i_HighBattery = IO_ON);
-                  guard_1 <-- land(predicate_1,predicate_2);//[$CommsLink?currbit /\ $HighBattery?highBattery]
+                  //[$CommsLink?currbit /\ $HighBattery?highBattery]
+                  guard_1 <-- land(predicate_1,predicate_2);
                   
                   predicate_3:= bool(i_CommsLink  = IO_OFF);
                   predicate_4:= bool(i_HighBattery = IO_OFF); 
-                  guard_2 <-- land(predicate_3,predicate_4); //[not($CommsLink?currbit /\ $HighBattery?highBattery)] 
+                  //[not($CommsLink?currbit /\ $HighBattery?highBattery)] 
+                  guard_2 <-- lor(predicate_3,predicate_4); 
                   
                   local_since <--since(var_P_1);
-                  guard_3 := bool(local_since <= TIMEOUT); //[since(P) <= TIMEOUT]
-                  guard_4 := bool(TIMEOUT < local_since); // [since(P) > TIMEOUT]
+                  //[since(P) <= TIMEOUT]
+                  guard_3 := bool(local_since <= TIMEOUT);
+                  // [since(P) > TIMEOUT]
+                  guard_4 := bool(TIMEOUT < local_since); 
                   
-                  predicate_5 <-- validBitPattern(PATTERN,var_read_1,i_CommsLink);
+                  local_read:= 0;
+                  var_currbit_2 := bool(i_CommsLink = IO_ON);
+                  predicate_5 <-- validBitPattern(PATTERN,local_read,var_currbit_2);
                   predicate_6 <-- lnot(predicate_5);
-                  guard_5 <-- land(predicate_6,predicate_2);//[not validBitPattern() /\ highBattery]
-                  guard_6 <-- land(predicate_5,predicate_2);//[validBitPattern() /\ highBattery]
+                  var_highBattery_3 := bool(i_HighBattery = IO_ON);
+                  predicate_7:= var_highBattery_3;
+                  //[not validBitPattern() /\ highBattery]
+                  guard_5 <-- land(predicate_6,predicate_7);
+                  
+                  local_read:= 0;
+                  var_currbit_2 := bool(i_CommsLink = IO_ON);
+                  predicate_8 <-- validBitPattern(PATTERN,local_read,var_currbit_2);
+                  var_highBattery_3 := bool(i_HighBattery = IO_ON);
+                  predicate_9 := var_highBattery_3;
+                  //[validBitPattern() /\ highBattery]
+                  guard_6 <-- land(predicate_8,predicate_9);
                                       
-                  predicate_7 := bool(i_CommsLink  = IO_OFF);
-                  predicate_8 := bool(i_CommsLink  = IO_OFF);
-                  predicate_9 <-- land(predicate_7,predicate_8);
                   predicate_10:= bool(TIMEOUT < local_since);
                   predicate_11:= bool(i_HighBattery = IO_OFF);
                   predicate_12 <--land(predicate_10,predicate_11);
                   guard_7 <-- land(predicate_9,predicate_12);
                   
-                  guard_8 := predicate_4;
+                  var_highBattery_3 := bool(i_HighBattery = IO_OFF);
+                  predicate_13:= var_highBattery_3;
+                  //[not highBattery]
+                  guard_8 :=  predicate_13;
                   
-                  guard_9 := guard_1;
+                  predicate_14:= bool(i_CommsLink = IO_ON);
+                  predicate_15:= bool(i_HighBattery = IO_ON);
+                  //[$CommsLink?currbit /\ $HighBattery?highBattery]
+                  guard_9 <-- land(predicate_1,predicate_2);
                   
-                  IF (guard_2 = TRUE) THEN //[not($CommsLink?currbit /\ $HighBattery?highBattery)]
-                        //Junction 1
-                        IF (guard_3 = TRUE) THEN //[since(P) <= TIMEOUT]
-                            o_Proceed:= IO_ON;
-                            SM_SimBCMonitor_state := EXEC_2
-                            
-                        ELSIF (guard_4 = TRUE) THEN //[TIMEOUT < since(P)]
-                               o_Proceed:= IO_OFF;
-                               SM_SimBCMonitor_state := EXEC_2
-                        END
+                  var_highBattery_3 := bool(i_HighBattery = IO_OFF);
+                  predicate_16:= var_highBattery_3;
+                  //[not highBattery]
+                  guard_10:= predicate_16;
                   
-                  ELSIF (guard_1 = TRUE) THEN //[$CommsLink?currbit /\ $HighBattery?highBattery]
-                     // Junction 2
-                      IF (guard_6 = TRUE) THEN //[validBitPattern() /\ highBattery]
-                         //Junction 1
-                          IF (guard_3 = TRUE) THEN //[since(P) <= TIMEOUT]
-                              o_Proceed:= IO_ON;
-                              SM_SimBCMonitor_state := EXEC_2
-                              
-                          ELSIF (guard_4 = TRUE) THEN //[TIMEOUT < since(P)]
-                              o_Proceed:= IO_OFF;
-                              SM_SimBCMonitor_state := EXEC_2
-                          END 
+                  
+                  IF (guard_1 = TRUE) THEN //[$CommsLink?currbit /\ $HighBattery?highBattery]
+                      IF (guard_5 = TRUE) THEN //[not validBitPattern() /\ highBattery]
+                         IF (guard_3 = TRUE) THEN //[since(P) <= TIMEOUT]
+                             o_Proceed:= IO_ON;
+                             SM_SimBCMonitor_state := EXEC_2
+                         ELSIF (guard_4 = TRUE) THEN // [since(P) > TIMEOUT]
+                             o_Proceed:= IO_OFF;
+                             SM_SimBCMonitor_state := EXEC_2
+                         END
+                      ELSIF (guard_6 = TRUE) THEN //[validBitPattern() /\ highBattery]
+                          IF (guard_7 = TRUE) THEN
+                              skip
+                          ELSIF (guard_8 = TRUE) THEN
+                               SM_SimBCMonitor_state := EXEC_3
+                          ELSIF (guard_9 = TRUE) THEN //[$CommsLink?currbit /\ $HighBattery?highBattery]
+                              IF (guard_5 = TRUE) THEN
+                                 IF (guard_3 = TRUE) THEN //[since(P) <= TIMEOUT]
+                                     o_Proceed:= IO_ON;
+                                     SM_SimBCMonitor_state := EXEC_2
+                                 ELSIF (guard_4 = TRUE) THEN // [since(P) > TIMEOUT]
+                                     o_Proceed:= IO_OFF;
+                                     SM_SimBCMonitor_state := EXEC_2
+                                 END
+                              ELSIF (guard_6 = TRUE) THEN
+                                     skip
+                              ELSIF (guard_10 = TRUE) THEN
+                                    SM_SimBCMonitor_state := EXEC_3
+                              END    
+                          END    
+                      ELSIF (guard_10 = TRUE) THEN //[not highBattery]
+                          SM_SimBCMonitor_state := EXEC_3
                       END
                         //Junction 2
-                  ELSIF (guard_1 = TRUE) THEN//[$CommsLink?currbit /\ $HighBattery?highBattery]
-                          //ProcessBitPattern
-                          IF (guard_5 = TRUE) THEN //[not validBitPattern() /\ highBattery]
-                             IF(guard_7 = TRUE) THEN //[not ($CommsLink?currbit/\$HighBattery?highBattery)
-                                                     // /\ since(P)>TIMEOUT/\highBattery]
-                                 o_Proceed:= IO_OFF;
-                                 SM_SimBCMonitor_state := EXEC_2
-                             END    
-                          END;
-                          
-                          IF(guard_8 = TRUE) THEN //[not highBattery]
-                              SM_SimBCMonitor_state := EXEC_3
-                          END    
-                      
-                  
-                  ELSIF (guard_1 = TRUE) THEN//[$CommsLink?currbit /\ $HighBattery?highBattery]
-                        IF(guard_8 = TRUE) THEN //[not highBattery]
-                           SM_SimBCMonitor_state := EXEC_3
-                        END    
+                  ELSIF (guard_2 = TRUE) THEN//[not($CommsLink?currbit /\ $HighBattery?highBattery)]
+                         IF (guard_3 = TRUE) THEN //[since(P) <= TIMEOUT]
+                             o_Proceed:= IO_ON;
+                             SM_SimBCMonitor_state := EXEC_2
+                         ELSIF (guard_4 = TRUE) THEN // [since(P) > TIMEOUT]
+                             o_Proceed:= IO_OFF;
+                             SM_SimBCMonitor_state := EXEC_2
+                         END               
                   END
                END
                 
@@ -425,17 +457,21 @@ OPERATIONS
         cycle_state := st_WRITE_OUTPUTS 
     END;    
     
-    valid <-- validBitPattern(pp,rr,cc) = //Sequecen bit pattern is simplified to just contain two bits
+    valid <-- validBitPattern(pp,rr,cc) = //Sequence bit pattern is simplified to just contain two bits
     BEGIN
         valid:(valid:BOOL);
-        IF (cc = IO_ON) THEN
+        
+        IF (cc = TRUE) THEN
            var_patternBit_1:= FALSE;
            var_patternBit_2:= pp;
-           valid:= TRUE
+           valid:= TRUE;
+           var_read_1:= add_uint32(rr,1)
+           
         ELSE
            var_patternBit_1:= TRUE;
            var_patternBit_2:= FALSE;
            valid:= FALSE
+           
         END      
     END;
     

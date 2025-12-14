@@ -69,7 +69,7 @@ FREE_RAM_SECTION                | .FREE_RAM_SPACE
 0.1) Build directory initialization
 ---------------------------------------
 [Warning] Existing project folder RoME_UAV_3, will be removed.
-Starting generation 2025-12-11 12:26:15.223070
+Starting generation 2025-12-13 20:20:47.736811
 
 
 0.2) Generating model_data_group.cfg

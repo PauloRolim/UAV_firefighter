@@ -33,11 +33,11 @@ extern "C" {
 #define cycle_timer safety_variables.fields.v_cycle_timer
 #define cycle_state safety_variables.fields.v_cycle_state
 #define var_read_1 safety_variables.fields.v_var_read_1
+#define var_currbit_2 safety_variables.fields.v_var_currbit_2
+#define var_highBattery_3 safety_variables.fields.v_var_highBattery_3
 #define var_P_1 safety_variables.fields.v_var_P_1
 #define var_patternBit_1 safety_variables.fields.v_var_patternBit_1
 #define var_patternBit_2 safety_variables.fields.v_var_patternBit_2
-#define valid_pred_5 safety_variables.fields.v_valid_pred_5
-#define valid_pred_6 safety_variables.fields.v_valid_pred_6
 #define i_MissionStart safety_variables.fields.v_i_MissionStart
 #define i_CommsLink safety_variables.fields.v_i_CommsLink
 #define i_HighBattery safety_variables.fields.v_i_HighBattery

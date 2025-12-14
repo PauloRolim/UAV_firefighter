@@ -35,7 +35,7 @@ stack                   0xa0000020          0xfd8        4056  Reserved for stac
 Discarded input sections
 
  .reginfo       0x00000000       0x18 C:\CSSP\workspace\RoME_UAV_3\lang\dcc\RoME_UAV_3\c_toolchain_1\build\kernel_app\link_to_kernel.o
- .debug_info    0x00000000      0xa3e C:\CSSP\workspace\RoME_UAV_3\lang\dcc\RoME_UAV_3\c_toolchain_1\build\kernel_app\link_to_kernel.o
+ .debug_info    0x00000000      0xa44 C:\CSSP\workspace\RoME_UAV_3\lang\dcc\RoME_UAV_3\c_toolchain_1\build\kernel_app\link_to_kernel.o
  .debug_abbrev  0x00000000       0xa9 C:\CSSP\workspace\RoME_UAV_3\lang\dcc\RoME_UAV_3\c_toolchain_1\build\kernel_app\link_to_kernel.o
  .debug_aranges
                 0x00000000       0x18 C:\CSSP\workspace\RoME_UAV_3\lang\dcc\RoME_UAV_3\c_toolchain_1\build\kernel_app\link_to_kernel.o
@@ -65,7 +65,7 @@ Discarded input sections
  .debug_line    0x00000000       0xaa C:\CSSP\workspace\RoME_UAV_3\lang\dcc\RoME_UAV_3\c_toolchain_1\build\replica_2\c4b_no_checked_variables.o
  .comment       0x00000000       0x3c C:\CSSP\workspace\RoME_UAV_3\lang\dcc\RoME_UAV_3\c_toolchain_1\build\replica_2\c4b_no_checked_variables.o
  .reginfo       0x00000000       0x18 C:\CSSP\workspace\RoME_UAV_3\lang\dcc\RoME_UAV_3\c_toolchain_1\build\replica_2\c4b_safety_variables.o
- .debug_info    0x00000000      0x43d C:\CSSP\workspace\RoME_UAV_3\lang\dcc\RoME_UAV_3\c_toolchain_1\build\replica_2\c4b_safety_variables.o
+ .debug_info    0x00000000      0x443 C:\CSSP\workspace\RoME_UAV_3\lang\dcc\RoME_UAV_3\c_toolchain_1\build\replica_2\c4b_safety_variables.o
  .debug_abbrev  0x00000000       0x83 C:\CSSP\workspace\RoME_UAV_3\lang\dcc\RoME_UAV_3\c_toolchain_1\build\replica_2\c4b_safety_variables.o
  .debug_aranges
                 0x00000000       0x18 C:\CSSP\workspace\RoME_UAV_3\lang\dcc\RoME_UAV_3\c_toolchain_1\build\replica_2\c4b_safety_variables.o
@@ -81,7 +81,7 @@ Discarded input sections
  .comment       0x00000000       0x3c C:\CSSP\workspace\RoME_UAV_3\lang\dcc\RoME_UAV_3\c_toolchain_1\build\replica_2\g_types_i.o
  .debug_frame   0x00000000       0x30 C:\CSSP\workspace\RoME_UAV_3\lang\dcc\RoME_UAV_3\c_toolchain_1\build\replica_2\g_types_i.o
  .reginfo       0x00000000       0x18 C:\CSSP\workspace\RoME_UAV_3\lang\dcc\RoME_UAV_3\c_toolchain_1\build\replica_2\inputs_i.o
- .debug_info    0x00000000      0x514 C:\CSSP\workspace\RoME_UAV_3\lang\dcc\RoME_UAV_3\c_toolchain_1\build\replica_2\inputs_i.o
+ .debug_info    0x00000000      0x51a C:\CSSP\workspace\RoME_UAV_3\lang\dcc\RoME_UAV_3\c_toolchain_1\build\replica_2\inputs_i.o
  .debug_abbrev  0x00000000       0xeb C:\CSSP\workspace\RoME_UAV_3\lang\dcc\RoME_UAV_3\c_toolchain_1\build\replica_2\inputs_i.o
  .debug_aranges
                 0x00000000       0x40 C:\CSSP\workspace\RoME_UAV_3\lang\dcc\RoME_UAV_3\c_toolchain_1\build\replica_2\inputs_i.o
@@ -90,12 +90,12 @@ Discarded input sections
  .comment       0x00000000       0x3c C:\CSSP\workspace\RoME_UAV_3\lang\dcc\RoME_UAV_3\c_toolchain_1\build\replica_2\inputs_i.o
  .debug_frame   0x00000000       0xa4 C:\CSSP\workspace\RoME_UAV_3\lang\dcc\RoME_UAV_3\c_toolchain_1\build\replica_2\inputs_i.o
  .reginfo       0x00000000       0x18 C:\CSSP\workspace\RoME_UAV_3\lang\dcc\RoME_UAV_3\c_toolchain_1\build\replica_2\logic_i.o
- .debug_info    0x00000000      0x90d C:\CSSP\workspace\RoME_UAV_3\lang\dcc\RoME_UAV_3\c_toolchain_1\build\replica_2\logic_i.o
+ .debug_info    0x00000000      0x918 C:\CSSP\workspace\RoME_UAV_3\lang\dcc\RoME_UAV_3\c_toolchain_1\build\replica_2\logic_i.o
  .debug_abbrev  0x00000000      0x1ab C:\CSSP\workspace\RoME_UAV_3\lang\dcc\RoME_UAV_3\c_toolchain_1\build\replica_2\logic_i.o
  .debug_aranges
                 0x00000000       0x80 C:\CSSP\workspace\RoME_UAV_3\lang\dcc\RoME_UAV_3\c_toolchain_1\build\replica_2\logic_i.o
  .debug_ranges  0x00000000       0x98 C:\CSSP\workspace\RoME_UAV_3\lang\dcc\RoME_UAV_3\c_toolchain_1\build\replica_2\logic_i.o
- .debug_line    0x00000000      0x1f5 C:\CSSP\workspace\RoME_UAV_3\lang\dcc\RoME_UAV_3\c_toolchain_1\build\replica_2\logic_i.o
+ .debug_line    0x00000000      0x1fe C:\CSSP\workspace\RoME_UAV_3\lang\dcc\RoME_UAV_3\c_toolchain_1\build\replica_2\logic_i.o
  .comment       0x00000000       0x3c C:\CSSP\workspace\RoME_UAV_3\lang\dcc\RoME_UAV_3\c_toolchain_1\build\replica_2\logic_i.o
  .debug_frame   0x00000000      0x1a4 C:\CSSP\workspace\RoME_UAV_3\lang\dcc\RoME_UAV_3\c_toolchain_1\build\replica_2\logic_i.o
  .reginfo       0x00000000       0x18 C:\CSSP\workspace\RoME_UAV_3\lang\dcc\RoME_UAV_3\c_toolchain_1\build\replica_2\outputs_i.o
@@ -108,7 +108,7 @@ Discarded input sections
  .comment       0x00000000       0x3c C:\CSSP\workspace\RoME_UAV_3\lang\dcc\RoME_UAV_3\c_toolchain_1\build\replica_2\outputs_i.o
  .debug_frame   0x00000000       0x4c C:\CSSP\workspace\RoME_UAV_3\lang\dcc\RoME_UAV_3\c_toolchain_1\build\replica_2\outputs_i.o
  .reginfo       0x00000000       0x18 C:\CSSP\workspace\RoME_UAV_3\lang\dcc\RoME_UAV_3\c_toolchain_1\build\replica_2\user_component_i.o
- .debug_info    0x00000000      0x4de C:\CSSP\workspace\RoME_UAV_3\lang\dcc\RoME_UAV_3\c_toolchain_1\build\replica_2\user_component_i.o
+ .debug_info    0x00000000      0x4e4 C:\CSSP\workspace\RoME_UAV_3\lang\dcc\RoME_UAV_3\c_toolchain_1\build\replica_2\user_component_i.o
  .debug_abbrev  0x00000000       0xca C:\CSSP\workspace\RoME_UAV_3\lang\dcc\RoME_UAV_3\c_toolchain_1\build\replica_2\user_component_i.o
  .debug_aranges
                 0x00000000       0x30 C:\CSSP\workspace\RoME_UAV_3\lang\dcc\RoME_UAV_3\c_toolchain_1\build\replica_2\user_component_i.o
@@ -342,7 +342,7 @@ LOAD C:\CSSP\workspace\RoME_UAV_3\lang\dcc\RoME_UAV_3\c_toolchain_1\build\replic
  *(.r2_cst.*)
                 0x9d0193a0                . = ALIGN (0x8)
 
-.R2_FN          0x9d0193a0      0xf20
+.R2_FN          0x9d0193a0      0xfd0
  *(.r2_fn)
  .r2_fn         0x9d0193a0       0x38 C:\CSSP\workspace\RoME_UAV_3\lang\dcc\RoME_UAV_3\c_toolchain_1\build\replica_2\g_types_i.o
                 0x9d0193a0                g_types__initialisation
@@ -352,25 +352,24 @@ LOAD C:\CSSP\workspace\RoME_UAV_3\lang\dcc\RoME_UAV_3\c_toolchain_1\build\replic
                 0x9d0194b8                get_board_0_I1
                 0x9d0194ec                get_board_0_I2
                 0x9d019524                get_board_0_I3
- .r2_fn         0x9d01955c      0xba0 C:\CSSP\workspace\RoME_UAV_3\lang\dcc\RoME_UAV_3\c_toolchain_1\build\replica_2\logic_i.o
+ .r2_fn         0x9d01955c      0xc54 C:\CSSP\workspace\RoME_UAV_3\lang\dcc\RoME_UAV_3\c_toolchain_1\build\replica_2\logic_i.o
                 0x9d01955c                logic__initialisation
                 0x9d019690                user_logic
-                0x9d01a08c                get_board_0_O1
-                0x9d01a0c4                get_board_0_O2
- .r2_fn         0x9d01a0fc       0xa8 C:\CSSP\workspace\RoME_UAV_3\lang\dcc\RoME_UAV_3\c_toolchain_1\build\replica_2\outputs_i.o
-                0x9d01a0fc                outputs__initialisation
-                0x9d01a11c                write_outputs
- .r2_fn         0x9d01a1a4       0xd8 C:\CSSP\workspace\RoME_UAV_3\lang\dcc\RoME_UAV_3\c_toolchain_1\build\replica_2\user_component_i.o
-                0x9d01a1a4                user_component__initialisation
-                0x9d01a1f8                user_app
-                0x9d01a244                user_consistency_error_detection_test
- .r2_fn         0x9d01a27c       0x20 C:\CSSP\workspace\RoME_UAV_3\lang\dcc\RoME_UAV_3\c_toolchain_1\build\replica_2\user_configuration_i.o
-                0x9d01a27c                user_configuration__initialisation
- .r2_fn         0x9d01a29c       0x20 C:\CSSP\workspace\RoME_UAV_3\lang\dcc\RoME_UAV_3\c_toolchain_1\build\replica_2\user_ctx_i.o
-                0x9d01a29c                user_ctx__initialisation
+                0x9d01a140                get_board_0_O1
+                0x9d01a178                get_board_0_O2
+ .r2_fn         0x9d01a1b0       0xa8 C:\CSSP\workspace\RoME_UAV_3\lang\dcc\RoME_UAV_3\c_toolchain_1\build\replica_2\outputs_i.o
+                0x9d01a1b0                outputs__initialisation
+                0x9d01a1d0                write_outputs
+ .r2_fn         0x9d01a258       0xd8 C:\CSSP\workspace\RoME_UAV_3\lang\dcc\RoME_UAV_3\c_toolchain_1\build\replica_2\user_component_i.o
+                0x9d01a258                user_component__initialisation
+                0x9d01a2ac                user_app
+                0x9d01a2f8                user_consistency_error_detection_test
+ .r2_fn         0x9d01a330       0x20 C:\CSSP\workspace\RoME_UAV_3\lang\dcc\RoME_UAV_3\c_toolchain_1\build\replica_2\user_configuration_i.o
+                0x9d01a330                user_configuration__initialisation
+ .r2_fn         0x9d01a350       0x20 C:\CSSP\workspace\RoME_UAV_3\lang\dcc\RoME_UAV_3\c_toolchain_1\build\replica_2\user_ctx_i.o
+                0x9d01a350                user_ctx__initialisation
  *(.r2_fn.*)
-                0x9d01a2c0                . = ALIGN (0x8)
- *fill*         0x9d01a2bc        0x4 
+                0x9d01a370                . = ALIGN (0x8)
 
 .R2_CHK_VAR     0xa000839c       0x24
  *(.r2_chk_var)
@@ -386,16 +385,16 @@ LOAD C:\CSSP\workspace\RoME_UAV_3\lang\dcc\RoME_UAV_3\c_toolchain_1\build\replic
  *(.r2_nchk_var.*)
                 0xa00083c0                . = ALIGN (0x8)
 
-.R1_CST         0x9d01a2c0        0x0
+.R1_CST         0x9d01a370        0x0
  *(.r1_cst)
  *(.r1_cst.*)
-                0x9d01a2c0                . = ALIGN (0x8)
+                0x9d01a370                . = ALIGN (0x8)
 
-.R1_FN          0x9d01a2c0    0x63d40
+.R1_FN          0x9d01a370    0x63c90
                 0x9d07e000                _end_r1_fn = (ORIGIN (kseg0_application_program_mem) + 0x64cc8)
                 [0x9d07e000]                _end_r1_fn = (_end_r1_fn - 0x0)
                 0x9d07e000                . = _end_r1_fn
- *fill*         0x9d01a2c0    0x63d40 
+ *fill*         0x9d01a370    0x63c90 
 
 .R1_CHK_VAR     0xa00083c0       0x28
                 0xa00083e4                . = (. + SIZEOF (.R2_CHK_VAR))
