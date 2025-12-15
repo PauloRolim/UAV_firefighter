@@ -17,7 +17,7 @@ extern "C" {
 /* Clause CONCRETE_CONSTANTS */
 #include "c4b_constants.h"
 #define SimBCMonitor_cycle_def ((uint32_t) 1UL)
-#define cycle_unit ((uint32_t) 1000UL)
+#define cycle_unit ((uint32_t) 2000UL)
 #define st_READ_INPUTS ((uint32_t) 1UL)
 #define st_STATE_MACHINE_CYCLE ((uint32_t) 2UL)
 #define st_WRITE_OUTPUTS ((uint32_t) 3UL)

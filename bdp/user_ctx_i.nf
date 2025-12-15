@@ -141,8 +141,8 @@ END
 &
 THEORY ListValuesX IS
   Precond_Valued_Objects(Implementation(user_ctx_i))==(btrue);
-  Values_Subs(Implementation(user_ctx_i))==(INIT,EXEC_1,EXEC_2,EXEC_3,SimBCMonitor_cycle_def,cycle_unit,st_READ_INPUTS,st_STATE_MACHINE_CYCLE,st_WRITE_OUTPUTS,st_TIME,PATTERN,TIMEOUT: 0,1,2,3,1,1000,1,2,3,4,TRUE,40000);
-  List_Values(Implementation(user_ctx_i))==(INIT = 0;EXEC_1 = 1;EXEC_2 = 2;EXEC_3 = 3;SimBCMonitor_cycle_def = 1;cycle_unit = 1000;st_READ_INPUTS = 1;st_STATE_MACHINE_CYCLE = 2;st_WRITE_OUTPUTS = 3;st_TIME = 4;PATTERN = TRUE;TIMEOUT = 40000)
+  Values_Subs(Implementation(user_ctx_i))==(INIT,EXEC_1,EXEC_2,EXEC_3,SimBCMonitor_cycle_def,cycle_unit,st_READ_INPUTS,st_STATE_MACHINE_CYCLE,st_WRITE_OUTPUTS,st_TIME,PATTERN,TIMEOUT: 0,1,2,3,1,2000,1,2,3,4,TRUE,40000);
+  List_Values(Implementation(user_ctx_i))==(INIT = 0;EXEC_1 = 1;EXEC_2 = 2;EXEC_3 = 3;SimBCMonitor_cycle_def = 1;cycle_unit = 2000;st_READ_INPUTS = 1;st_STATE_MACHINE_CYCLE = 2;st_WRITE_OUTPUTS = 3;st_TIME = 4;PATTERN = TRUE;TIMEOUT = 40000)
 END
 &
 THEORY ListSeenInfoX IS

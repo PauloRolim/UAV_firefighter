@@ -1,9 +1,10 @@
 THEORY BalanceX IS
-user_ctx_i,7,0,0,7,0,0,0;
-ValuesLemmas,7,0,0,7,0,0,0
+user_ctx_i,8,0,0,8,0,0,0;
+ValuesLemmas,8,0,0,8,0,0,0
 END
 &
 THEORY ProofState IS
+Proved(0);
 Proved(0);
 Proved(0);
 Proved(0);
@@ -20,6 +21,7 @@ pr;
 pr;
 pr;
 pr;
+pr;
 pr
 END
 &
@@ -30,10 +32,11 @@ Force(0),?;
 Force(0),?;
 Force(0),?;
 Force(0),?;
+Force(0),?;
 Force(0),?
 END
 &
 THEORY Status IS
-user_ctx_i,7,0,7,0,0,0;
-ValuesLemmas,7,0,7,0,0,0
+user_ctx_i,8,0,8,0,0,0;
+ValuesLemmas,8,0,8,0,0,0
 END

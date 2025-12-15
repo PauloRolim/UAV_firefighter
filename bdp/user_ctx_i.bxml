@@ -70,7 +70,7 @@
 <Attr>
 <Pos l='19' c='5' s='10'/>
 </Attr>
-<Integer_Literal value='1000' typref='1'>
+<Integer_Literal value='2000' typref='1'>
 <Attr>
 <Pos l='19' c='18' s='4'/>
 </Attr>

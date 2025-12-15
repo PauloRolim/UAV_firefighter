@@ -176,6 +176,7 @@ void SECTION_C4B_FUNCTION SM_SimBCMonitor(void)
             uint8_t guard_9;
             uint8_t guard_10;
             uint32_t local_since;
+            uint32_t local_read;
             uint8_t predicate_1;
             uint8_t predicate_2;
             uint8_t predicate_3;
@@ -209,11 +210,13 @@ void SECTION_C4B_FUNCTION SM_SimBCMonitor(void)
             since(var_P_1, &local_since);
             guard_3 = (((local_since) <= (TIMEOUT)) ? true : false);
             guard_4 = (((TIMEOUT) < (local_since)) ? true : false);
-            validBitPattern(PATTERN, var_read_1 + ((uint32_t) 1UL), var_currbit_2, &predicate_5);
+            local_read = var_read_1;
+            validBitPattern(PATTERN, local_read + ((uint32_t) 1UL), var_currbit_2, &predicate_5);
             lnot(predicate_5, &predicate_6);
             predicate_7 = var_highBattery_3;
             land(predicate_6, predicate_7, &guard_5);
-            validBitPattern(PATTERN, var_read_1 + ((uint32_t) 1UL), var_currbit_2, &predicate_8);
+            local_read = var_read_1;
+            validBitPattern(PATTERN, local_read + ((uint32_t) 1UL), var_currbit_2, &predicate_8);
             predicate_9 = var_highBattery_3;
             land(predicate_8, predicate_9, &guard_6);
             predicate_10 = ((i_CommsLink == IO_OFF) ? true : false);
@@ -310,6 +313,7 @@ void SECTION_C4B_FUNCTION SM_SimBCMonitor(void)
 
 void SECTION_C4B_FUNCTION validBitPattern(uint8_t pp, uint32_t rr, uint8_t cc, uint8_t *valid)
 {
+    var_read_1 = rr;
     if((cc == true))
     {
         var_patternBit_1 = false;

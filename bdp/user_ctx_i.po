@@ -14,7 +14,7 @@ THEORY Formulas IS
 ((uint32_t) = (((0) .. (4294967295)))) & ((uint16_t) = (((0) .. (65535)))) & ((uint8_t) = (((0) .. (255)))) & ((STRUE) : (uint8_t)) & ((SFALSE) : (uint8_t)) & ((MAX_UINT32) : (uint32_t)) & ((MAX_UINT16) : (uint16_t)) & ((MAX_UINT8) : (uint8_t)) & ((STRUE) : (((0) .. (MAX_UINT8)))) & ((SFALSE) : (((0) .. (MAX_UINT8)))) & not(((STRUE) = (SFALSE))) & ((SBOOL) = (({STRUE}\/{SFALSE}))) & (STRUE <= 2) & (SFALSE <= 2) & ((MAX_UINT32) = (4294967295)) & ((MAX_UINT16) = (65535)) & ((MAX_UINT8) = (255)) & ((Convert_Bool) = (({((TRUE) |-> (STRUE))}\/{((FALSE) |-> (SFALSE))})));
 "Valuation is correct";
 ((1) : (uint32_t));
-((1000) : (uint32_t));
+((2000) : (uint32_t));
 ((1) : (uint8_t));
 ((2) : (uint8_t));
 ((3) : (uint8_t));

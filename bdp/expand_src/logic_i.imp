@@ -181,6 +181,7 @@ LOCAL_OPERATIONS
     PRE valid : BOOL & pp : BOOL & rr : uint32_t & cc : BOOL
     THEN
          valid :: BOOL ||
+         var_read_1 :: uint32_t ||
          var_patternBit_1 :: BOOL ||
          var_patternBit_2 :: BOOL
     END
@@ -310,7 +311,7 @@ OPERATIONS
                VAR guard_1 , guard_2 , guard_3 , guard_4 ,
                    guard_5 , guard_6 , guard_7 , guard_8 ,
                    guard_9 , guard_10 ,
-                   local_since ,
+                   local_since , local_read ,
                    predicate_1 , predicate_2 , predicate_3 ,
                    predicate_4 , predicate_5 , predicate_6 ,
                    predicate_7 , predicate_8 , predicate_9 ,
@@ -331,6 +332,7 @@ OPERATIONS
                   guard_10 : ( guard_10 : BOOL ) ;
 
                   local_since : ( local_since : uint32_t ) ;
+                  local_read : ( local_read : uint32_t ) ;
 
                   predicate_1 : ( predicate_1 : BOOL ) ;
                   predicate_2 : ( predicate_2 : BOOL ) ;
@@ -372,13 +374,15 @@ OPERATIONS
                   // [since(P) > TIMEOUT]
                   guard_4 := bool ( TIMEOUT < local_since ) ;
 
-                  predicate_5 <-- validBitPattern ( PATTERN , add_uint32 ( var_read_1 , 1 ) , var_currbit_2 ) ;
+                  local_read := var_read_1 ;
+                  predicate_5 <-- validBitPattern ( PATTERN , add_uint32 ( local_read , 1 ) , var_currbit_2 ) ;
                   predicate_6 <-- lnot ( predicate_5 ) ;
                   predicate_7 := var_highBattery_3 ;
                   //[not validBitPattern() /\ highBattery]
                   guard_5 <-- land ( predicate_6 , predicate_7 ) ;
 
-                  predicate_8 <-- validBitPattern ( PATTERN , add_uint32 ( var_read_1 , 1 ) , var_currbit_2 ) ;
+                  local_read := var_read_1 ;
+                  predicate_8 <-- validBitPattern ( PATTERN , add_uint32 ( local_read , 1 ) , var_currbit_2 ) ;
                   predicate_9 := var_highBattery_3 ;
                   //[validBitPattern() /\ highBattery]
                   guard_6 <-- land ( predicate_8 , predicate_9 ) ;
@@ -467,7 +471,7 @@ OPERATIONS
     valid <-- validBitPattern ( pp , rr , cc ) = //Sequence bit pattern is simplified to just contain two bits
     BEGIN
         valid : ( valid : BOOL ) ;
-
+        var_read_1 := rr ;
         IF ( cc = TRUE ) THEN
            var_patternBit_1 := FALSE ;
            var_patternBit_2 := pp ;
