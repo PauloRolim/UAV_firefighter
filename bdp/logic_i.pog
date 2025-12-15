@@ -2516,7 +2516,7 @@
             </Goal>
         </Simple_Goal>
     </Proof_Obligation>
-    <Proof_Obligation goalHash="15663109599390367691">
+    <Proof_Obligation goalHash="12184286971301346739">
         <Tag>LocalOperation_SM_SimBCMonitor</Tag>
         <Definition name="B definitions"/>
         <Definition name="ctx"/>
@@ -5689,7 +5689,7 @@
             </Goal>
         </Simple_Goal>
     </Proof_Obligation>
-    <Proof_Obligation goalHash="14568747610121607032">
+    <Proof_Obligation goalHash="5887738022177636857">
         <Tag>WellDefinedness_SM_SimBCMonitor</Tag>
         <Definition name="B definitions"/>
         <Definition name="ctx"/>

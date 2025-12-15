@@ -401,14 +401,14 @@ OPERATIONS
 
                   predicate_16 := var_highBattery_3 ;
                   //[not highBattery]
-                  guard_8 <-- lnot ( predicate_13 ) ;
+                  guard_8 <-- lnot ( predicate_16 ) ;
 
-                  predicate_14 := bool ( i_CommsLink = IO_ON ) ;
-                  var_currbit_2 := predicate_14 ;
-                  predicate_15 := bool ( i_HighBattery = IO_ON ) ;
-                  var_highBattery_3 := predicate_15 ;
+                  predicate_17 := bool ( i_CommsLink = IO_ON ) ;
+                  var_currbit_2 := predicate_17 ;
+                  predicate_18 := bool ( i_HighBattery = IO_ON ) ;
+                  var_highBattery_3 := predicate_18 ;
                   //[$CommsLink?currbit /\ $HighBattery?highBattery]
-                  guard_9 <-- land ( predicate_14 , predicate_15 ) ;
+                  guard_9 <-- land ( predicate_17 , predicate_18 ) ;
 
                   predicate_19 := var_highBattery_3 ;
                   //[not highBattery]

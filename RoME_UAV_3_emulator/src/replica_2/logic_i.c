@@ -229,12 +229,12 @@ void SECTION_C4B_FUNCTION SM_SimBCMonitor(void)
             land(predicate_13, predicate_14, &predicate_15);
             land(predicate_12, predicate_15, &guard_7);
             predicate_16 = var_highBattery_3;
-            lnot(predicate_13, &guard_8);
-            predicate_14 = ((i_CommsLink == IO_ON) ? true : false);
-            var_currbit_2 = predicate_14;
-            predicate_15 = ((i_HighBattery == IO_ON) ? true : false);
-            var_highBattery_3 = predicate_15;
-            land(predicate_14, predicate_15, &guard_9);
+            lnot(predicate_16, &guard_8);
+            predicate_17 = ((i_CommsLink == IO_ON) ? true : false);
+            var_currbit_2 = predicate_17;
+            predicate_18 = ((i_HighBattery == IO_ON) ? true : false);
+            var_highBattery_3 = predicate_18;
+            land(predicate_17, predicate_18, &guard_9);
             predicate_19 = var_highBattery_3;
             lnot(predicate_19, &guard_10);
             if((guard_1 == true))
