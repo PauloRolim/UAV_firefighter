@@ -44,7 +44,7 @@ INVARIANT
     SM_SimBCMonitor_state: {INIT, EXEC_1, EXEC_2, EXEC_3} &
     cycle_timer: uint32_t &
     cycle_state: uint8_t &
-    cycle_state: {st_READ_INPUTS, st_STATE_MACHINE_CYCLE, st_WRITE_OUTPUTS, st_TIME} &
+    cycle_state: {st_READ_INPUTS, st_STATE_MACHINE, st_WRITE_OUTPUTS, st_TIME} &
 	
 	var_read_1: uint32_t &
 	var_currbit_2: BOOL &
@@ -160,7 +160,7 @@ LOCAL_OPERATIONS
     END;
     
     SM_SimBCMonitor =
-    PRE cycle_state = st_STATE_MACHINE_CYCLE
+    PRE cycle_state = st_STATE_MACHINE
     THEN
         cycle_state  :: uint8_t ||
         SM_SimBCMonitor_state:: uint32_t ||
@@ -275,7 +275,7 @@ OPERATIONS
         i_MissionStart <-- get_board_0_I1;
         i_CommsLink <-- get_board_0_I2;
         i_HighBattery <-- get_board_0_I3;        
-        cycle_state := st_STATE_MACHINE_CYCLE
+        cycle_state := st_STATE_MACHINE
        
     END;
     

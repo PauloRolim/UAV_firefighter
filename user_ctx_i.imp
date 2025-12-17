@@ -19,10 +19,10 @@ VALUES
     cycle_unit = 2000;
     
     //Translation constants for cycle status
-    st_READ_INPUTS = 1;
-    st_STATE_MACHINE_CYCLE = 2;
-    st_WRITE_OUTPUTS = 3;
-    st_TIME = 4;
+    st_READ_INPUTS = 0;
+    st_STATE_MACHINE = 1;
+    st_WRITE_OUTPUTS = 2;
+    st_TIME = 3;
     
     PATTERN = TRUE;
     TIMEOUT = 40000

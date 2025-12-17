@@ -142,7 +142,7 @@
             </Binary_Exp>
         </Exp_Comparison>
     </Define>
-    <Define name="lprp" hash="9929470245043092772">
+    <Define name="lprp" hash="17914214380241677773">
         <Exp_Comparison op=":">
             <Id value="SimBCMonitor_cycle_def" typref="1" tag="C:\CSSP\workspace\RoME_UAV_3\bdp\user_ctx.bxml:1:3:1:1:1"/>
             <Id value="uint32_t" typref="0" tag="C:\CSSP\workspace\RoME_UAV_3\bdp\user_ctx.bxml:1:3:1:1:2"/>
@@ -156,7 +156,7 @@
             <Id value="uint8_t" typref="0" tag="C:\CSSP\workspace\RoME_UAV_3\bdp\user_ctx.bxml:1:3:1:3:2"/>
         </Exp_Comparison>
         <Exp_Comparison op=":">
-            <Id value="st_STATE_MACHINE_CYCLE" typref="1" tag="C:\CSSP\workspace\RoME_UAV_3\bdp\user_ctx.bxml:1:3:1:4:1"/>
+            <Id value="st_STATE_MACHINE" typref="1" tag="C:\CSSP\workspace\RoME_UAV_3\bdp\user_ctx.bxml:1:3:1:4:1"/>
             <Id value="uint8_t" typref="0" tag="C:\CSSP\workspace\RoME_UAV_3\bdp\user_ctx.bxml:1:3:1:4:2"/>
         </Exp_Comparison>
         <Exp_Comparison op=":">

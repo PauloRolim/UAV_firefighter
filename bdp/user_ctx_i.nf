@@ -106,8 +106,8 @@ THEORY ListPreconditionX END
 THEORY ListSubstitutionX END
 &
 THEORY ListConstantsX IS
-  List_Valuable_Constants(Implementation(user_ctx_i))==(SimBCMonitor_cycle_def,cycle_unit,st_READ_INPUTS,st_STATE_MACHINE_CYCLE,st_WRITE_OUTPUTS,st_TIME,INIT,EXEC_1,EXEC_2,EXEC_3,PATTERN,TIMEOUT);
-  Inherited_List_Constants(Implementation(user_ctx_i))==(SimBCMonitor_cycle_def,cycle_unit,st_READ_INPUTS,st_STATE_MACHINE_CYCLE,st_WRITE_OUTPUTS,st_TIME,INIT,EXEC_1,EXEC_2,EXEC_3,PATTERN,TIMEOUT);
+  List_Valuable_Constants(Implementation(user_ctx_i))==(SimBCMonitor_cycle_def,cycle_unit,st_READ_INPUTS,st_STATE_MACHINE,st_WRITE_OUTPUTS,st_TIME,INIT,EXEC_1,EXEC_2,EXEC_3,PATTERN,TIMEOUT);
+  Inherited_List_Constants(Implementation(user_ctx_i))==(SimBCMonitor_cycle_def,cycle_unit,st_READ_INPUTS,st_STATE_MACHINE,st_WRITE_OUTPUTS,st_TIME,INIT,EXEC_1,EXEC_2,EXEC_3,PATTERN,TIMEOUT);
   List_Constants(Implementation(user_ctx_i))==(?)
 END
 &
@@ -133,7 +133,7 @@ THEORY ListHiddenConstantsX IS
 END
 &
 THEORY ListPropertiesX IS
-  Abstract_List_Properties(Implementation(user_ctx_i))==(SimBCMonitor_cycle_def: uint32_t & cycle_unit: uint32_t & st_READ_INPUTS: uint8_t & st_STATE_MACHINE_CYCLE: uint8_t & st_WRITE_OUTPUTS: uint8_t & st_TIME: uint8_t & INIT: uint8_t & EXEC_1: uint8_t & EXEC_2: uint8_t & EXEC_3: uint8_t & PATTERN: BOOL & TIMEOUT: uint32_t);
+  Abstract_List_Properties(Implementation(user_ctx_i))==(SimBCMonitor_cycle_def: uint32_t & cycle_unit: uint32_t & st_READ_INPUTS: uint8_t & st_STATE_MACHINE: uint8_t & st_WRITE_OUTPUTS: uint8_t & st_TIME: uint8_t & INIT: uint8_t & EXEC_1: uint8_t & EXEC_2: uint8_t & EXEC_3: uint8_t & PATTERN: BOOL & TIMEOUT: uint32_t);
   Context_List_Properties(Implementation(user_ctx_i))==(uint32_t = 0..4294967295 & uint16_t = 0..65535 & uint8_t = 0..255 & STRUE: uint8_t & SFALSE: uint8_t & MAX_UINT32: uint32_t & MAX_UINT16: uint16_t & MAX_UINT8: uint8_t & STRUE: 0..MAX_UINT8 & SFALSE: 0..MAX_UINT8 & STRUE/=SFALSE & SBOOL = {STRUE,SFALSE} & STRUE<=2 & SFALSE<=2 & MAX_UINT32 = 4294967295 & MAX_UINT16 = 65535 & MAX_UINT8 = 255 & Convert_Bool = {TRUE|->STRUE,FALSE|->SFALSE});
   Inherited_List_Properties(Implementation(user_ctx_i))==(btrue);
   List_Properties(Implementation(user_ctx_i))==(btrue)
@@ -141,8 +141,8 @@ END
 &
 THEORY ListValuesX IS
   Precond_Valued_Objects(Implementation(user_ctx_i))==(btrue);
-  Values_Subs(Implementation(user_ctx_i))==(INIT,EXEC_1,EXEC_2,EXEC_3,SimBCMonitor_cycle_def,cycle_unit,st_READ_INPUTS,st_STATE_MACHINE_CYCLE,st_WRITE_OUTPUTS,st_TIME,PATTERN,TIMEOUT: 0,1,2,3,1,2000,1,2,3,4,TRUE,40000);
-  List_Values(Implementation(user_ctx_i))==(INIT = 0;EXEC_1 = 1;EXEC_2 = 2;EXEC_3 = 3;SimBCMonitor_cycle_def = 1;cycle_unit = 2000;st_READ_INPUTS = 1;st_STATE_MACHINE_CYCLE = 2;st_WRITE_OUTPUTS = 3;st_TIME = 4;PATTERN = TRUE;TIMEOUT = 40000)
+  Values_Subs(Implementation(user_ctx_i))==(INIT,EXEC_1,EXEC_2,EXEC_3,SimBCMonitor_cycle_def,cycle_unit,st_READ_INPUTS,st_STATE_MACHINE,st_WRITE_OUTPUTS,st_TIME,PATTERN,TIMEOUT: 0,1,2,3,1,2000,0,1,2,3,TRUE,40000);
+  List_Values(Implementation(user_ctx_i))==(INIT = 0;EXEC_1 = 1;EXEC_2 = 2;EXEC_3 = 3;SimBCMonitor_cycle_def = 1;cycle_unit = 2000;st_READ_INPUTS = 0;st_STATE_MACHINE = 1;st_WRITE_OUTPUTS = 2;st_TIME = 3;PATTERN = TRUE;TIMEOUT = 40000)
 END
 &
 THEORY ListSeenInfoX IS
@@ -159,7 +159,7 @@ END
 THEORY ListIncludedOperationsX END
 &
 THEORY InheritedEnvX IS
-  Constants(Implementation(user_ctx_i))==(Type(SimBCMonitor_cycle_def) == Cst(btype(INTEGER,?,?));Type(cycle_unit) == Cst(btype(INTEGER,?,?));Type(st_READ_INPUTS) == Cst(btype(INTEGER,?,?));Type(st_STATE_MACHINE_CYCLE) == Cst(btype(INTEGER,?,?));Type(st_WRITE_OUTPUTS) == Cst(btype(INTEGER,?,?));Type(st_TIME) == Cst(btype(INTEGER,?,?));Type(INIT) == Cst(btype(INTEGER,?,?));Type(EXEC_1) == Cst(btype(INTEGER,?,?));Type(EXEC_2) == Cst(btype(INTEGER,?,?));Type(EXEC_3) == Cst(btype(INTEGER,?,?));Type(PATTERN) == Cst(btype(BOOL,?,?));Type(TIMEOUT) == Cst(btype(INTEGER,?,?)))
+  Constants(Implementation(user_ctx_i))==(Type(SimBCMonitor_cycle_def) == Cst(btype(INTEGER,?,?));Type(cycle_unit) == Cst(btype(INTEGER,?,?));Type(st_READ_INPUTS) == Cst(btype(INTEGER,?,?));Type(st_STATE_MACHINE) == Cst(btype(INTEGER,?,?));Type(st_WRITE_OUTPUTS) == Cst(btype(INTEGER,?,?));Type(st_TIME) == Cst(btype(INTEGER,?,?));Type(INIT) == Cst(btype(INTEGER,?,?));Type(EXEC_1) == Cst(btype(INTEGER,?,?));Type(EXEC_2) == Cst(btype(INTEGER,?,?));Type(EXEC_3) == Cst(btype(INTEGER,?,?));Type(PATTERN) == Cst(btype(BOOL,?,?));Type(TIMEOUT) == Cst(btype(INTEGER,?,?)))
 END
 &
 THEORY ListVisibleStaticX IS
@@ -181,7 +181,7 @@ THEORY ListOfIdsX IS
 END
 &
 THEORY ConstantsEnvX IS
-  Constants(Implementation(user_ctx_i)) == (Type(TIMEOUT) == Cst(btype(INTEGER,?,?));Type(PATTERN) == Cst(btype(BOOL,?,?));Type(EXEC_3) == Cst(btype(INTEGER,?,?));Type(EXEC_2) == Cst(btype(INTEGER,?,?));Type(EXEC_1) == Cst(btype(INTEGER,?,?));Type(INIT) == Cst(btype(INTEGER,?,?));Type(st_TIME) == Cst(btype(INTEGER,?,?));Type(st_WRITE_OUTPUTS) == Cst(btype(INTEGER,?,?));Type(st_STATE_MACHINE_CYCLE) == Cst(btype(INTEGER,?,?));Type(st_READ_INPUTS) == Cst(btype(INTEGER,?,?));Type(cycle_unit) == Cst(btype(INTEGER,?,?));Type(SimBCMonitor_cycle_def) == Cst(btype(INTEGER,?,?)))
+  Constants(Implementation(user_ctx_i)) == (Type(TIMEOUT) == Cst(btype(INTEGER,?,?));Type(PATTERN) == Cst(btype(BOOL,?,?));Type(EXEC_3) == Cst(btype(INTEGER,?,?));Type(EXEC_2) == Cst(btype(INTEGER,?,?));Type(EXEC_1) == Cst(btype(INTEGER,?,?));Type(INIT) == Cst(btype(INTEGER,?,?));Type(st_TIME) == Cst(btype(INTEGER,?,?));Type(st_WRITE_OUTPUTS) == Cst(btype(INTEGER,?,?));Type(st_STATE_MACHINE) == Cst(btype(INTEGER,?,?));Type(st_READ_INPUTS) == Cst(btype(INTEGER,?,?));Type(cycle_unit) == Cst(btype(INTEGER,?,?));Type(SimBCMonitor_cycle_def) == Cst(btype(INTEGER,?,?)))
 END
 &
 THEORY TCIntRdX IS

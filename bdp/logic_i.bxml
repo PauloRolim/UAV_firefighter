@@ -275,19 +275,19 @@
 <Pos l='47' c='19' s='14'/>
 </Attr>
 </Id>
-<Id value='st_STATE_MACHINE_CYCLE' typref='1'>
+<Id value='st_STATE_MACHINE' typref='1'>
 <Attr>
-<Pos l='47' c='35' s='22'/>
+<Pos l='47' c='35' s='16'/>
 </Attr>
 </Id>
 <Id value='st_WRITE_OUTPUTS' typref='1'>
 <Attr>
-<Pos l='47' c='59' s='16'/>
+<Pos l='47' c='53' s='16'/>
 </Attr>
 </Id>
 <Id value='st_TIME' typref='1'>
 <Attr>
-<Pos l='47' c='77' s='7'/>
+<Pos l='47' c='71' s='7'/>
 </Attr>
 </Id>
 </Nary_Exp>
@@ -1531,9 +1531,9 @@
 <Pos l='163' c='9' s='11'/>
 </Attr>
 </Id>
-<Id value='st_STATE_MACHINE_CYCLE' typref='1'>
+<Id value='st_STATE_MACHINE' typref='1'>
 <Attr>
-<Pos l='163' c='23' s='22'/>
+<Pos l='163' c='23' s='16'/>
 </Attr>
 </Id>
 </Exp_Comparison>
@@ -2798,9 +2798,9 @@
 </Id>
 </Variables>
 <Values>
-<Id value='st_STATE_MACHINE_CYCLE' typref='1'>
+<Id value='st_STATE_MACHINE' typref='1'>
 <Attr>
-<Pos l='278' c='24' s='22'/>
+<Pos l='278' c='24' s='16'/>
 </Attr>
 </Id>
 </Values>

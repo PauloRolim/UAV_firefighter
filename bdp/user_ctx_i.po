@@ -1,5 +1,4 @@
 THEORY ProofList IS
-_f(1) & _f(2) & ValuesLemmas.8,(_f(3) => _f(11));
 _f(1) & _f(2) & ValuesLemmas.7,(_f(3) => _f(10));
 _f(1) & _f(2) & ValuesLemmas.6,(_f(3) => _f(9));
 _f(1) & _f(2) & ValuesLemmas.5,(_f(3) => _f(8));
@@ -15,11 +14,10 @@ THEORY Formulas IS
 "Valuation is correct";
 ((1) : (uint32_t));
 ((2000) : (uint32_t));
+((0) : (uint8_t));
 ((1) : (uint8_t));
 ((2) : (uint8_t));
 ((3) : (uint8_t));
-((4) : (uint8_t));
-((0) : (uint8_t));
 ((40000) : (uint32_t))
 END
 &

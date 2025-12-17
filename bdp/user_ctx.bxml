@@ -30,9 +30,9 @@
 <Pos l='13' c='5' s='14'/>
 </Attr>
 </Id>
-<Id value='st_STATE_MACHINE_CYCLE' typref='1'>
+<Id value='st_STATE_MACHINE' typref='1'>
 <Attr>
-<Pos l='14' c='5' s='22'/>
+<Pos l='14' c='5' s='16'/>
 </Attr>
 </Id>
 <Id value='st_WRITE_OUTPUTS' typref='1'>
@@ -128,16 +128,16 @@
 </Exp_Comparison>
 <Exp_Comparison op=':'>
 <Attr>
-<Pos l='34' c='27' s='1'/>
+<Pos l='34' c='21' s='1'/>
 </Attr>
-<Id value='st_STATE_MACHINE_CYCLE' typref='1'>
+<Id value='st_STATE_MACHINE' typref='1'>
 <Attr>
-<Pos l='34' c='5' s='22'/>
+<Pos l='34' c='5' s='16'/>
 </Attr>
 </Id>
 <Id value='uint8_t' typref='2'>
 <Attr>
-<Pos l='34' c='29' s='7'/>
+<Pos l='34' c='23' s='7'/>
 </Attr>
 </Id>
 </Exp_Comparison>

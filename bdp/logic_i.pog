@@ -16,7 +16,7 @@
             </Binary_Exp>
         </Exp_Comparison>
     </Define>
-    <Define name="ctx" hash="15409434233316829249">
+    <Define name="ctx" hash="8453578459176675030">
         <Exp_Comparison op="=">
             <Id value="uint32_t" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/g_types.bxml:1:3:1:1:1"/>
             <Binary_Exp op=".." typref="0">
@@ -1019,7 +1019,7 @@
             <Id value="uint8_t" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/user_ctx.bxml:1:3:1:3:2"/>
         </Exp_Comparison>
         <Exp_Comparison op=":">
-            <Id value="st_STATE_MACHINE_CYCLE" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/user_ctx.bxml:1:3:1:4:1"/>
+            <Id value="st_STATE_MACHINE" typref="1" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/user_ctx.bxml:1:3:1:4:1"/>
             <Id value="uint8_t" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/user_ctx.bxml:1:3:1:4:2"/>
         </Exp_Comparison>
         <Exp_Comparison op=":">
@@ -1106,7 +1106,7 @@
             <Id value="uint8_t" typref="0" tag="C:/CSSP/workspace/RoME_UAV_3/bdp\/logic.bxml:1:3:1:2:2"/>
         </Exp_Comparison>
     </Define>
-    <Define name="inv" hash="1847848850957520477">
+    <Define name="inv" hash="8036893403217047559">
         <Exp_Comparison op="=">
             <Id value="board_0_O1" typref="1" tag="C:\CSSP\workspace\RoME_UAV_3\bdp\logic_i.bxml:1:3:1"/>
             <Id value="board_0_O1" suffix="1" typref="1" tag="C:\CSSP\workspace\RoME_UAV_3\bdp\logic_i.bxml:1:3:1"/>
@@ -1152,7 +1152,7 @@
             <Id value="cycle_state" suffix="1" typref="1" tag="C:\CSSP\workspace\RoME_UAV_3\bdp\logic_i.bxml:1:3:6,C:\CSSP\workspace\RoME_UAV_3\bdp\logic_i.bxml:1:4:1:8:1,"/>
             <Nary_Exp op="{" typref="0">
                 <Id value="st_READ_INPUTS" typref="1" tag="C:\CSSP\workspace\RoME_UAV_3\bdp\logic_i.bxml:1:4:1:8:2:1"/>
-                <Id value="st_STATE_MACHINE_CYCLE" typref="1" tag="C:\CSSP\workspace\RoME_UAV_3\bdp\logic_i.bxml:1:4:1:8:2:2"/>
+                <Id value="st_STATE_MACHINE" typref="1" tag="C:\CSSP\workspace\RoME_UAV_3\bdp\logic_i.bxml:1:4:1:8:2:2"/>
                 <Id value="st_WRITE_OUTPUTS" typref="1" tag="C:\CSSP\workspace\RoME_UAV_3\bdp\logic_i.bxml:1:4:1:8:2:3"/>
                 <Id value="st_TIME" typref="1" tag="C:\CSSP\workspace\RoME_UAV_3\bdp\logic_i.bxml:1:4:1:8:2:4"/>
             </Nary_Exp>
@@ -1203,7 +1203,7 @@
     <Define name="imlprp" hash="0"/>
     <Define name="imprp" hash="0"/>
     <Define name="imext" hash="0"/>
-    <Proof_Obligation goalHash="4633156146389273096">
+    <Proof_Obligation goalHash="8969645285645032338">
         <Tag>Initialisation</Tag>
         <Definition name="B definitions"/>
         <Definition name="ctx"/>
@@ -1252,7 +1252,7 @@
                     <Integer_Literal value="1" typref="1" tag="C:\CSSP\workspace\RoME_UAV_3\bdp\logic_i.bxml:1:3:6,C:\CSSP\workspace\RoME_UAV_3\bdp\logic_i.bxml:1:4:1:8:1,,C:\CSSP\workspace\RoME_UAV_3\bdp\logic_i.bxml:1:5:1:6:2:1"/>
                     <Nary_Exp op="{" typref="0">
                         <Id value="st_READ_INPUTS" typref="1" tag="C:\CSSP\workspace\RoME_UAV_3\bdp\logic_i.bxml:1:4:1:8:2:1"/>
-                        <Id value="st_STATE_MACHINE_CYCLE" typref="1" tag="C:\CSSP\workspace\RoME_UAV_3\bdp\logic_i.bxml:1:4:1:8:2:2"/>
+                        <Id value="st_STATE_MACHINE" typref="1" tag="C:\CSSP\workspace\RoME_UAV_3\bdp\logic_i.bxml:1:4:1:8:2:2"/>
                         <Id value="st_WRITE_OUTPUTS" typref="1" tag="C:\CSSP\workspace\RoME_UAV_3\bdp\logic_i.bxml:1:4:1:8:2:3"/>
                         <Id value="st_TIME" typref="1" tag="C:\CSSP\workspace\RoME_UAV_3\bdp\logic_i.bxml:1:4:1:8:2:4"/>
                     </Nary_Exp>
@@ -1260,7 +1260,7 @@
             </Goal>
         </Simple_Goal>
     </Proof_Obligation>
-    <Proof_Obligation goalHash="9355612916204549226">
+    <Proof_Obligation goalHash="1416305999201380436">
         <Tag>Operation_user_logic</Tag>
         <Definition name="B definitions"/>
         <Definition name="ctx"/>
@@ -1434,7 +1434,7 @@
                     <Id value="st_READ_INPUTS" typref="1" tag="C:\CSSP\workspace\RoME_UAV_3\bdp\logic_i.bxml:1:3:6,C:\CSSP\workspace\RoME_UAV_3\bdp\logic_i.bxml:1:4:1:8:1,,C:\CSSP\workspace\RoME_UAV_3\bdp\logic_i.bxml:1:7:1:1:1:2:1:3:2:1"/>
                     <Nary_Exp op="{" typref="0">
                         <Id value="st_READ_INPUTS" typref="1" tag="C:\CSSP\workspace\RoME_UAV_3\bdp\logic_i.bxml:1:4:1:8:2:1"/>
-                        <Id value="st_STATE_MACHINE_CYCLE" typref="1" tag="C:\CSSP\workspace\RoME_UAV_3\bdp\logic_i.bxml:1:4:1:8:2:2"/>
+                        <Id value="st_STATE_MACHINE" typref="1" tag="C:\CSSP\workspace\RoME_UAV_3\bdp\logic_i.bxml:1:4:1:8:2:2"/>
                         <Id value="st_WRITE_OUTPUTS" typref="1" tag="C:\CSSP\workspace\RoME_UAV_3\bdp\logic_i.bxml:1:4:1:8:2:3"/>
                         <Id value="st_TIME" typref="1" tag="C:\CSSP\workspace\RoME_UAV_3\bdp\logic_i.bxml:1:4:1:8:2:4"/>
                     </Nary_Exp>
@@ -1492,7 +1492,7 @@
                     <Id value="st_READ_INPUTS" typref="1" tag="C:\CSSP\workspace\RoME_UAV_3\bdp\logic_i.bxml:1:3:6,C:\CSSP\workspace\RoME_UAV_3\bdp\logic_i.bxml:1:4:1:8:1,,C:\CSSP\workspace\RoME_UAV_3\bdp\logic_i.bxml:1:7:1:1:1:3:1:2:1:5:2:1:3:2:1"/>
                     <Nary_Exp op="{" typref="0">
                         <Id value="st_READ_INPUTS" typref="1" tag="C:\CSSP\workspace\RoME_UAV_3\bdp\logic_i.bxml:1:4:1:8:2:1"/>
-                        <Id value="st_STATE_MACHINE_CYCLE" typref="1" tag="C:\CSSP\workspace\RoME_UAV_3\bdp\logic_i.bxml:1:4:1:8:2:2"/>
+                        <Id value="st_STATE_MACHINE" typref="1" tag="C:\CSSP\workspace\RoME_UAV_3\bdp\logic_i.bxml:1:4:1:8:2:2"/>
                         <Id value="st_WRITE_OUTPUTS" typref="1" tag="C:\CSSP\workspace\RoME_UAV_3\bdp\logic_i.bxml:1:4:1:8:2:3"/>
                         <Id value="st_TIME" typref="1" tag="C:\CSSP\workspace\RoME_UAV_3\bdp\logic_i.bxml:1:4:1:8:2:4"/>
                     </Nary_Exp>
@@ -1500,7 +1500,7 @@
             </Goal>
         </Simple_Goal>
     </Proof_Obligation>
-    <Proof_Obligation goalHash="13248187621778658242">
+    <Proof_Obligation goalHash="13791670731909677193">
         <Tag>LocalOperation_execute_model_cycle</Tag>
         <Definition name="B definitions"/>
         <Definition name="ctx"/>
@@ -1653,7 +1653,7 @@
         <Local_Hyp num="8">
             <Exp_Comparison op="=">
                 <Id value="cycle_state" suffix="2" typref="1" tag="C:\CSSP\workspace\RoME_UAV_3\bdp\logic_i.bxml:1:3:6,C:\CSSP\workspace\RoME_UAV_3\bdp\logic_i.bxml:1:6:8:1:1:1,,C:\CSSP\workspace\RoME_UAV_3\bdp\logic_i.bxml:1:7:2:1:1:2:1:1,C:\CSSP\workspace\RoME_UAV_3\bdp\logic_i.bxml:1:3:6,C:\CSSP\workspace\RoME_UAV_3\bdp\logic_i.bxml:1:6:6:2:1:3:1:1,,C:\CSSP\workspace\RoME_UAV_3\bdp\logic_i.bxml:1:7:2:1:1:1:1:1"/>
-                <Id value="st_STATE_MACHINE_CYCLE" typref="1" tag="C:\CSSP\workspace\RoME_UAV_3\bdp\logic_i.bxml:1:6:8:1:1:2,C:\CSSP\workspace\RoME_UAV_3\bdp\logic_i.bxml:1:7:2:1:1:2:1:1"/>
+                <Id value="st_STATE_MACHINE" typref="1" tag="C:\CSSP\workspace\RoME_UAV_3\bdp\logic_i.bxml:1:6:8:1:1:2,C:\CSSP\workspace\RoME_UAV_3\bdp\logic_i.bxml:1:7:2:1:1:2:1:1"/>
             </Exp_Comparison>
         </Local_Hyp>
         <Local_Hyp num="9">
@@ -1755,7 +1755,7 @@
             <Goal>
                 <Exp_Comparison op="=">
                     <Id value="cycle_state" suffix="2" typref="1" tag="C:\CSSP\workspace\RoME_UAV_3\bdp\logic_i.bxml:1:3:6,C:\CSSP\workspace\RoME_UAV_3\bdp\logic_i.bxml:1:6:8:1:1:1,,C:\CSSP\workspace\RoME_UAV_3\bdp\logic_i.bxml:1:7:2:1:1:2:1:1,C:\CSSP\workspace\RoME_UAV_3\bdp\logic_i.bxml:1:3:6,C:\CSSP\workspace\RoME_UAV_3\bdp\logic_i.bxml:1:6:6:2:1:3:1:1,,C:\CSSP\workspace\RoME_UAV_3\bdp\logic_i.bxml:1:7:2:1:1:1:1:1"/>
-                    <Id value="st_STATE_MACHINE_CYCLE" typref="1" tag="C:\CSSP\workspace\RoME_UAV_3\bdp\logic_i.bxml:1:6:8:1:1:2,C:\CSSP\workspace\RoME_UAV_3\bdp\logic_i.bxml:1:7:2:1:1:2:1:1"/>
+                    <Id value="st_STATE_MACHINE" typref="1" tag="C:\CSSP\workspace\RoME_UAV_3\bdp\logic_i.bxml:1:6:8:1:1:2,C:\CSSP\workspace\RoME_UAV_3\bdp\logic_i.bxml:1:7:2:1:1:2:1:1"/>
                 </Exp_Comparison>
             </Goal>
         </Simple_Goal>
@@ -2225,7 +2225,7 @@
             </Goal>
         </Simple_Goal>
     </Proof_Obligation>
-    <Proof_Obligation goalHash="12916877352103128903">
+    <Proof_Obligation goalHash="21963414371587986">
         <Tag>LocalOperation_read_model_inputs</Tag>
         <Definition name="B definitions"/>
         <Definition name="ctx"/>
@@ -2516,7 +2516,7 @@
             </Goal>
         </Simple_Goal>
     </Proof_Obligation>
-    <Proof_Obligation goalHash="12184286971301346739">
+    <Proof_Obligation goalHash="902328098926151390">
         <Tag>LocalOperation_SM_SimBCMonitor</Tag>
         <Definition name="B definitions"/>
         <Definition name="ctx"/>
@@ -2627,7 +2627,7 @@
         <Local_Hyp num="1">
             <Exp_Comparison op="=">
                 <Id value="cycle_state" suffix="1" typref="1" tag="C:\CSSP\workspace\RoME_UAV_3\bdp\logic_i.bxml:1:6:8:1:1:1,C:\CSSP\workspace\RoME_UAV_3\bdp\logic_i.bxml:1:3:6"/>
-                <Id value="st_STATE_MACHINE_CYCLE" typref="1" tag="C:\CSSP\workspace\RoME_UAV_3\bdp\logic_i.bxml:1:6:8:1:1:2"/>
+                <Id value="st_STATE_MACHINE" typref="1" tag="C:\CSSP\workspace\RoME_UAV_3\bdp\logic_i.bxml:1:6:8:1:1:2"/>
             </Exp_Comparison>
         </Local_Hyp>
         <Local_Hyp num="2">

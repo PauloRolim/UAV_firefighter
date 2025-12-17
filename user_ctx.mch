@@ -11,7 +11,7 @@ CONCRETE_CONSTANTS
     
     //Translation constants for cycle status
     st_READ_INPUTS,
-    st_STATE_MACHINE_CYCLE,
+    st_STATE_MACHINE,
     st_WRITE_OUTPUTS,
     st_TIME,
     
@@ -31,7 +31,7 @@ PROPERTIES
     
     //Translation constants for cycle status
     st_READ_INPUTS: uint8_t &
-    st_STATE_MACHINE_CYCLE: uint8_t &
+    st_STATE_MACHINE: uint8_t &
     st_WRITE_OUTPUTS: uint8_t &
     st_TIME: uint8_t &
     
